@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>MAC原型机</title>
+ <style type="text/css">
+.container{
+font-size:1.3em;
+text-indent:2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.3em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+table {
+	width: 960px;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:center;
+	line-height:30px;
+	table-layout:fixed;
+}
+
+table th,table td{
+border:1px solid #aaa;
+font-size:20px;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+}
+
+table thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+padding:2px 0px;
+display:table-column-group;
+}
+table th{
+background-color:#f2f4b9;
+}
+table th.title{
+background-color:#e3e685;
+}
+
+table caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+table .xhx{
+border-bottom:0px solid #aaa;
+}
+
+table .font16{
+font-size:12px;
+
+}
+
+table tr{
+height:6px;
+}
+table tr>th{
+font-size:16px;
+}
+
+table tr>td{
+font-size:1em;text-align:center;
+width:30%;
+}
+table tr>td+td{
+text-align:left;
+width:70%;
+font-size:1em;
+}
+table tr>td+td+td{
+font-size:1em;
+
+}
+table tr>td+td+td+td{
+font-size:1em;text-align:center;
+}table tr>td+td+td+td+td{
+font-size:1em;text-align:left;
+}
+table tr>td+td+td+td+td+td{
+font-size:1em;
+}
+
+
+table tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <p align="left"><strong>MAC</strong><strong>原型机 </strong></p>
+  <p align="left"><a href="http://folklore.org/StoryView.py?project=Macintosh&amp;story=Macintosh_Prototypes.txt&amp;sortOrder=Sort%20by%20Date&amp;detail=medium">Macintosh Prototypes</a></p>
+<p>
+    作者：丹尼尔·考奇 </p>
+<p>
+    时间：1981 年 6 月</p>
+<p>
+    人物：丹·考奇、伯瑞尔·史密斯、布莱恩·霍华德、法伦、杰里·曼诺可、乔治·克劳、史蒂夫·乔布斯、温戴尔·桑德、克蕾特·阿斯奇兰德</p>
+<p>
+    概要：麦金塔数字电路板的进化 </p>
+<p>
+  <img border="0" width="320" height="305" src="MAC原型机_clip_image001.jpg" alt="mac-wirewrap83a.jpg" /></p>
+<p>
+  </p>
+<p>
+    麦金塔原型机 5 号主板 </p>
+<p>
+    1981 年 1 月我加入麦金塔项目组时，他们只有一台手工绕线制成的采用 68000 处理器的原型机。我的第一个任务就是跟布莱恩·霍华德（外号「道奇大叔」）一起多做出几台原型机。布莱恩原本是杰夫手下的程序员，但实际上他却为伯瑞尔做了很多硬件的制作和测试工作。我和布莱恩通力协作，一共为程序员们又制作了四五台原型机。我们使用的是通用型 8” x 9” 印刷电路板。如果手头材料齐全，制作一台原型机只需要几天时间，并且自己绕接原型机的好处是更改设计非常方便。事实上，这些原型机电路板一直不断地更新，我使用的 5 号原型机电路板到了 1982 年还升级了一次，在原有设计上增加了 Z8530 串行通信控制器（SCC）、沃兹式磁盘控制器，以及特殊任务组件（STF）的时钟。 </p>
+<p>
+    麦金塔的基本架构很简单，（当然现在的小孩可能会说怎么上面那么多东西啊），不算 68000 处理器和 16 个随机存取存储器（RAM）芯片的话，一共有32个集成电路芯片。其中包括：由一个可编辑逻辑阵列芯片（PAL）和几个触发器（flipflop）制成的时间状态机（TSM），由一个可编辑逻辑阵列芯片和几个计数器制成的线性地址生成器（LAG），还有一个负责总线控制的 PAL，四个为 RAM 寻址用的复用器（multiplexor），两个可擦除可编程存储器（EPROM），几个总线驱动器，一个视频输出移位寄存器，  一个负责处理键盘鼠标接口等任务、有 16 个可编程输入输出（I/O）接口的 6522 外设接口适配器（PIA）。这些便是核心架构的元件，另外还接了两个串行接口，内外部软盘驱动器接口，实时时钟芯片和音频输出。PAL 是单体存储器公司（MMI）出品的可编程逻辑阵列，可以定义 8 种输出的的逻辑方程式。以今天的标准来看，它能耗巨大，但是便宜好用，伯瑞尔用起来得心应手。 </p>
+<p>
+    原型机内部自然就是个接满了线的迷宫。一天早上我们来到办公室，惊奇的发现一台原型机竟然烧了，原来前一天晚上伯瑞尔在上面做了些改动，不知怎么的就短路了。伯瑞尔急着让这台原型机起死回生，决定使用「暴力疗法」，他拔掉了所有的芯片，然后直接把 120 伏交流电源和地线接起来，把短路的地方给「烧开」。一看就知道，这种办法极不靠谱。最终我也没看见那台机器好起来。 </p>
+<p>
+    1981 年晚些时候，我们把克蕾特·阿斯奇兰德从  苹果 III/III 部门调来给麦金塔的印刷电路板布线。从 1981 年第一个算起到 1983 年最终版为止，她反复设计了 8 个。以现在的眼光看，它们绝对称得上是古董了，没有一个元件是直接插在主板上的。下面让我们把这8块主板一一列出来。 </p>
+<p>
+  <strong>#1 </strong><strong>第一块麦金塔的印刷电路板，代号 MC1001-00，1981 年</strong></p>
+<p>
+    主板的周围一圈都是大洞，用于装上「栅栏」，也就是绕着主板绑一圈铜的导电条，然后将这圈铜导电条「栅栏」捆在地上或底座上，目的是尽量减少数字逻辑信号的电磁辐射。后来我们设法去掉了这圈「栅栏」，只是在主板后端绑上铜导电条。 </p>
+<p>
+  <strong>#2 </strong><strong>代号 MC1001-01，1981 年</strong></p>
+<p>
+    33 个 IC 芯片（不含 CPU 和 128KB 的 RAM），三个 EPROM，两个 6551 UART（串行端口），6522 PIA， 三个 PAL：分别用于 BMU、LAG 和 TSM。 </p>
+<p>
+  <strong>#3 </strong><strong>代号 MC1001-02，1982 年 2 月</strong></p>
+<p>
+    32 个 IC（不包括 CPU 和 RAM），Z8530  SCC，RMA 带宽由从一个字节增加到一个字（等于两个字节——编者注），这次只用了两个 EPROM 接口。根据我们的美学导师史蒂夫·乔布斯的特殊要求，RAM 芯片之间需要提高间距，以与其他芯片的排列距离一致，这个任务我们完成得不是太好：RAM 信号传输速率很高，走线延长必然导致噪声增大。所以在设计下一个版本的主板时，我们又拾回了原来的紧凑型设计。在 3 号原型机主板上我们还增加了一个新的特殊任务组件时钟芯片（STFCLK），用于跟踪实时的时钟，还可以保存系统预设参数。鼠标接口也移到了主板后面。还有增加了齐洛格公司（Zilog）的 Z8530 芯片，它集成了两个串行端口，可以运行新型高速同步串行模式。还集成了硬件识别比较寄存器，这样一来机器收到的信号包就可以由它完成硬件识别，而处理器只需要处理发送给这台麦金塔的服务包，数年之后 Appletalk 程序的实现正是利用了这项功能。Z8530 是一枚新款高效能芯片，跟 86000 一样，对于这样一台小型消费电子产品来说功能有点过于强大，但是史蒂夫·乔布斯再一次凭借预期的数百万购买需求，谈下了一个相当低的价格。这块主板也将 Apple II 时代的 6 针电源接口升级为 10 针的电源兼显示器复合接口，做到这点全靠我们将乔治·克劳拉进了麦金塔小组，他给自己发明的这个东西命名为「模拟接板」（analog borad），可以为主板和 CRT 显示器同时供电。在这个版本的原型机主板上，我们还没有采用沃兹式软盘控制器芯片，仍旧使用的是 Apple II 的磁盘控制器电路（由一个可编程只读存储器和一个锁存制成的状态机）。 </p>
+<p>
+  <strong>#4 </strong><strong>代号 MC1019-00，IBM 主板，1982 年夏</strong></p>
+<p>
+    IBM（「伯瑞尔一体机」的缩写）是我们自制的 64 针脚的超大规模集成电路（VLSI），集成了麦金塔的绝大部分核心部件，这一设计能降低成本，并防止逆向工程。很不幸，有一些很低级的问题一直困扰着我们这个设计，最后由于成本太高且风险太大，这个设计最终被迫放弃。在四号主板上我们已经安装上了沃兹式一体机，这是温戴尔·桑德在沃兹当年给 Apple II 写的软盘控制器基础上改进而成的设计。 </p>
+<p>
+  <strong>#5 </strong><strong>代号 MC1023-00 MAC512 主板，1982 年</strong>（正式支持 512 KB RAM，但仍只有 16 个芯片）</p>
+<p>
+    已经很接近最终完成版了，现在的这个原型机主板上一共有五个 PAL，分别用于 TSM、LAG、BMU0 和 BMU1，以及模拟音频生成器（ASG）。它还增加了一个 4 针脚的接口（J8），我记得我们这么做是为将来传输彩色和灰度画面作准备。 </p>
+<p>
+  <strong>#6 </strong><strong>代号 820-0086-00 MAC512，1983 年 5 月</strong>（法伦「MacMan」标志）</p>
+<p>
+    增加了第六个 PAL，用作时间信号生成器（TSG）。 </p>
+<p>
+  <strong>#7 </strong><strong>代号 820-0086-B</strong></p>
+<p>
+    「MacMan」的标志被我们去掉了，同时去掉的还有 J8 外部视频接口。 </p>
+<p>
+  <strong>#8 </strong><strong>代号 820-0086-C，最终版主板，1983 年</strong></p>
+<p>
+    我也不清楚到底在这个最终版本上面做了哪些改动，貌似仅仅去掉了一些部件，好在主板左下角空出来的地方打上「Macintosh」标识。 </p>
+<p>
+  <img border="0" width="400" height="278" src="MAC原型机_clip_image002.jpg" alt="mac-schematic_t.jpg" /></p>
+<p>
+  </p>
+<p>
+    麦金塔的电路图（点击可看大图） </p>
+<p>
+  <strong>麦金塔的电路图</strong> </p>
+<p>
+    麦金塔的电路图是由计算机制图小组的戴维·儒特绘制的，这个小组由硬件设计师杰里·曼诺可领导。根据业界常规，一套正式的麦金塔电路图要耗费 3 至 4 张 D 型纸，（译者注：D型纸尺寸为 24″ x 36″，通常用于建筑绘图），这样一来很多信号的传输路线就会来回跨越好几张图纸。1983 年初，麦金塔的电路设计陷入困顿，这时候我就在考虑用一种简略的方式来呈现电路图，最好压缩到一张纸大小，这样就能方便地挂到墙上来解决主板的问题。因为麦金塔的架构主要是依靠 PAL 来实现，而每一个 PAL 的输入输出都有一个名字，我就想到，可以用这些名字来设计一种混合型电路图，上面不用画出实际的信号线路（当然还是有一些省略不了），但每个芯片都保持他们在主板上实际的位置和朝向，然后再标示出来谁连接到谁上面。 </p>
+<p>
+    传统电路图的最大问题是，要在上面找出某条特定的信号很困难，实际上真正需要标明的是针脚的编号及其在芯片上所处的位置。传统电路图已不敷用，因为它根据功能来绘制芯片上的引脚位置，而不是引脚的实际位置。何不使用一种规定了样式的绘制方法，用输入输出的信号来命名每个部分的引脚——这就是我设计的电路图。当然，得附上引脚之间的连接列表，不过只要你熟悉主板架构，记住它们并不难。 </p>
+<p>
+    这种混合型电路图在麦金塔的计算机制图小组实在派不上用场，他们让我给它做一个注释，注明它不是正式文档，仅作为技术辅助使用。这都没什么，能在一张 11 x 17 的纸上而不是多张 D 型纸上来诊断主板的问题，这就让我知足了。现如今的电路图跟我的设计已颇为相似，不过他们通常还是要用掉很多多 8 ” x 11″（译者注：基本是  A4 纸的尺寸）的图纸拼接在一起，上面密密麻麻布满芯片，想找到一个引脚还是很难的一件事情。（<em>翻译：Colin Yang；校对：Jix Huang</em>） </p>
+<p>
+    参考文献 </p>
+<p>
+    http://apple4.us/2009/09/revolution-019.html</p>
+
+
+</div>
+</body>
+</html>

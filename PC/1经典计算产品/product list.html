@@ -1,0 +1,4005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base target="_blank" />
+ 
+<title></title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px solid #aaa;
+font-size:1em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:1em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<table id="tbrowser">
+    <col width="10%" />
+	<col width="40%" />
+	<col width="50%" />
+	<thead>
+    <tr>
+      <th width="10%">Year</td>
+      <th width="40%">Product</td>
+      <th width="50%">Company or Man</td>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WHIRLWIND" title="WHIRLWIND">1951</a></td>
+    <td>whirlwind</td><td>mit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-UNIVAC%201" title="UNIVAC 1">1951</a></td>
+    <td>univac 1</td><td>remington rand</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DEUCE" title="DEUCE">1955</a></td>
+    <td>deuce</td><td>english electric co.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AN/FSQ-7" title="AN/FSQ-7">1958</a></td>
+    <td>an/fsq-7</td><td>ibm</td>
+  </tr>
+  <tr>
+<td colspan="3" class="nd"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EC-1" title="EC-1">1960</a></td>
+    <td>ec-1</td><td>heathkit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MECIPT" title="MECIPT">1961</a></td>
+    <td>mecipt</td><td>mecipt</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CELLATRON%208205" title="CELLATRON 8205">1963</a></td>
+    <td>cellatron 8205</td><td>büromaschinenwerke zella-mehlis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PDP-8" title="PDP-8">1965</a></td>
+    <td>pdp-8</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PROGRAMMA%20P101/P102" title="PROGRAMMA P101/P102">1965</a></td>
+    <td>programma p101/p102</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DDP-516" title="DDP-516">1966</a></td>
+    <td>ddp-516</td><td>honeywell</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-H316" title="H316">1969</a></td>
+    <td>h316 kitchen computer</td><td>honeywell</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="nd"></td>
+      </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ANALOG%20COMPUTER" title="ANALOG COMPUTER">1971</a></td>
+    <td>analog computer</td><td>compumedic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DATAPOINT%202200" title="DATAPOINT 2200">1971</a></td>
+    <td>datapoint 2200</td><td>datapoint corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABACUS%20EDUCATIONAL%20COMPUTER" title="ABACUS EDUCATIONAL COMPUTER">1971</a></td>
+    <td>abacus educational computer</td><td>feedback</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9810" title="HP-9810">1971</a></td>
+    <td>hp-9810</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KENBAK-1" title="KENBAK-1">1971</a></td>
+    <td>kenbak-1</td><td>kenbak computer company</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-832" title="832">1971</a></td>
+    <td>832</td><td>national radio institute</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9830" title="HP-9830">1972</a></td>
+    <td>hp-9830</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Q1%20SYSTEM" title="Q1 SYSTEM">1972</a></td>
+    <td>q1 system</td><td>q1 corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-INTELLEC%20SERIES" title="INTELLEC SERIES">1973</a></td>
+    <td>intellec series</td><td>intel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRAL-N" title="MICRAL-N">1973</a></td>
+    <td>micral-n</td><td>r2e</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TA-1000" title="TA-1000">1973</a></td>
+    <td>ta-1000</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-65" title="HP-65">1974</a></td>
+    <td>hp-65</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MINICOMPUTER" title="MINICOMPUTER">1974</a></td>
+    <td>minicomputer</td><td>mark-8</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALCYANE" title="ALCYANE">1974</a></td>
+    <td>alcyane</td><td>mbc</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MCM%2070" title="MCM 70">1974</a></td>
+    <td>mcm 70 / 700</td><td>mcm computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DOLPHIN" title="DOLPHIN">1975</a></td>
+    <td>dolphin</td><td>brd</td>
+  </tr>
+  <tr>
+    <td>1975</td>
+    <td>8001 / 8051</td><td>compucolor corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-5100" title="5100">1975</a></td>
+    <td>5100</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M18%20SERIES" title="M18 SERIES">1975</a></td>
+    <td>m18 series</td><td>ice-felix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-JOLT" title="JOLT">1975</a></td>
+    <td>jolt</td><td>microcomputer associates inc.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALTAIR%20680" title="ALTAIR 680">1975</a></td>
+    <td>altair 680</td><td>mits</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALTAIR%208800" title="ALTAIR 8800">1975</a></td>
+    <td>altair 8800</td><td>mits</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KIM%201" title="KIM 1">1975</a></td>
+    <td>kim 1</td><td>mos technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TIM" title="TIM">1975</a></td>
+    <td>tim</td><td>mos technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HANTU" title="HANTU">1975</a></td>
+    <td>hantu</td><td>nbi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OP-1" title="OP-1">1975</a></td>
+    <td>op-1</td><td>ontel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-6800" title="6800">1975</a></td>
+    <td>6800</td><td>south west technical products corporation</td>
+  </tr>
+  <tr>
+<td colspan="3" class="nd"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%201" title="APPLE 1">1976</a></td>
+    <td>apple 1</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEM%20I/II/III" title="SYSTEM I/II/III">1976</a></td>
+    <td>system i/ii/iii</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z-1" title="Z-1">1976</a></td>
+    <td>z-1</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ET-3400" title="ET-3400">1976</a></td>
+    <td>et-3400</td><td>heathkit / zenith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9825" title="HP-9825">1976</a></td>
+    <td>hp-9825</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IA-7301" title="IA-7301">1976</a></td>
+    <td>ia-7301</td><td>iasis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8080" title="8080">1976</a></td>
+    <td>8080</td><td>imsai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MCM%20800" title="MCM 800">1976</a></td>
+    <td>mcm 800</td><td>mcm computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALTAIR%208800B" title="ALTAIR 8800B">1976</a></td>
+    <td>altair 8800b</td><td>mits</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-INTROKIT" title="INTROKIT">1976</a></td>
+    <td>introkit</td><td>national semiconductor</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK%2080" title="TK 80">1976</a></td>
+    <td>tk 80</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-POLY%2088" title="POLY 88">1976</a></td>
+    <td>poly 88</td><td>polymorphic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SOL%20-%2010/20" title="SOL</td><td>10/20">1976</a></td>
+    <td>sol 10/20</td>
+    <td>processor technology corp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COSMAC%20MICROTUTOR" title="COSMAC MICROTUTOR">1976</a></td>
+    <td>cosmac microtutor</td><td>rca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AIM%2065" title="AIM 65">1976</a></td>
+    <td>aim 65</td><td>rockwell</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LCM-1001" title="LCM-1001">1976</a></td>
+    <td>lcm-1001</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VECTOR%201" title="VECTOR 1">1976</a></td>
+    <td>vector 1</td><td>vector graphics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20II" title="APPLE II">1977</a></td>
+    <td>apple ii</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-2650" title="2650">1977</a></td>
+    <td>2650</td><td>central data</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PET%202001" title="PET 2001">1977</a></td>
+    <td>pet 2001</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VERSATILE%202" title="VERSATILE 2">1977</a></td>
+    <td>versatile 2</td><td>computer data systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z-2" title="Z-2">1977</a></td>
+    <td>z-2</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PCS%2080" title="PCS 80">1977</a></td>
+    <td>pcs 80</td><td>data soft</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VDP%2080" title="VDP 80">1977</a></td>
+    <td>vdp 80</td><td>data soft</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DE%2068DT" title="DE 68DT">1977</a></td>
+    <td>de 68dt</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-F85" title="F85">1977</a></td>
+    <td>f85</td><td>durango</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EPA-6800" title="EPA-6800">1977</a></td>
+    <td>epa-6800</td><td>electronic product ass.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EX3000" title="EX3000">1977</a></td>
+    <td>ex3000</td><td>extensis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-H8" title="H8">1977</a></td>
+    <td>h8</td><td>heathkit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8048" title="8048">1977</a></td>
+    <td>8048</td><td>imsai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PCS%2080" title="PCS 80">1977</a></td>
+    <td>pcs 80</td><td>imsai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VDP%2080" title="VDP 80">1977</a></td>
+    <td>vdp 80</td><td>imsai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SDK-85" title="SDK-85">1977</a></td>
+    <td>sdk-85</td><td>intel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPUCOLOR%20II" title="COMPUCOLOR II">1977</a></td>
+    <td>compucolor ii</td><td>isc (intelligent systems corp)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EC-1035" title="EC-1035">1977</a></td>
+    <td>ec-1035</td><td>isot</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRO%20M16" title="MICRO M16">1977</a></td>
+    <td>micro m16</td><td>micromega</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-6800" title="6800">1977</a></td>
+    <td>6800</td><td>msi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HORIZON" title="HORIZON">1977</a></td>
+    <td>horizon</td><td>northstar</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MODEL%20500" title="MODEL 500">1977</a></td>
+    <td>model 500</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P6060" title="P6060">1977</a></td>
+    <td>p6060</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEM%208813" title="SYSTEM 8813">1977</a></td>
+    <td>system 8813</td><td>polymorphic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COSMAC%20VIP" title="COSMAC VIP">1977</a></td>
+    <td>cosmac vip</td><td>rca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RM-380Z" title="RM-380Z">1977</a></td>
+    <td>rm-380z</td><td>research machines</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SM-B-80TC" title="SM-B-80TC">1977</a></td>
+    <td>sm-b-80tc</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SM-B-80TE" title="SM-B-80TE">1977</a></td>
+    <td>sm-b-80te</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%20I" title="TRS 80 MODEL I">1977</a></td>
+    <td>trs 80 model i</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TERMINAL%20PROCESSOR" title="TERMINAL PROCESSOR">1977</a></td>
+    <td>terminal processor</td><td>tei</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VECTOR%203" title="VECTOR 3">1977</a></td>
+    <td>vector 3 (vip)</td><td>vector graphics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACS-8000" title="ACS-8000">1978</a></td>
+    <td>acs-8000</td><td>altos computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VT78" title="VT78">1978</a></td>
+    <td>vt78</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SORCERER" title="SORCERER">1978</a></td>
+    <td>sorcerer</td><td>exidy</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-5000" title="5000">1978</a></td>
+    <td>5000</td><td>i.s.t.c. (informatic systèmes télécom)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LX-500%20SERIES" title="LX-500 SERIES">1978</a></td>
+    <td>lx-500 series</td><td>logabax</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NASCOM%201" title="NASCOM 1">1978</a></td>
+    <td>nascom 1</td><td>lucas</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%2080" title="ABC 80">1978</a></td>
+    <td>abc 80</td><td>luxor</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPO%20BS/80" title="COMPO BS/80">1978</a></td>
+    <td>compo bs/80</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHALLENGER%20II" title="CHALLENGER II">1978</a></td>
+    <td>challenger ii</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHALLENGER%20III" title="CHALLENGER III">1978</a></td>
+    <td>challenger iii</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SUPERBOARD%20II" title="SUPERBOARD II">1978</a></td>
+    <td>superboard ii</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P/330" title="P/330">1978</a></td>
+    <td>p/330</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P5000%20SERIES" title="P5000 SERIES">1978</a></td>
+    <td>p5000 series</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PROTEUS%20III" title="PROTEUS III">1978</a></td>
+    <td>proteus iii</td><td>proteus international</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SUPERELF" title="SUPERELF">1978</a></td>
+    <td>superelf</td><td>rca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%2040K" title="MZ 40K">1978</a></td>
+    <td>mz 40k</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SME" title="SME">1978</a></td>
+    <td>sme</td><td>siemens</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-INSTRUCTOR%2050" title="INSTRUCTOR 50">1978</a></td>
+    <td>instructor 50</td><td>signetics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MK%2014" title="MK 14">1978</a></td>
+    <td>mk 14</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M%20170" title="M 170">1978</a></td>
+    <td>m 170</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M-100ACE" title="M-100ACE">1978</a></td>
+    <td>m-100ace</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYM1" title="SYM1">1978</a></td>
+    <td>sym1</td><td>synertek</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEM%201" title="SYSTEM 1">1979</a></td>
+    <td>system 1</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACS-1007" title="ACS-1007">1979</a></td>
+    <td>acs-1007</td><td>advanced computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%2020" title="ABC 20">1979</a></td>
+    <td>abc 20</td><td>ai electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%2024" title="ABC 24">1979</a></td>
+    <td>abc 24</td><td>ai electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IMAGINATION%20MACHINE" title="IMAGINATION MACHINE">1979</a></td>
+    <td>imagination machine</td><td>apf</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20II+" title="APPLE II+">1979</a></td>
+    <td>apple ii+</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEMX" title="SYSTEMX">1979</a></td>
+    <td>systemx</td><td>asci</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-400" title="400">1979</a></td>
+    <td>400</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-800" title="800">1979</a></td>
+    <td>800</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMMUNICATOR" title="COMMUNICATOR">1979</a></td>
+    <td>communicator</td><td>comart</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PET%20200" title="PET 200">1979</a></td>
+    <td>pet 200</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PET%2030XX" title="PET 30XX">1979</a></td>
+    <td>pet 30xx</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-UK-101" title="UK-101">1979</a></td>
+    <td>uk-101</td><td>compukit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-300%20PROFESSIONAL%20SERIES" title="300 PROFESSIONAL SERIES">1979</a></td>
+    <td>300 professional series</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-H-89" title="H-89">1979</a></td>
+    <td>h-89</td><td>heathkit / zenith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-5036A" title="HP-5036A">1979</a></td>
+    <td>hp-5036a</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DAI" title="DAI">1979</a></td>
+    <td>dai</td><td>indata</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SDK-86" title="SDK-86">1979</a></td>
+    <td>sdk-86</td><td>intel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HOME%20COMPUTER%20SYSTEM" title="HOME COMPUTER SYSTEM">1979</a></td>
+    <td>home computer system</td><td>interact</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DPS-1" title="DPS-1">1979</a></td>
+    <td>dps-1</td><td>intersystems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SILEX" title="SILEX">1979</a></td>
+    <td>silex</td><td>leanord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NASCOM%202" title="NASCOM 2">1979</a></td>
+    <td>nascom 2</td><td>lucas</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MD" title="MD">1979</a></td>
+    <td>md</td><td>mostek</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208001" title="PC 8001">1979</a></td>
+    <td>pc 8001</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHALLENGER%201P" title="CHALLENGER 1P">1979</a></td>
+    <td>challenger 1p</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHALLENGER%204P" title="CHALLENGER 4P">1979</a></td>
+    <td>challenger 4p</td><td>ohio scientific</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PT501" title="PT501">1979</a></td>
+    <td>pt501</td><td>open university, uk</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IMKO-1/2%20&amp;%20PRAVETZ%2082" title="IMKO-1/2 &amp; PRAVETZ 82">1979</a></td>
+    <td>imko-1/2 &amp; pravetz 82</td><td>pravetz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRAL%208030%20SERIES" title="MICRAL 8030 SERIES">1979</a></td>
+    <td>micral 8030 series</td><td>r2e</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BLACK%20BOX" title="BLACK BOX">1979</a></td>
+    <td>black box</td><td>rair microcomputer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-7000" title="7000">1979</a></td>
+    <td>7000</td><td>sanco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PHC%203000" title="PHC 3000">1979</a></td>
+    <td>phc 3000</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SBS%208000" title="SBS 8000">1979</a></td>
+    <td>sbs 8000</td><td>sbs</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GAZELLE" title="GAZELLE">1979</a></td>
+    <td>gazelle</td><td>seattle computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%2080C" title="MZ 80C">1979</a></td>
+    <td>mz 80c</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%2080K" title="MZ 80K">1979</a></td>
+    <td>mz 80k</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ATHENA" title="ATHENA">1979</a></td>
+    <td>athena</td><td>solid state technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M223%20SERIES" title="M223 SERIES">1979</a></td>
+    <td>m223 series</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-S/09" title="S/09">1979</a></td>
+    <td>s/09</td><td>south west technical products corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%20II" title="TRS 80 MODEL II">1979</a></td>
+    <td>trs 80 model ii</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROTAN%2065" title="MICROTAN 65">1979</a></td>
+    <td>microtan 65</td><td>tangerine</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ" title="MZ">1979</a></td>
+    <td>mz</td><td>vector graphics</td>
+  </tr>
+  <tr>
+<td colspan="3" class="nd"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ATOM" title="ATOM">1980</a></td>
+    <td>atom</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td>1980</td>
+    <td>j100 j500</td>
+    <td>am international jacquard systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20III" title="APPLE III">1980</a></td>
+    <td>apple iii</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRAL%2080/22" title="MICRAL 80/22">1980</a></td>
+    <td>micral 80/22</td><td>bull</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TTX%2080" title="TTX 80">1980</a></td>
+    <td>ttx 80 / 85 / 90</td><td>bull</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-65" title="65">1980</a></td>
+    <td>65</td><td>cab</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PET/CBM%2040XX" title="PET/CBM 40XX">1980</a></td>
+    <td>pet/cbm 40xx</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VIC-1001" title="VIC-1001">1980</a></td>
+    <td>vic-1001</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MINITERM" title="MINITERM">1980</a></td>
+    <td>miniterm</td><td>computer devices incorporated</td>
+  </tr>
+  <tr>
+    <td>1980</td>
+    <td>video genie 1 / eg-3003</td><td>eaca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EAGLE" title="EAGLE">1980</a></td>
+    <td>eagle</td><td>eagle computers inc.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NEW%20BRAIN" title="NEW BRAIN">1980</a></td>
+    <td>new brain</td><td>grundy</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-85" title="HP-85">1980</a></td>
+    <td>hp-85</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MB-6890" title="MB-6890">1980</a></td>
+    <td>mb-6890 / basic master level 3</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-5120" title="5120">1980</a></td>
+    <td>5120</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SUPERBRAIN" title="SUPERBRAIN">1980</a></td>
+    <td>superbrain</td><td>intertec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PSI%2080" title="PSI 80">1980</a></td>
+    <td>psi 80</td><td>kontron</td>
+  </tr>
+  <tr>
+    <td>1980</td>
+    <td>cp1 / computer praxis</td><td>kosmos</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROACE" title="MICROACE">1980</a></td>
+    <td>microace</td><td>microace</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VICTOR%20LAMBDA" title="VICTOR LAMBDA">1980</a></td>
+    <td>victor lambda</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROWRITER" title="MICROWRITER">1980</a></td>
+    <td>microwriter</td><td>microwriter</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BOSS" title="BOSS">1980</a></td>
+    <td>boss</td><td>olympia</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PCC%202000" title="PCC 2000">1980</a></td>
+    <td>pcc 2000</td><td>ordisor</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P2000%20T/M" title="P2000 T/M">1980</a></td>
+    <td>p2000 t/m</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-500%20SERIES" title="500 SERIES">1980</a></td>
+    <td>500 series</td><td>quay corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRAL%208020%20SERIES" title="MICRAL 8020 SERIES">1980</a></td>
+    <td>micral 8020 series</td><td>r2e</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RC%20700%20PICCOLO" title="RC 700 PICCOLO">1980</a></td>
+    <td>rc 700 piccolo</td><td>regnecentralen</td>
+  </tr>
+  <tr>
+    <td>1980</td>
+    <td>pc-1210 / 1211 / 1212</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-3101" title="PC-3101">1980</a></td>
+    <td>pc-3101</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-3201" title="PC-3201">1980</a></td>
+    <td>pc-3201</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%2080" title="ZX 80">1980</a></td>
+    <td>zx 80</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M203%20MARK%20II" title="M203 MARK II">1980</a></td>
+    <td>m203 mark ii</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BUBCOM%2080" title="BUBCOM 80">1980</a></td>
+    <td>bubcom 80</td><td>system formulet inc.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COLOR%20COMPUTER" title="COLOR COMPUTER">1980</a></td>
+    <td>color computer</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20PC-1" title="TRS 80 PC-1">1980</a></td>
+    <td>trs 80 pc-1</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DS990" title="DS990">1980</a></td>
+    <td>ds990</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T%20200" title="T 200">1980</a></td>
+    <td>t 200</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TUSCAN%20S-100" title="TUSCAN S-100">1980</a></td>
+    <td>tuscan s-100</td><td>transam</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALPHATRONIC" title="ALPHATRONIC">1980</a></td>
+    <td>alphatronic</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-860" title="860">1980</a></td>
+    <td>860</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BBC%20MODEL%20A" title="BBC MODEL A">1981</a></td>
+    <td>bbc model a / b / b+</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SMP-8" title="SMP-8">1981</a></td>
+    <td>smp-8</td><td>add-x système</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACS-580" title="ACS-580">1981</a></td>
+    <td>acs-580</td><td>altos computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MIMI%20802" title="MIMI 802">1981</a></td>
+    <td>mimi 802 / 803 / 804</td><td>british micro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CX-1" title="CX-1">1981</a></td>
+    <td>cx-1 / bx-3</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FX-702P" title="FX-702P">1981</a></td>
+    <td>fx-702p</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FX-9000P" title="FX-9000P">1981</a></td>
+    <td>fx-9000p</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CBM%2080XX" title="CBM 80XX">1981</a></td>
+    <td>cbm 80xx</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SUPERPET" title="SUPERPET">1981</a></td>
+    <td>superpet</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VIC%2020" title="VIC 20">1981</a></td>
+    <td>vic 20</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MENTA" title="MENTA">1981</a></td>
+    <td>menta</td><td>dataman designs</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HUSKY" title="HUSKY">1981</a></td>
+    <td>husky</td><td>dvw micro-electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACE%20100" title="ACE 100">1981</a></td>
+    <td>ace 100</td><td>franklin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%208" title="FM 8">1981</a></td>
+    <td>fm 8</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-801" title="801">1981</a></td>
+    <td>801</td><td>gemini</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9826" title="HP-9826">1981</a></td>
+    <td>hp-9826</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-9100" title="9100">1981</a></td>
+    <td>9100</td><td>holborn</td>
+  </tr>
+  <tr>
+    <td>1981</td>
+    <td>pc model 5150</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PERSONAL%20COMPUTER" title="PERSONAL COMPUTER">1981</a></td>
+    <td>personal computer</td><td>icl</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OC-8880" title="OC-8880">1981</a></td>
+    <td>oc-8880 litton</td><td>monroe</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NASCOM%203" title="NASCOM 3">1981</a></td>
+    <td>nascom 3</td><td>lucas</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%20800%20SERIES" title="ABC 800 SERIES">1981</a></td>
+    <td>abc 800 series</td><td>luxor</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NATIONAL%20JR%20100" title="NATIONAL JR 100">1981</a></td>
+    <td>national jr 100</td><td>matsushita</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-82" title="TK-82">1981</a></td>
+    <td>tk-82</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-83" title="TK-83">1981</a></td>
+    <td>tk-83</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HECTOR%201" title="HECTOR 1">1981</a></td>
+    <td>victor/hector 1</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MULTI%2016" title="MULTI 16">1981</a></td>
+    <td>multi 16</td><td>mitsubishi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WDR-1-BIT%20COMPUTER" title="WDR-1-BIT COMPUTER">1981</a></td>
+    <td>wdr-1-bit computer</td><td>motorola</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF-1%20A/B" title="MPF-1 A/B">1981</a></td>
+    <td>mpf-1 a/b</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MUPID" title="MUPID">1981</a></td>
+    <td>mupid</td><td>mupid</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%206001" title="PC 6001">1981</a></td>
+    <td>pc 6001</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208801" title="PC 8801">1981</a></td>
+    <td>pc 8801</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HEKTOR%202" title="HEKTOR 2">1981</a></td>
+    <td>hektor 2</td><td>open university, uk</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OSBORNE%201" title="OSBORNE 1">1981</a></td>
+    <td>osborne 1</td><td>osborne corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HHC" title="HHC">1981</a></td>
+    <td>hhc</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-JD%20SERIES" title="JD SERIES">1981</a></td>
+    <td>jd series</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GALEB" title="GALEB">1981</a></td>
+    <td>galeb</td><td>pel varazdin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-POLY%201%20EDUCATIONAL%20COMPUTER" title="POLY 1 EDUCATIONAL COMPUTER">1981</a></td>
+    <td>poly 1 educational computer</td><td>polycorp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTAL" title="PORTAL">1981</a></td>
+    <td>portal</td><td>r2e</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LINK%20480Z" title="LINK 480Z">1981</a></td>
+    <td>link 480z</td><td>research machines</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AIM%2065/40" title="AIM 65/40">1981</a></td>
+    <td>aim 65/40</td><td>rockwell</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%2080B" title="MZ 80B">1981</a></td>
+    <td>mz 80b</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1981</td>
+    <td>pc-1500 / pc-1500a</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SIG-NET" title="SIG-NET">1981</a></td>
+    <td>sig-net</td><td>shelton instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%2081" title="ZX 81">1981</a></td>
+    <td>zx 81</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GOUPIL%202" title="GOUPIL 2">1981</a></td>
+    <td>goupil 2</td><td>smt</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROMACHINE%202000%20ET%203000" title="MICROMACHINE 2000 ET 3000">1981</a></td>
+    <td>micromachine 2000 et 3000</td><td>symag informatique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-2000" title="2000">1981</a></td>
+    <td>2000</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%20III" title="TRS 80 MODEL III">1981</a></td>
+    <td>trs 80 model iii</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TI%2099" title="TI 99">1981</a></td>
+    <td>ti 99 / 4a</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TI-55-II" title="TI-55-II">1981</a></td>
+    <td>ti-55-ii</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PASOPIA" title="PASOPIA">1981</a></td>
+    <td>pasopia</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TA-1100" title="TA-1100">1981</a></td>
+    <td>ta-1100</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-150" title="150">1981</a></td>
+    <td>150</td><td>wicat</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-820" title="820">1981</a></td>
+    <td>820</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACCESS%20COMPUTER" title="ACCESS COMPUTER">1982</a></td>
+    <td>access computer</td><td>access computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACT-800" title="ACT-800">1982</a></td>
+    <td>act-800</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SMP-5" title="SMP-5">1982</a></td>
+    <td>smp-5</td><td>add-x système</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%2026" title="ABC 26">1982</a></td>
+    <td>abc 26</td><td>ai electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AI-M16" title="AI-M16">1982</a></td>
+    <td>ai-m16</td><td>ai electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20SERIES" title="1000 SERIES">1982</a></td>
+    <td>1000 series</td><td>alpha micro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SERIE%205" title="SERIE 5">1982</a></td>
+    <td>serie 5</td><td>altos computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROBEE%2032" title="MICROBEE 32">1982</a></td>
+    <td>microbee 32</td><td>applied technologies</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1200%20XL" title="1200 XL">1982</a></td>
+    <td>1200 xl</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1450%20XLD" title="1450 XLD">1982</a></td>
+    <td>1450 xld</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-800%20XL" title="800 XL">1982</a></td>
+    <td>600 / 800 xl</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AVC%20777" title="AVC 777">1982</a></td>
+    <td>avc 777</td><td>aval</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AVC%20777" title="AVC 777">1982</a></td>
+    <td>avc 777 j2</td><td>aval</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMP%202" title="COMP 2">1982</a></td>
+    <td>comp 2</td><td>avt electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AX-20" title="AX-20">1982</a></td>
+    <td>ax-20</td><td>axel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BASIS%20108" title="BASIS 108">1982</a></td>
+    <td>basis 108</td><td>basis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BR-1000M" title="BR-1000M">1982</a></td>
+    <td>br-1000m</td><td>brascom</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-YD-8110" title="YD-8110">1982</a></td>
+    <td>yd-8110</td><td>c.itoh</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LYNX" title="LYNX">1982</a></td>
+    <td>lynx</td><td>camputers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AS-100" title="AS-100">1982</a></td>
+    <td>as-100</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FP%20200" title="FP 200">1982</a></td>
+    <td>fp 200</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FX-700P" title="FX-700P">1982</a></td>
+    <td>fx-700p</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PB-100" title="PB-100">1982</a></td>
+    <td>pb-100</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-2683" title="2683">1982</a></td>
+    <td>2683</td><td>cifer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPC" title="MPC">1982</a></td>
+    <td>mpc</td><td>columbia data products</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C64" title="C64">1982</a></td>
+    <td>c64</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>max machine / ultimax / vc-10</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PROF80" title="PROF80">1982</a></td>
+    <td>prof80</td><td>conitec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WORKSLATE" title="WORKSLATE">1982</a></td>
+    <td>workslate</td><td>convergent technologies</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CONCEPT" title="CONCEPT">1982</a></td>
+    <td>concept</td><td>corvus systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C10" title="C10">1982</a></td>
+    <td>c10</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEME%200" title="SYSTEME 0">1982</a></td>
+    <td>systeme 0</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DY%2080" title="DY 80">1982</a></td>
+    <td>dy 80</td><td>darlay</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ASSOCIATE" title="ASSOCIATE">1982</a></td>
+    <td>associate</td><td>data technology industries</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VZ200" title="VZ200">1982</a></td>
+    <td>vz200</td><td>dick smith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DECMATE%20II" title="DECMATE II">1982</a></td>
+    <td>decmate ii</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VT-180" title="VT-180">1982</a></td>
+    <td>vt-180</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DMS-3/F" title="DMS-3/F">1982</a></td>
+    <td>dms-3/f</td><td>digital micro systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DMS-5000" title="DMS-5000">1982</a></td>
+    <td>dms-5000</td><td>digital micro systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DRAGON%2032" title="DRAGON 32">1982</a></td>
+    <td>dragon 32</td><td>dragon data ltd</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COLOUR%20GENIE" title="COLOUR GENIE">1982</a></td>
+    <td>colour genie / eg-2000</td><td>eaca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VIDEO%20GENIE%20III" title="VIDEO GENIE III">1982</a></td>
+    <td>video genie iii / eg-3200</td><td>eaca</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EAGLE%20PC" title="EAGLE PC">1982</a></td>
+    <td>eagle pc</td><td>eagle computers inc.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HX-20" title="HX-20">1982</a></td>
+    <td>hc / hx-20</td><td>epson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-QX%2010" title="QX 10">1982</a></td>
+    <td>qx 10</td><td>epson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-500%20SERIES" title="500 SERIES">1982</a></td>
+    <td>500 series</td><td>exxon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-32:16" title="32:16">1982</a></td>
+    <td>32:16</td><td>fortune</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACE%201000" title="ACE 1000">1982</a></td>
+    <td>ace 1000</td><td>franklin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2011%20AD" title="FM 11 AD">1982</a></td>
+    <td>fm 11 ad</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2011%20EX" title="FM 11 EX">1982</a></td>
+    <td>fm 11 ex</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%207" title="FM 7">1982</a></td>
+    <td>fm 7</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPASS" title="COMPASS">1982</a></td>
+    <td>compass</td><td>grid</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LE%20GUEPARD" title="LE GUEPARD">1982</a></td>
+    <td>le guepard</td><td>hbn computeur</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z-100" title="Z-100">1982</a></td>
+    <td>z-100/110/120</td><td>heathkit / zenith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-86" title="HP-86">1982</a></td>
+    <td>hp-86</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-87" title="HP-87">1982</a></td>
+    <td>hp-87</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9816" title="HP-9816">1982</a></td>
+    <td>hp-9816</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MB-16000" title="MB-16000">1982</a></td>
+    <td>mb-16000</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MB-6885" title="MB-6885">1982</a></td>
+    <td>mb-6885 / basic master jr</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MB-6891" title="MB-6891">1982</a></td>
+    <td>mb-6891 / basic master level 3 mark 2</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-INSTRUMENTS%20COMPUTER%20SYSTEM" title="INSTRUMENTS COMPUTER SYSTEM">1982</a></td>
+    <td>instruments computer system</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BETASYSTEM" title="BETASYSTEM">1982</a></td>
+    <td>betasystem</td><td>independant business systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IPDS" title="IPDS">1982</a></td>
+    <td>ipds</td><td>intel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-3030" title="3030">1982</a></td>
+    <td>3030</td><td>itt</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%20II" title="KAYPRO II">1982</a></td>
+    <td>kaypro ii</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OC-8820" title="OC-8820">1982</a></td>
+    <td>oc-8820 litton</td><td>monroe</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LNW-80" title="LNW-80">1982</a></td>
+    <td>lnw-80</td><td>lnw research</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MAX-80" title="MAX-80">1982</a></td>
+    <td>max-80</td><td>lobo drives international</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ECRITEXT" title="ECRITEXT">1982</a></td>
+    <td>ecritext</td><td>logystem</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NATIONAL%20JR%20200" title="NATIONAL JR 200">1982</a></td>
+    <td>national jr 200</td><td>matsushita</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VEGAS%206809" title="VEGAS 6809">1982</a></td>
+    <td>vegas 6809</td><td>microkit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DECISION%201" title="DECISION 1">1982</a></td>
+    <td>decision 1</td><td>morrow designs</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRO%20DECISION" title="MICRO DECISION">1982</a></td>
+    <td>micro decision</td><td>morrow designs</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXORSET%2030" title="EXORSET 30">1982</a></td>
+    <td>exorset 30</td><td>motorola</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MEK-6802-D5" title="MEK-6802-D5">1982</a></td>
+    <td>mek-6802-d5</td><td>motorola</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF%20II" title="MPF II">1982</a></td>
+    <td>mpf ii</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF-1%20PLUS" title="MPF-1 PLUS">1982</a></td>
+    <td>mpf-1 plus</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SKS%202500" title="SKS 2500">1982</a></td>
+    <td>sks 2500</td><td>nano</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APC" title="APC">1982</a></td>
+    <td>apc</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208001%20MK%202" title="PC 8001 MK 2">1982</a></td>
+    <td>pc 8001 mk 2</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ADVANTAGE" title="ADVANTAGE">1982</a></td>
+    <td>advantage</td><td>northstar</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IF%20800" title="IF 800">1982</a></td>
+    <td>if 800</td><td>oki</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OKI%20IF%20COM7" title="OKI IF COM7">1982</a></td>
+    <td>oki if com7</td><td>oki</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M20" title="M20">1982</a></td>
+    <td>m20</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>op 544 / op 644</td><td>olympia</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXECUTIVE" title="EXECUTIVE">1982</a></td>
+    <td>executive</td><td>osborne corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ATTACHE" title="ATTACHE">1982</a></td>
+    <td>attache</td><td>otrona</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-150" title="150">1982</a></td>
+    <td>150</td><td>peerless</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CP-200" title="CP-200">1982</a></td>
+    <td>cp-200</td><td>prologica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-QDP-100" title="QDP-100">1982</a></td>
+    <td>qdp-100</td><td>quasar data products</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-QDP-300" title="QDP-300">1982</a></td>
+    <td>qdp-300</td><td>quasar data products</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SAGE%20II" title="SAGE II">1982</a></td>
+    <td>sage ii</td><td>sage computer technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SPC-1000" title="SPC-1000">1982</a></td>
+    <td>spc-1000</td><td>samsung</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8000" title="8000">1982</a></td>
+    <td>8000</td><td>sanco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MBC%204000" title="MBC 4000">1982</a></td>
+    <td>mbc 4000mbc 4050</td>
+    <td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MBC-1000" title="MBC-1000">1982</a></td>
+    <td>mbc-1000</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MBC-1100" title="MBC-1100">1982</a></td>
+    <td>mbc-1100 / 1150</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MBC-1200" title="MBC-1200">1982</a></td>
+    <td>mbc-1200 / 1250</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MBC-55X" title="MBC-55X">1982</a></td>
+    <td>mbc-55x</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%202000" title="MZ 2000">1982</a></td>
+    <td>mz 2000</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>mz 80a mz 1200</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>pc-1250 pc-1251</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CZ-800C" title="CZ-800C">1982</a></td>
+    <td>x1 (cz-800c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%20SPECTRUM" title="ZX SPECTRUM">1982</a></td>
+    <td>zx spectrum</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>victor 9000 / sirius 1</td><td>sirius computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALPHA%20PLUS" title="ALPHA PLUS">1982</a></td>
+    <td>alpha plus mh</td><td>alcatel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TOTUS" title="TOTUS">1982</a></td>
+    <td>totus</td><td>sobrelec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SMC%2070" title="SMC 70">1982</a></td>
+    <td>smc 70</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M%205" title="M 5">1982</a></td>
+    <td>m 5</td><td>sord</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>m 68 / m 68 mx</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M23%20MARK%20III" title="M23 MARK III">1982</a></td>
+    <td>m23 mark iii</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-S-PLUS" title="S-PLUS">1982</a></td>
+    <td>s-plus</td><td>south west technical products corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROMACHINE%204000" title="MICROMACHINE 4000">1982</a></td>
+    <td>micromachine 4000</td><td>symag informatique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%2016" title="TRS 80 MODEL 16">1982</a></td>
+    <td>trs 80 model 16</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20PC-2" title="TRS 80 PC-2">1982</a></td>
+    <td>trs 80 pc-2</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20PC-4" title="TRS 80 PC-4">1982</a></td>
+    <td>trs 80 pc-4</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OM%208064" title="OM 8064">1982</a></td>
+    <td>om 8064</td><td>tashki computer system</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TS-802" title="TS-802">1982</a></td>
+    <td>ts-802</td><td>televideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TO%207" title="TO 7">1982</a></td>
+    <td>to 7</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000" title="1000">1982</a></td>
+    <td>1000</td><td>timex / sinclair</td>
+  </tr>
+  <tr>
+    <td>1982</td>
+    <td>pasopia 16 / t300 / pap</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T%20100" title="T 100">1982</a></td>
+    <td>t 100</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALPHATRONIC%20MODELL-P3" title="ALPHATRONIC MODELL-P3">1982</a></td>
+    <td>alphatronic modell-p3 / p4</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-80.2" title="80.2">1982</a></td>
+    <td>80.2</td><td>welect</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8000" title="8000">1983</a></td>
+    <td>8000</td><td>acc</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ELECTRON" title="ELECTRON">1983</a></td>
+    <td>electron</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20PC" title="APRICOT PC">1983</a></td>
+    <td>apricot pc</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACTRIX%20DS" title="ACTRIX DS">1983</a></td>
+    <td>actrix ds</td><td>actrix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ADVANCE%2086" title="ADVANCE 86">1983</a></td>
+    <td>advance 86</td><td>advance technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACS-586" title="ACS-586">1983</a></td>
+    <td>acs-586 / 686</td><td>altos computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20IIE" title="APPLE IIE">1983</a></td>
+    <td>apple iie</td><td>apple</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>lisa / lisa 2 mac xl</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1400%20XL" title="1400 XL">1983</a></td>
+    <td>1400 xl</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GUNDAM%20RX-78" title="GUNDAM RX-78">1983</a></td>
+    <td>gundam rx-78</td><td>bandai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BIT%2060" title="BIT 60">1983</a></td>
+    <td>bit 60</td><td>bit corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BIT%2090" title="BIT 90">1983</a></td>
+    <td>bit 90</td><td>bit corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-V-10" title="V-10">1983</a></td>
+    <td>v-10</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-V-20" title="V-20">1983</a></td>
+    <td>v-20</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X-07" title="X-07">1983</a></td>
+    <td>x-07</td><td>canon</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>fp 1000 / fp 1100</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PB-300" title="PB-300">1983</a></td>
+    <td>pb-300</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PB-700" title="PB-700">1983</a></td>
+    <td>pb-700</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PV-2000" title="PV-2000">1983</a></td>
+    <td>pv-2000</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-6809" title="6809">1983</a></td>
+    <td>6809</td><td>codimex</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ADAM" title="ADAM">1983</a></td>
+    <td>adam</td><td>coleco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ORANGE%202" title="ORANGE 2">1983</a></td>
+    <td>orange 2</td><td>collins international trading corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VP" title="VP">1983</a></td>
+    <td>vp</td><td>columbia data products</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CBM%20500/600%20SERIES" title="CBM 500/600 SERIES">1983</a></td>
+    <td>cbm 500/600 series</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CBM%20700%20SERIES" title="CBM 700 SERIES">1983</a></td>
+    <td>cbm 700 series</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EDUCATOR%2064" title="EDUCATOR 64">1983</a></td>
+    <td>educator 64</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SX/DX%2064" title="SX/DX 64">1983</a></td>
+    <td>sx/dx 64 executive computer</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEM%20816" title="SYSTEM 816">1983</a></td>
+    <td>system 816</td><td>compupro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ATHENA" title="ATHENA">1983</a></td>
+    <td>athena</td><td>computer &amp; electronic system</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DOT" title="DOT">1983</a></td>
+    <td>dot</td><td>computer devices incorporated</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMX%2035" title="COMX 35">1983</a></td>
+    <td>comx 35</td><td>comx</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CORTEX" title="CORTEX">1983</a></td>
+    <td>cortex</td><td>cw/p</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PROFI%20203" title="PROFI 203">1983</a></td>
+    <td>profi 203</td><td>david computer</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>dgt100 / dgt1000</td><td>digitus</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DRAGON%2064" title="DRAGON 64">1983</a></td>
+    <td>dragon 64</td><td>dragon data ltd</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HYPERION" title="HYPERION">1983</a></td>
+    <td>hyperion</td><td>dynalogic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SPIRIT" title="SPIRIT">1983</a></td>
+    <td>spirit</td><td>eagle computers inc.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACE%201200" title="ACE 1200">1983</a></td>
+    <td>ace 1200</td><td>franklin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACE%20500" title="ACE 500">1983</a></td>
+    <td>ace 500</td><td>franklin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2016%20BETA" title="FM 16 BETA">1983</a></td>
+    <td>fm 16 beta</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICRO%2016S" title="MICRO 16S">1983</a></td>
+    <td>micro 16s</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GALAKSIJA" title="GALAKSIJA">1983</a></td>
+    <td>galaksija</td><td>galaksija</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GAVILAN" title="GAVILAN">1983</a></td>
+    <td>gavilan</td><td>gavilan</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GEM%201000%20JUNIOR%20COMPUTER" title="GEM 1000 JUNIOR COMPUTER">1983</a></td>
+    <td>gem 1000 junior computer / charlemagne 999</td><td>gem</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GEM-2000" title="GEM-2000">1983</a></td>
+    <td>gem-2000 / 3000 / 4000</td><td>gem</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GALAXY" title="GALAXY">1983</a></td>
+    <td>galaxy</td><td>gemini</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-150" title="HP-150">1983</a></td>
+    <td>hp-150</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-9836" title="HP-9836">1983</a></td>
+    <td>hp-9836</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-B16%20EX" title="B16 EX">1983</a></td>
+    <td>b16 ex</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>h1 / h1e</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MB%206892" title="MB 6892">1983</a></td>
+    <td>mb 6892 / basic master level-3 mark-5</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20JUNIOR" title="PC JUNIOR">1983</a></td>
+    <td>pc junior</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MODEL%205160" title="MODEL 5160">1983</a></td>
+    <td>pc xt model 5160</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PARTNER" title="PARTNER">1983</a></td>
+    <td>partner</td><td>iskra delta</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-JUPITER%20ACE" title="JUPITER ACE">1983</a></td>
+    <td>jupiter ace</td><td>jupiter cantab</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%2010" title="KAYPRO 10">1983</a></td>
+    <td>kaypro 10</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%20IV" title="KAYPRO IV">1983</a></td>
+    <td>kaypro iv</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KYOTRONIC%2085" title="KYOTRONIC 85">1983</a></td>
+    <td>kyotronic 85</td><td>kyocera</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208300" title="PC 8300">1983</a></td>
+    <td>pc 8300</td><td>lambda electronics ltd</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SIL'Z%20MODEL%205" title="SIL'Z MODEL 5">1983</a></td>
+    <td>sil'z model 5 / 6</td><td>leanord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AGAT" title="AGAT">1983</a></td>
+    <td>agat</td><td>lemz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PERSONA%201600" title="PERSONA 1600">1983</a></td>
+    <td>persona 1600</td><td>logabax</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALICE" title="ALICE">1983</a></td>
+    <td>alice</td><td>matra hachette</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AQUARIUS" title="AQUARIUS">1983</a></td>
+    <td>aquarius</td><td>mattel electronics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALCYANE%20A6E" title="ALCYANE A6E">1983</a></td>
+    <td>alcyane a6e</td><td>mbc</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MTX%20500" title="MTX 500">1983</a></td>
+    <td>mtx 500 /512</td><td>memotech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BFM%20186" title="BFM 186">1983</a></td>
+    <td>bfm 186</td><td>metrologie</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-85" title="TK-85">1983</a></td>
+    <td>tk-85</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HECTOR%20HRX" title="HECTOR HRX">1983</a></td>
+    <td>hector hrx</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>victor / hector 2hr / 2hr +</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>ml-f48 / ml-f80</td><td>mitsubishi</td>
+  </tr>
+
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ML-FX1" title="ML-FX1">1983</a></td>
+    <td>ml-fx1 / fx2</td><td>mitsubishi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MULTI%208" title="MULTI 8">1983</a></td>
+    <td>multi 8</td><td>mitsubishi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MSX%201" title="MSX 1">1983</a></td>
+    <td>msx 1</td><td>msx</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF-III" title="MPF-III">1983</a></td>
+    <td>mpf-iii/312</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MUPID%202" title="MUPID 2">1983</a></td>
+    <td>mupid 2</td><td>mupid</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CF-2000" title="CF-2000">1983</a></td>
+    <td>cf-2000</td><td>national</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APC%20III" title="APC III">1983</a></td>
+    <td>apc iii</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%206001%20MK%202" title="PC 6001 MK 2">1983</a></td>
+    <td>pc 6001 mk 2</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208201A" title="PC 8201A">1983</a></td>
+    <td>pc 8201a</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%209801%20E" title="PC 9801 E">1983</a></td>
+    <td>pc 9801 e</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%209801%20F" title="PC 9801 F">1983</a></td>
+    <td>pc 9801 f</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OPLITE" title="OPLITE">1983</a></td>
+    <td>oplite</td><td>normerel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M10" title="M10">1983</a></td>
+    <td>m10</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGO" title="AMIGO">1983</a></td>
+    <td>amigo</td><td>ontel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HEKTOR%203" title="HEKTOR 3">1983</a></td>
+    <td>hektor 3</td><td>open university, uk</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ORIC%201" title="ORIC 1">1983</a></td>
+    <td>oric 1</td><td>oric</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ENCORE" title="ENCORE">1983</a></td>
+    <td>encore</td><td>osborne corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-JR-200U" title="JR-200U">1983</a></td>
+    <td>jr-200u</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SENIOR%20PARTNER" title="SENIOR PARTNER">1983</a></td>
+    <td>senior partner</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P2000C" title="P2000C">1983</a></td>
+    <td>p2000c</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P3000" title="P3000">1983</a></td>
+    <td>p3000</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CORTEX" title="CORTEX">1983</a></td>
+    <td>cortex</td><td>powertran cybernetics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BUSINESS%20COMPUTER" title="BUSINESS COMPUTER">1983</a></td>
+    <td>business computer</td><td>rair microcomputer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SAGE%20IV" title="SAGE IV">1983</a></td>
+    <td>sage iv</td><td>sage computer technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MANAGER" title="MANAGER">1983</a></td>
+    <td>manager</td><td>salora</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TPC-8300" title="TPC-8300">1983</a></td>
+    <td>tpc-8300</td><td>sanco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PHC%2025" title="PHC 25">1983</a></td>
+    <td>phc 25</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYMBOLICS%203600" title="SYMBOLICS 3600">1983</a></td>
+    <td>symbolics 3600</td><td>scientific computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHAMELEON" title="CHAMELEON">1983</a></td>
+    <td>chameleon</td><td>seequa</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>sc 3000 / sc 3000h</td><td>sega</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-9500" title="9500">1983</a></td>
+    <td>9500</td><td>seiko</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LEMON%20II" title="LEMON II">1983</a></td>
+    <td>lemon ii</td><td>selcom</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PIED%20PIPER" title="PIED PIPER">1983</a></td>
+    <td>pied piper</td><td>semi-tech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%202200" title="MZ 2200">1983</a></td>
+    <td>mz 2200</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%205500" title="MZ 5500">1983</a></td>
+    <td>mz 5500 5600</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%20700" title="MZ 700">1983</a></td>
+    <td>mz 700</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ-3500" title="MZ-3500">1983</a></td>
+    <td>mz-3500</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-1245" title="PC-1245">1983</a></td>
+    <td>pc-1245</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>pc-1401 pc-1402 pc-1421</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-5000" title="PC-5000">1983</a></td>
+    <td>pc-5000</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>x1-c (cz-801c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>x1-d (cz-802c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GOUPIL%203" title="GOUPIL 3">1983</a></td>
+    <td>goupil 3</td><td>smt</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%2010" title="HIT-BIT 10">1983</a></td>
+    <td>hit-bit 10</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IS%2011" title="IS 11">1983</a></td>
+    <td>is 11</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SV%20318" title="SV 318">1983</a></td>
+    <td>sv 318</td><td>spectravideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SV%20328" title="SV 328">1983</a></td>
+    <td>sv 328</td><td>spectravideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ORCHID%C3%A9E" title="ORCHIDéE">1983</a></td>
+    <td>orchidée</td><td>symag informatique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROCOLOR" title="MICROCOLOR">1983</a></td>
+    <td>microcolor</td><td>sysdata eletronica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COLOR%20COMPUTER%202" title="COLOR COMPUTER 2">1983</a></td>
+    <td>color computer 2</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MC%2010" title="MC 10">1983</a></td>
+    <td>mc 10</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%204" title="TRS 80 MODEL 4">1983</a></td>
+    <td>trs 80 model 4</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS%2080%20MODEL%204P" title="TRS 80 MODEL 4P">1983</a></td>
+    <td>trs 80 model 4p</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS-80%20MODEL%20100" title="TRS-80 MODEL 100">1983</a></td>
+    <td>trs-80 model 100 / 102</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS-80%20MODEL%2012" title="TRS-80 MODEL 12">1983</a></td>
+    <td>trs-80 model 12</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZORBA" title="ZORBA">1983</a></td>
+    <td>zorba</td><td>telcon industries</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TS-803" title="TS-803">1983</a></td>
+    <td>ts-803</td><td>televideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-P%C3%A9RIMINITEL" title="PéRIMINITEL">1983</a></td>
+    <td>périminitel</td><td>telmi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPACT%20COMPUTER%2040" title="COMPACT COMPUTER 40">1983</a></td>
+    <td>compact computer 40 (cc40)</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPUTER%2099/8" title="COMPUTER 99/8">1983</a></td>
+    <td>computer 99/8</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTABLE%20PROFESSIONAL%20COMPUTER" title="PORTABLE PROFESSIONAL COMPUTER">1983</a></td>
+    <td>portable professional computer (ppc)</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TI%2099%20/%202" title="TI 99 / 2">1983</a></td>
+    <td>ti 99 / 2</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>ti 99 / 4a beige</td><td>texas instruments</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROMEGA%2032" title="MICROMEGA 32">1983</a></td>
+    <td>micromega 32</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1500" title="1500">1983</a></td>
+    <td>1500</td><td>timex / sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-2068" title="2068">1983</a></td>
+    <td>2068</td><td>timex / sinclair</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>tutor / pyuuta</td><td>tomy</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>pc</td><td>tonel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HX-10" title="HX-10">1983</a></td>
+    <td>hx-10</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PASOPIA%207" title="PASOPIA 7">1983</a></td>
+    <td>pasopia 7</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROMATE%20PMC%20101" title="MICROMATE PMC 101">1983</a></td>
+    <td>micromate pmc 101</td><td>trios micro systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALPHATRONIC%20PC" title="ALPHATRONIC PC">1983</a></td>
+    <td>alphatronic pc</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ICON" title="ICON">1983</a></td>
+    <td>icon</td><td>unisys</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VECTOR%204" title="VECTOR 4">1983</a></td>
+    <td>vector 4</td><td>vector graphics</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VX%20384" title="VX 384">1983</a></td>
+    <td>vx 384</td><td>vectrix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%20100" title="LASER 100">1983</a></td>
+    <td>laser 100/110</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%20200" title="LASER 200">1983</a></td>
+    <td>laser 200 / 210</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%202001" title="LASER 2001">1983</a></td>
+    <td>laser 2001</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%203000" title="LASER 3000">1983</a></td>
+    <td>laser 3000</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TV%20COMPUTER" title="TV COMPUTER">1983</a></td>
+    <td>tv computer</td><td>videoton</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VISUAL%201083" title="VISUAL 1083">1983</a></td>
+    <td>visual 1083 / commuter</td><td>visual technology</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>8 / 16</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-820-II" title="820-II">1983</a></td>
+    <td>820-ii</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SUNRISE%201800" title="SUNRISE 1800">1983</a></td>
+    <td>sunrise 1800 / 1805</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CX5" title="CX5">1983</a></td>
+    <td>cx5</td><td>yamaha</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-YIS-303" title="YIS-303">1983</a></td>
+    <td>yis-303 yamaha</td>
+  </tr>
+  <tr>
+    <td>1983</td>
+    <td>sc 3000 / sc 3000h</td><td>yeno</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%20110" title="ABC 110">1984</a></td>
+    <td>abc 110</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%20210" title="ABC 210">1984</a></td>
+    <td>abc 210 / cambridge workstation</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABC%20310" title="ABC 310">1984</a></td>
+    <td>abc 310</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20F1" title="APRICOT F1">1984</a></td>
+    <td>apricot f1</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20PORTABLE" title="APRICOT PORTABLE">1984</a></td>
+    <td>apricot portable</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20XI" title="APRICOT XI">1984</a></td>
+    <td>apricot xi</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ACS-186" title="ACS-186">1984</a></td>
+    <td>acs-186</td><td>altos computer systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CPC%20464" title="CPC 464">1984</a></td>
+    <td>cpc 464</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20II%20CLONES" title="APPLE II CLONES">1984</a></td>
+    <td>apple ii clones</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20IIC" title="APPLE IIC">1984</a></td>
+    <td>apple iic</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH" title="MACINTOSH">1984</a></td>
+    <td>macintosh</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROBEE%20128" title="MICROBEE 128">1984</a></td>
+    <td>microbee 128</td><td>applied technologies</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%206300" title="PC 6300">1984</a></td>
+    <td>pc 6300</td><td>att</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AX-25" title="AX-25">1984</a></td>
+    <td>ax-25</td><td>axel</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>mx-10 / mx-101</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PB-770" title="PB-770">1984</a></td>
+    <td>pb-770</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PV-16" title="PV-16">1984</a></td>
+    <td>pv-16</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PV-7" title="PV-7">1984</a></td>
+    <td>pv-7</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C116" title="C116">1984</a></td>
+    <td>c116</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C16" title="C16">1984</a></td>
+    <td>c16</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C64%20GOLDEN%20JUBILEE" title="C64 GOLDEN JUBILEE">1984</a></td>
+    <td>c64 golden jubilee</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20COMPATIBLE%20SYSTEMS" title="PC COMPATIBLE SYSTEMS">1984</a></td>
+    <td>pc compatible systems</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PLUS%204-C232" title="PLUS 4-C232">1984</a></td>
+    <td>plus 4-c232/264/364</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CUBIC%2099" title="CUBIC 99">1984</a></td>
+    <td>cubic 99</td><td>creative technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SYSTEM%20V" title="SYSTEM V">1984</a></td>
+    <td>system v</td><td>cromemco</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CAT" title="CAT">1984</a></td>
+    <td>cat</td><td>dick smith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DECMATE%20III" title="DECMATE III">1984</a></td>
+    <td>decmate iii</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RAINBOW%20100" title="RAINBOW 100">1984</a></td>
+    <td>rainbow 100</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DRAGON%20200" title="DRAGON 200">1984</a></td>
+    <td>dragon 200</td><td>dragon data ltd</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MAGNUM" title="MAGNUM">1984</a></td>
+    <td>magnum</td><td>dulmont</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>px 4 / hc 40</td><td>epson</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>px 8 / hc-88 / geneva</td><td>epson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXL%20100" title="EXL 100">1984</a></td>
+    <td>exl 100</td><td>exelvision</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2011%20AD%202" title="FM 11 AD 2">1984</a></td>
+    <td>fm 11 ad 2</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2011%20BS" title="FM 11 BS">1984</a></td>
+    <td>fm 11 bs</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%20NEW%207" title="FM NEW 7">1984</a></td>
+    <td>fm new 7</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>fc-80 / fc-200</td><td>goldstar</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PENCIL%20II" title="PENCIL II">1984</a></td>
+    <td>pencil ii</td><td>hanimex</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-110" title="HP-110">1984</a></td>
+    <td>hp-110</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AH-200" title="AH-200">1984</a></td>
+    <td>ah-200</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-H2" title="H2">1984</a></td>
+    <td>h2</td><td>hitachi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HUSKY%20HUNTER" title="HUSKY HUNTER">1984</a></td>
+    <td>husky hunter</td><td>husky computers limited</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20AT" title="PC AT">1984</a></td>
+    <td>pc at</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20JX" title="PC JX">1984</a></td>
+    <td>pc jx</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20PORTABLE" title="PC PORTABLE">1984</a></td>
+    <td>pc portable model 5155</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OPD-ONE%20PER%20DESK" title="OPD-ONE PER DESK">1984</a></td>
+    <td>opd-one per desk</td><td>icl</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-800" title="800">1984</a></td>
+    <td>800</td><td>iskra delta</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EC-1037S" title="EC-1037S">1984</a></td>
+    <td>ec-1037s</td><td>isot</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IVEL%20ULTRA" title="IVEL ULTRA">1984</a></td>
+    <td>ivel ultra</td><td>ivasim elektronika</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%202X" title="KAYPRO 2X">1984</a></td>
+    <td>kaypro 2x</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%204" title="KAYPRO 4">1984</a></td>
+    <td>kaypro 4</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ROBIE" title="ROBIE">1984</a></td>
+    <td>robie</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NAJA" title="NAJA">1984</a></td>
+    <td>naja</td><td>kemitron</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MAX%2020" title="MAX 20">1984</a></td>
+    <td>max 20</td><td>matra</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MAX%2090" title="MAX 90">1984</a></td>
+    <td>max 90</td><td>matra</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ALICE%2090" title="ALICE 90">1984</a></td>
+    <td>alice 90</td><td>matra hachette</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NATIONAL%20JR%20300" title="NATIONAL JR 300">1984</a></td>
+    <td>national jr 300</td><td>matsushita</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RS%20128" title="RS 128">1984</a></td>
+    <td>rs 128</td><td>memotech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-2000" title="TK-2000">1984</a></td>
+    <td>tk-2000</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PRIMO%20A-32" title="PRIMO A-32">1984</a></td>
+    <td>primo a-32</td><td>microkey kfft</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GRAPHICS%20COMPUTER" title="GRAPHICS COMPUTER">1984</a></td>
+    <td>graphics computer</td><td>mindset corp.</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>ml-f110 / ml-f120</td><td>mitsubishi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF-1/65" title="MPF-1/65">1984</a></td>
+    <td>mpf-1/65</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CF-2700" title="CF-2700">1984</a></td>
+    <td>cf-2700</td><td>national</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CF-3000" title="CF-3000">1984</a></td>
+    <td>cf-3000</td><td>national</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DECISION%20MATE%20V" title="DECISION MATE V">1984</a></td>
+    <td>decision mate v</td><td>ncr</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%206001%20MK%202%20SR" title="PC 6001 MK 2 SR">1984</a></td>
+    <td>pc 6001 mk 2 sr</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208401A" title="PC 8401A">1984</a></td>
+    <td>pc 8401a</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FAMILY%20COMPUTER%20KEYBOARD" title="FAMILY COMPUTER KEYBOARD">1984</a></td>
+    <td>family computer keyboard</td><td>nintendo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MIKRO%20MIKKO%201" title="MIKRO MIKKO 1">1984</a></td>
+    <td>mikro mikko 1</td><td>nokia</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M24" title="M24">1984</a></td>
+    <td>m24</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ATMOS" title="ATMOS">1984</a></td>
+    <td>atmos</td><td>oric</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NOVA%2064" title="NOVA 64">1984</a></td>
+    <td>nova 64</td><td>oric</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IQ%20164" title="IQ 164">1984</a></td>
+    <td>stratos / iq 164</td><td>oric</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VIXEN" title="VIXEN">1984</a></td>
+    <td>vixen</td><td>osborne corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CF-2700" title="CF-2700">1984</a></td>
+    <td>cf-2700</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VG%205000" title="VG 5000">1984</a></td>
+    <td>vg 5000</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VG%208000" title="VG 8000">1984</a></td>
+    <td>vg 8000 / 8010</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VG%208020" title="VG 8020">1984</a></td>
+    <td>vg 8020</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CP-400" title="CP-400">1984</a></td>
+    <td>cp-400</td><td>prologica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VG%205000" title="VG 5000">1984</a></td>
+    <td>vg 5000</td><td>radiola</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AQUARIUS%202" title="AQUARIUS 2">1984</a></td>
+    <td>aquarius 2</td><td>radofin electronics limited</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RC759%20PICCOLINE" title="RC759 PICCOLINE">1984</a></td>
+    <td>rc759 piccoline</td><td>regnecentralen</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>kc 85/1 hc 9001</td><td>robotron</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FELLOW" title="FELLOW">1984</a></td>
+    <td>fellow</td><td>salora</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPC%20100" title="MPC 100">1984</a></td>
+    <td>mpc 100</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PHC-30" title="PHC-30">1984</a></td>
+    <td>phc-30</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PHC-33" title="PHC-33">1984</a></td>
+    <td>phc-33</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WAVY%2010" title="WAVY 10">1984</a></td>
+    <td>wavy 10 (mpc 10)</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WAVY%203" title="WAVY 3">1984</a></td>
+    <td>wavy 3</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MC-810" title="MC-810">1984</a></td>
+    <td>mc-810</td><td>schneider (philips)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MC-2200" title="MC-2200">1984</a></td>
+    <td>mc-2200</td><td>seiko</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%20800" title="MZ 800">1984</a></td>
+    <td>mz 800 mz 1500</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>pc-1260 pc-1261 pc-1262</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X1%20TURBO" title="X1 TURBO">1984</a></td>
+    <td>x1 turbo</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>x1-ck (cz-804c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>x1-cs (cz-803c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>ql (quantum leap)</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%20SPECTRUM+" title="ZX SPECTRUM+">1984</a></td>
+    <td>zx spectrum+</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20101" title="HIT-BIT 101">1984</a></td>
+    <td>hit-bit 101</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%2020" title="HIT-BIT 20">1984</a></td>
+    <td>hit-bit 20</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20201" title="HIT-BIT 201">1984</a></td>
+    <td>hit-bit 201</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%2055" title="HIT-BIT 55">1984</a></td>
+    <td>hit-bit 55</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SMC%2070G" title="SMC 70G">1984</a></td>
+    <td>smc 70g</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SVI%20728" title="SVI 728">1984</a></td>
+    <td>svi 728</td><td>spectravideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000" title="1000">1984</a></td>
+    <td>1000</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS-80%20MODEL%20200" title="TRS-80 MODEL 200">1984</a></td>
+    <td>trs-80 model 200</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EINSTEIN%20TC-01" title="EINSTEIN TC-01">1984</a></td>
+    <td>einstein tc-01</td><td>tatung</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-2000" title="PC-2000">1984</a></td>
+    <td>pc-2000</td><td>tatung</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PERSONAL%20MINI%20PM/4T" title="PERSONAL MINI PM/4T">1984</a></td>
+    <td>personal mini pm/4t</td><td>televideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TX%208000" title="TX 8000">1984</a></td>
+    <td>tx 8000</td><td>texet</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MO%205" title="MO 5">1984</a></td>
+    <td>mo 5</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MO5%20NR" title="MO5 NR">1984</a></td>
+    <td>mo5 nr</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TO%207" title="TO 7">1984</a></td>
+    <td>to 7 / 70</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WREN" title="WREN">1984</a></td>
+    <td>wren</td><td>thorn emi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TIKI-100" title="TIKI-100">1984</a></td>
+    <td>tiki-100</td><td>tiki-data</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TC-2048" title="TC-2048">1984</a></td>
+    <td>tc-2048</td><td>timex computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TUTOR%20MK%20II" title="TUTOR MK II">1984</a></td>
+    <td>tutor mk ii</td><td>tomy</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>hx-20 / hx-21 / pasopia iq</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>alphatronic p-30 / p-40</td><td>triumph adler</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%20310" title="LASER 310">1984</a></td>
+    <td>laser 310</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VISUAL%201050" title="VISUAL 1050">1984</a></td>
+    <td>visual 1050</td><td>visual technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CX5M%20MUSIC%20COMPUTER" title="CX5M MUSIC COMPUTER">1984</a></td>
+    <td>cx5m music computer</td><td>yamaha</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-YIS-503" title="YIS-503">1984</a></td>
+    <td>yis-503 / diabolik</td><td>yamaha</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-YC-64" title="YC-64">1984</a></td>
+    <td>yc-64</td><td>yashica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-DPC-64" title="DPC-64">1984</a></td>
+    <td>dpc-64</td><td>yeno</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MX-64" title="MX-64">1984</a></td>
+    <td>mx-64</td><td>yeno</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z-160%20PC" title="Z-160 PC">1984</a></td>
+    <td>z-160 pc</td><td>zenith data systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IQ-151" title="IQ-151">1984</a></td>
+    <td>iq-151</td><td>zpa</td>
+  </tr>
+  <tr>
+<td colspan="3" class="nd"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20F2" title="APRICOT F2">1985</a></td>
+    <td>apricot f2 / f10</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APRICOT%20XEN" title="APRICOT XEN">1985</a></td>
+    <td>apricot xen</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WS%201" title="WS 1">1985</a></td>
+    <td>ws 1</td><td>ampere</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPUTER%20IN%20A%20BOOK" title="COMPUTER IN A BOOK">1985</a></td>
+    <td>computer in a book</td><td>applied technologies</td>
+  </tr>
+  <tr>
+    <td>1985</td>
+    <td>130 st 260 st</td><td>atari</td>
+  </tr>
+  <tr>
+    <td>1985</td>
+    <td>520 st / st+ / stm</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-130%20XE" title="130 XE">1985</a></td>
+    <td>65 / 130 xe</td><td>atari</td>
+  </tr>
+  <tr>
+    <td>1985</td>
+    <td>65xep / 65xem</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-800XE" title="800XE">1985</a></td>
+    <td>800xe</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-UNIX%20PC" title="UNIX PC">1985</a></td>
+    <td>unix pc</td><td>att</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FP%206000" title="FP 6000">1985</a></td>
+    <td>fp 6000</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MC%201000" title="MC 1000">1985</a></td>
+    <td>mc 1000</td><td>cce</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%201000" title="AMIGA 1000">1985</a></td>
+    <td>amiga 1000</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td>1985</td>
+    <td>c128 c128d</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LCD" title="LCD">1985</a></td>
+    <td>lcd</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CZ-1000" title="CZ-1000">1985</a></td>
+    <td>cz-1000</td><td>czerweny</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VZ300" title="VZ300">1985</a></td>
+    <td>vz300</td><td>dick smith</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MSX-64" title="MSX-64">1985</a></td>
+    <td>msx-64</td><td>dragon data ltd</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROLAB" title="MICROLAB">1985</a></td>
+    <td>microlab</td><td>educatel</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PECOM%2032" title="PECOM 32">1985</a></td>
+    <td>pecom 32</td><td>elektronska industrija nis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PECOM%2064" title="PECOM 64">1985</a></td>
+    <td>pecom 64</td><td>elektronska industrija nis</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ENTERPRISE%2064" title="ENTERPRISE 64">1985</a></td>
+    <td>enterprise 64 / 128</td><td>enterprise</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HOTBIT%20HB-8000" title="HOTBIT HB-8000">1985</a></td>
+    <td>hotbit hb-8000</td><td>epcom / sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2077%20AV" title="FM 77 AV">1985</a></td>
+    <td>fm 77 av</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CHALLENGER" title="CHALLENGER">1985</a></td>
+    <td>challenger</td><td>gemini</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PAXON%20PCK-50%20" title="PAXON PCK-50 ">1985</a></td>
+    <td>paxon pck-50</td><td>general</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXPERT%20XP-800" title="EXPERT XP-800">1985</a></td>
+    <td>expert xp-800</td><td>gradiente</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GRIDCASE" title="GRIDCASE">1985</a></td>
+    <td>gridcase</td><td>grid</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-INTEGRAL%20PC" title="INTEGRAL PC">1985</a></td>
+    <td>integral pc</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HOMELAB" title="HOMELAB">1985</a></td>
+    <td>homelab</td><td>homelab series</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FELIX-PC" title="FELIX-PC">1985</a></td>
+    <td>felix-pc</td><td>ice-felix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HC-85" title="HC-85">1985</a></td>
+    <td>hc-85</td><td>ice-felix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-QUATTRO" title="QUATTRO">1985</a></td>
+    <td>quattro</td><td>icl</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IMCE%20JUNIOR" title="IMCE JUNIOR">1985</a></td>
+    <td>imce junior</td><td>imce</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-2000" title="2000">1985</a></td>
+    <td>2000</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%2016" title="KAYPRO 16">1985</a></td>
+    <td>kaypro 16</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20&amp;%20286I" title="PC &amp; 286I">1985</a></td>
+    <td>pc &amp; 286i</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ELAN" title="ELAN">1985</a></td>
+    <td>elan</td><td>leanord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TONTO" title="TONTO">1985</a></td>
+    <td>tonto</td><td>merlin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-3000" title="TK-3000">1985</a></td>
+    <td>tk-3000</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-90X" title="TK-90X">1985</a></td>
+    <td>tk-90x</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HECTOR%20MX" title="HECTOR MX">1985</a></td>
+    <td>hector mx</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HECTOR%20XT" title="HECTOR XT">1985</a></td>
+    <td>hector xt</td><td>micronique</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ML-G10" title="ML-G10">1985</a></td>
+    <td>ml-g10</td><td>mitsubishi</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MSX%202" title="MSX 2">1985</a></td>
+    <td>msx 2</td><td>msx</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MPF-I/88" title="MPF-I/88">1985</a></td>
+    <td>mpf-i/88</td><td>multitech</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS-4000" title="FS-4000">1985</a></td>
+    <td>fs-4000</td><td>national</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC4" title="PC4">1985</a></td>
+    <td>pc4</td><td>ncr</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC6" title="PC6">1985</a></td>
+    <td>pc6</td><td>ncr</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%206601" title="PC 6601">1985</a></td>
+    <td>pc 6601</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208001%20MK%202%20SR" title="PC 8001 MK 2 SR">1985</a></td>
+    <td>pc 8001 mk 2 sr</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ORAO" title="ORAO">1985</a></td>
+    <td>orao</td><td>pel varazdin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NMS-801" title="NMS-801">1985</a></td>
+    <td>nms-801</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-VG%208235" title="VG 8235">1985</a></td>
+    <td>vg 8235</td><td>philips</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PALCOM%20PX-7" title="PALCOM PX-7">1985</a></td>
+    <td>palcom px-7</td><td>pioneer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8D" title="8D">1985</a></td>
+    <td>8d</td><td>pravetz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NIMBUS%20PC" title="NIMBUS PC">1985</a></td>
+    <td>nimbus pc</td><td>research machines</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%201715" title="PC 1715">1985</a></td>
+    <td>pc 1715</td><td>robotron</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WAVY%2023" title="WAVY 23">1985</a></td>
+    <td>wavy 23</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CPC-464" title="CPC-464">1985</a></td>
+    <td>cpc-464</td><td>schneider (germany)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%202500" title="MZ 2500">1985</a></td>
+    <td>mz 2500</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-2500" title="PC-2500">1985</a></td>
+    <td>pc-2500</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-7000" title="PC-7000">1985</a></td>
+    <td>pc-7000</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WD%202000" title="WD 2000">1985</a></td>
+    <td>wd 2000</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%20SPECTRUM%20128" title="ZX SPECTRUM 128">1985</a></td>
+    <td>zx spectrum 128</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GOUPIL%20G4" title="GOUPIL G4">1985</a></td>
+    <td>goupil g4</td><td>smt</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20501" title="HIT-BIT 501">1985</a></td>
+    <td>hit-bit 501</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20F1XD" title="HIT-BIT F1XD">1985</a></td>
+    <td>hit-bit f1xd</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20F700" title="HIT-BIT F700">1985</a></td>
+    <td>hit-bit f700</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20G900F" title="HIT-BIT G900F">1985</a></td>
+    <td>hit-bit g900f</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SERIES%2035%20MODEL%2010" title="SERIES 35 MODEL 10">1985</a></td>
+    <td>series 35 model 10</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-IS-11C" title="IS-11C">1985</a></td>
+    <td>is-11c</td><td>sord</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TRS-80%20MODEL%20600" title="TRS-80 MODEL 600">1985</a></td>
+    <td>trs-80 model 600</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COMPIS" title="COMPIS">1985</a></td>
+    <td>compis</td><td>telenova</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ONDRA" title="ONDRA">1985</a></td>
+    <td>ondra</td><td>tesla</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PMD-85" title="PMD-85">1985</a></td>
+    <td>pmd-85</td><td>tesla</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MO5%20E" title="MO5 E">1985</a></td>
+    <td>mo5 e</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TO%209" title="TO 9">1985</a></td>
+    <td>to 9</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HX-52" title="HX-52">1985</a></td>
+    <td>hx-52</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MAC%20512" title="MAC 512">1985</a></td>
+    <td>mac 512</td><td>unitron (brazil)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%20350" title="LASER 350">1985</a></td>
+    <td>laser 350 / 500 / 700 / 750</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%2050" title="LASER 50">1985</a></td>
+    <td>laser 50 / one</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-6085" title="6085">1985</a></td>
+    <td>6085</td><td>xerox</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z-171%20PC" title="Z-171 PC">1985</a></td>
+    <td>z-171 pc</td><td>zenith data systems</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BBC%20MASTER" title="BBC MASTER">1986</a></td>
+    <td>bbc master</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BBC%20MASTER%20AIV" title="BBC MASTER AIV">1986</a></td>
+    <td>bbc master aiv</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BBC%20MASTER%20COMPACT" title="BBC MASTER COMPACT">1986</a></td>
+    <td>bbc master compact</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MENTOR%202000" title="MENTOR 2000">1986</a></td>
+    <td>mentor 2000</td><td>adds</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CPC%205512" title="CPC 5512">1986</a></td>
+    <td>cpc 5512</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%201512" title="PC 1512">1986</a></td>
+    <td>pc 1512</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%201640" title="PC 1640">1986</a></td>
+    <td>pc 1640</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20IIGS" title="APPLE IIGS">1986</a></td>
+    <td>apple iigs</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20PLUS" title="MACINTOSH PLUS">1986</a></td>
+    <td>macintosh plus</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1040%20STF" title="1040 STF">1986</a></td>
+    <td>520 / 1040 stf / stfm</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTABLE%20II" title="PORTABLE II">1986</a></td>
+    <td>portable ii</td><td>compaq</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CZ-2000" title="CZ-2000">1986</a></td>
+    <td>cz-2000</td><td>czerweny</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SPECTRUM" title="SPECTRUM">1986</a></td>
+    <td>spectrum</td><td>czerweny</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SPECTRUM%20PLUS" title="SPECTRUM PLUS">1986</a></td>
+    <td>spectrum plus</td><td>czerweny</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-800%20JUNIOR" title="800 JUNIOR">1986</a></td>
+    <td>800 junior</td><td>elwro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXELTEL" title="EXELTEL">1986</a></td>
+    <td>exeltel</td><td>exelvision</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%205000" title="PC 5000">1986</a></td>
+    <td>pc 5000, 6000, 8000</td><td>franklin</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2077%20AV%2020" title="FM 77 AV 20">1986</a></td>
+    <td>fm 77 av 20</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%2077%20AV%2040" title="FM 77 AV 40">1986</a></td>
+    <td>fm 77 av 40</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-5140%20CONVERTIBLE" title="5140 CONVERTIBLE">1986</a></td>
+    <td>5140 convertible</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20XT%20286" title="PC XT 286">1986</a></td>
+    <td>pc xt 286</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td>1986</td>
+    <td>rt (6150)</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROTIM" title="MICROTIM">1986</a></td>
+    <td>microtim</td><td>iptvt (traian vuia polytechnical institute)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HC-95" title="HC-95">1986</a></td>
+    <td>hc-95</td><td>jvc</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KAYPRO%201" title="KAYPRO 1">1986</a></td>
+    <td>kaypro 1</td><td>kaypro</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AGAT%209" title="AGAT 9">1986</a></td>
+    <td>agat 9</td><td>lemz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK-95" title="TK-95">1986</a></td>
+    <td>tk-95</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS-4500" title="FS-4500">1986</a></td>
+    <td>fs-4500</td><td>national</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC8" title="PC8">1986</a></td>
+    <td>pc8</td><td>ncr</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%2005" title="PC 05">1986</a></td>
+    <td>pc 05</td><td>nixdorf</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PRODEST%20PC%20128" title="PRODEST PC 128">1986</a></td>
+    <td>prodest pc 128</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TELESTRAT" title="TELESTRAT">1986</a></td>
+    <td>telestrat</td><td>oric</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FH%202000" title="FH 2000">1986</a></td>
+    <td>fh 2000</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS%20A1" title="FS A1">1986</a></td>
+    <td>fs a1</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ORGANISER%20II" title="ORGANISER II">1986</a></td>
+    <td>organiser ii</td><td>psion</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KC%2085" title="KC 85">1986</a></td>
+    <td>kc 85/3</td><td>r.f.t.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KC%2087" title="KC 87">1986</a></td>
+    <td>kc 87</td><td>robotron</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-1403" title="PC-1403">1986</a></td>
+    <td>pc-1403 (h)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X1%20TURBO%20III" title="X1 TURBO III">1986</a></td>
+    <td>x1 turbo iii</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1986</td>
+    <td>x1 turbo z (cz-880c)</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%20SPECTRUM%20+2" title="ZX SPECTRUM +2">1986</a></td>
+    <td>zx spectrum +2</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20F500" title="HIT-BIT F500">1986</a></td>
+    <td>hit-bit f500</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HIT-BIT%20F9" title="HIT-BIT F9">1986</a></td>
+    <td>hit-bit f9</td><td>sony</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SVI%20738" title="SVI 738">1986</a></td>
+    <td>svi 738 xpress</td><td>spectravideo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20EX" title="1000 EX">1986</a></td>
+    <td>1000 ex</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20SX" title="1000 SX">1986</a></td>
+    <td>1000 sx</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20TX" title="1000 TX">1986</a></td>
+    <td>1000 tx</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-COLOR%20COMPUTER%203" title="COLOR COMPUTER 3">1986</a></td>
+    <td>color computer 3</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MO%206" title="MO 6">1986</a></td>
+    <td>mo 6</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td>1986</td>
+    <td>to 8 to 8d</td>
+    <td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TO%209%20PLUS" title="TO 9 PLUS">1986</a></td>
+    <td>to 9 plus</td><td>thomson</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES" title="ARCHIMEDES">1987</a></td>
+    <td>archimedes</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PCW%209512" title="PCW 9512">1987</a></td>
+    <td>pcw 9512</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20IIE%20PLATINUM" title="APPLE IIE PLATINUM">1987</a></td>
+    <td>apple iie platinum</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20II" title="MACINTOSH II">1987</a></td>
+    <td>macintosh ii</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20SE" title="MACINTOSH SE">1987</a></td>
+    <td>macintosh se</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ABAQ%20ATW%20TRANSPUTER%20800" title="ABAQ ATW TRANSPUTER 800">1987</a></td>
+    <td>abaq atw transputer 800</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MEGA%20ST" title="MEGA ST">1987</a></td>
+    <td>mega st</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC" title="PC">1987</a></td>
+    <td>pc</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CAT" title="CAT">1987</a></td>
+    <td>cat</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PB-1000" title="PB-1000">1987</a></td>
+    <td>pb-1000</td><td>casio</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%202000" title="AMIGA 2000">1987</a></td>
+    <td>amiga 2000</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%20500" title="AMIGA 500">1987</a></td>
+    <td>amiga 500</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C64%20ALDI" title="C64 ALDI">1987</a></td>
+    <td>c64 aldi</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C64C" title="C64C">1987</a></td>
+    <td>c64c</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTABLE%20386" title="PORTABLE 386">1987</a></td>
+    <td>portable 386</td><td>compaq</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTABLE%20III" title="PORTABLE III">1987</a></td>
+    <td>portable iii</td><td>compaq</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SPARK" title="SPARK">1987</a></td>
+    <td>spark</td><td>datavue</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GAMA" title="GAMA">1987</a></td>
+    <td>gama</td><td>didaktik</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BRUC%20100" title="BRUC 100">1987</a></td>
+    <td>bruc 100</td><td>frael</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BOSMAN%208" title="BOSMAN 8">1987</a></td>
+    <td>bosman 8</td><td>g.z.e. unimor</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GRIDLITE" title="GRIDLITE">1987</a></td>
+    <td>gridlite</td><td>grid</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HAWK" title="HAWK">1987</a></td>
+    <td>hawk</td><td>husky computers limited</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PS/2%20MODEL%2025" title="PS/2 MODEL 25">1987</a></td>
+    <td>ps/2 model 25</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KMC-5000" title="KMC-5000">1987</a></td>
+    <td>kmc-5000</td><td>kawai</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-GENEVE%209640" title="GENEVE 9640">1987</a></td>
+    <td>geneve 9640</td><td>myarc</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%2088VA" title="PC 88VA">1987</a></td>
+    <td>pc 88va</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC-88%20VA%202" title="PC-88 VA 2">1987</a></td>
+    <td>pc-88 va 2</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PRODEST%20PC%20128S" title="PRODEST PC 128S">1987</a></td>
+    <td>prodest pc 128s</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-08" title="08">1987</a></td>
+    <td>08</td><td>osborne corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS%20A1F" title="FS A1F">1987</a></td>
+    <td>fs a1f</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MZ%202800" title="MZ 2800">1987</a></td>
+    <td>mz 2800</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000" title="X68000">1987</a></td>
+    <td>x68000</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ZX%20SPECTRUM%20+3" title="ZX SPECTRUM +3">1987</a></td>
+    <td>zx spectrum +3</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20HX" title="1000 HX">1987</a></td>
+    <td>1000 hx</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1400%20LT" title="1400 LT">1987</a></td>
+    <td>1400 lt/fd/hd</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T%201200" title="T 1200">1987</a></td>
+    <td>t 1200</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C1" title="C1">1987</a></td>
+    <td>c1</td><td>yamaha</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-QI-300" title="QI-300">1988</a></td>
+    <td>qi-300</td><td>act</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PPC%20512" title="PPC 512">1988</a></td>
+    <td>ppc 512 / 640</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-APPLE%20IIC%20PLUS" title="APPLE IIC PLUS">1988</a></td>
+    <td>apple iic plus</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-4160%20STE" title="4160 STE">1988</a></td>
+    <td>4160 ste</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-Z%2088" title="Z 88">1988</a></td>
+    <td>z 88</td><td>cambridge computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CIP-03" title="CIP-03">1988</a></td>
+    <td>cip-03</td><td>electronica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%20R%2070" title="FM R 70">1988</a></td>
+    <td>fm r 70</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TK%20EXTENDED" title="TK EXTENDED">1988</a></td>
+    <td>tk extended</td><td>microdigital</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MSX%202+" title="MSX 2+">1988</a></td>
+    <td>msx 2+</td><td>msx</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%208801%20FE" title="PC 8801 FE">1988</a></td>
+    <td>pc 8801 fe</td><td>nec</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NEXT%20CUBE" title="NEXT CUBE">1988</a></td>
+    <td>next cube</td><td>next computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%201" title="PC 1">1988</a></td>
+    <td>pc 1</td><td>olivetti</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS%20A1%20FX" title="FS A1 FX">1988</a></td>
+    <td>fs a1 fx</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KC%2085/4" title="KC 85/4">1988</a></td>
+    <td>kc 85/4</td><td>r.f.t.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-A5105" title="A5105">1988</a></td>
+    <td>a5105</td><td>robotron</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WAVY%2035" title="WAVY 35">1988</a></td>
+    <td>wavy 35</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-WAVY%2070FD" title="WAVY 70FD">1988</a></td>
+    <td>wavy 70fd</td><td>sanyo</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X1%20TURBO%20Z%20III" title="X1 TURBO Z III">1988</a></td>
+    <td>x1 turbo z iii</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20ACE" title="X68000 ACE">1988</a></td>
+    <td>x68000 ace / ace hd</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PC%20200" title="PC 200">1988</a></td>
+    <td>pc 200</td><td>sinclair</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TPC-310" title="TPC-310">1988</a></td>
+    <td>tpc-310</td><td>talent/telematica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-LASER%20128" title="LASER 128">1988</a></td>
+    <td>laser 128 / 128ex / 128ex2</td><td>video technology</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A3000" title="ARCHIMEDES A3000">1989</a></td>
+    <td>archimedes a3000</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20PORTABLE" title="MACINTOSH PORTABLE">1989</a></td>
+    <td>macintosh portable</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20SE%2030" title="MACINTOSH SE 30">1989</a></td>
+    <td>macintosh se 30</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PORTFOLIO" title="PORTFOLIO">1989</a></td>
+    <td>portfolio</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-STACY" title="STACY">1989</a></td>
+    <td>stacy</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%202500" title="AMIGA 2500">1989</a></td>
+    <td>amiga 2500</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C64G" title="C64G">1989</a></td>
+    <td>c64g</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%20TOWNS" title="FM TOWNS">1989</a></td>
+    <td>fm towns</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%20TOWNS%20II" title="FM TOWNS II">1989</a></td>
+    <td>fm towns ii</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-EXPERT%20PLUS" title="EXPERT PLUS">1989</a></td>
+    <td>expert plus</td><td>gradiente</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-190" title="190">1989</a></td>
+    <td>190</td><td>ibp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SAM%20COUP%C3%A9" title="SAM COUPé">1989</a></td>
+    <td>sam coupé</td><td>mgt (miles gordon technology)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NEXT%20STATION" title="NEXT STATION">1989</a></td>
+    <td>next station</td><td>next computers</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-A%2010" title="A 10">1989</a></td>
+    <td>a 10</td><td>oki</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-16A" title="16A">1989</a></td>
+    <td>16a</td><td>pravetz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MC%20200" title="MC 200">1989</a></td>
+    <td>mc 200 / 400 / 600</td><td>psion</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20EXPERT" title="X68000 EXPERT">1989</a></td>
+    <td>x68000 expert</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20PRO" title="X68000 PRO">1989</a></td>
+    <td>x68000 pro</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1000%20SL%20&amp;%20SL/2" title="1000 SL &amp; SL/2">1989</a></td>
+    <td>1000 sl &amp; sl/2</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td>1989</td>
+    <td>portable wordprocessor wp-2 / wp-3</td><td>tandy radio shack</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MATO" title="MATO">1989</a></td>
+    <td>mato</td><td>tesla</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CONSUL%202717" title="CONSUL 2717">1989</a></td>
+    <td>consul 2717</td><td>zba</td>
+  </tr>
+  <tr>
+<td colspan="3" class="nd"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-464" title="464">1990</a></td>
+    <td>464 / 6128 plus</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CSD" title="CSD">1990</a></td>
+    <td>csd</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-1040%20STE" title="1040 STE">1990</a></td>
+    <td>520 / 1040 ste</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ST%20BOOK" title="ST BOOK">1990</a></td>
+    <td>st book</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TT%20030" title="TT 030">1990</a></td>
+    <td>tt 030</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%201500" title="AMIGA 1500">1990</a></td>
+    <td>amiga 1500</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%203000" title="AMIGA 3000">1990</a></td>
+    <td>amiga 3000</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C65" title="C65">1990</a></td>
+    <td>c65</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CDTV" title="CDTV">1990</a></td>
+    <td>cdtv</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-M" title="M">1990</a></td>
+    <td>m</td><td>didaktik</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-JET" title="JET">1990</a></td>
+    <td>jet</td><td>electromagnetica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HOBBIT" title="HOBBIT">1990</a></td>
+    <td>hobbit</td><td>hobbit</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PS/1" title="PS/1">1990</a></td>
+    <td>ps/1</td><td>ibm</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS%20A1%20ST" title="FS A1 ST">1990</a></td>
+    <td>fs a1 st</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-8C" title="8C">1990</a></td>
+    <td>8c</td><td>pravetz</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-V1" title="V1">1990</a></td>
+    <td>v1</td><td>sages</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20EXPERT%20II" title="X68000 EXPERT II">1990</a></td>
+    <td>x68000 expert ii</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20PRO%20II" title="X68000 PRO II">1990</a></td>
+    <td>x68000 pro ii</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td>1990</td>
+    <td>x68000 super / super hd</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-A4" title="A4">1991</a></td>
+    <td>a4-acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A4000" title="ARCHIMEDES A4000">1991</a></td>
+    <td>archimedes a4000</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A5000" title="ARCHIMEDES A5000">1991</a></td>
+    <td>archimedes a5000</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FX-1%20SPARROW" title="FX-1 SPARROW">1991</a></td>
+    <td>fx-1 sparrow</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MEGA%20STE" title="MEGA STE">1991</a></td>
+    <td>mega ste</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-STYLUS-ST%20PAD" title="STYLUS-ST PAD">1991</a></td>
+    <td>stylus-st pad</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%20500%20PLUS" title="AMIGA 500 PLUS">1991</a></td>
+    <td>amiga 500 plus</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-C3800" title="C3800">1991</a></td>
+    <td>c3800</td><td>convex computer corp.</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HC-91" title="HC-91">1991</a></td>
+    <td>hc-91</td><td>ice-felix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MSX%20TURBO%20R" title="MSX TURBO R">1991</a></td>
+    <td>msx turbo r</td><td>msx</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FS%20A1%20GT" title="FS A1 GT">1991</a></td>
+    <td>fs a1 gt</td><td>panasonic</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-SERIES%203" title="SERIES 3">1991</a></td>
+    <td>series 3</td><td>psion</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ROBIK" title="ROBIK">1991</a></td>
+    <td>robik</td><td>robik</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-TERADRIVE" title="TERADRIVE">1991</a></td>
+    <td>teradrive</td><td>sega</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AX%20286" title="AX 286">1991</a></td>
+    <td>ax 286</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20XVI" title="X68000 XVI">1991</a></td>
+    <td>x68000 xvi</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A3010" title="ARCHIMEDES A3010">1992</a></td>
+    <td>archimedes a3010</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A3020" title="ARCHIMEDES A3020">1992</a></td>
+    <td>archimedes a3020</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NC%20100" title="NC 100">1992</a></td>
+    <td>nc 100</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FALCON%20030" title="FALCON 030">1992</a></td>
+    <td>falcon 030</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%201200" title="AMIGA 1200">1992</a></td>
+    <td>amiga 1200</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%204000" title="AMIGA 4000">1992</a></td>
+    <td>amiga 4000</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%20600" title="AMIGA 600">1992</a></td>
+    <td>amiga 600</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-AMIGA%20600HD" title="AMIGA 600HD">1992</a></td>
+    <td>amiga 600hd</td><td>commodore</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-KOMPAKT" title="KOMPAKT">1992</a></td>
+    <td>kompakt</td><td>didaktik</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-4000%20AXP" title="4000 AXP">1992</a></td>
+    <td>4000 axp</td><td>digital equipment corporation</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-CIP-04" title="CIP-04">1992</a></td>
+    <td>cip-04</td><td>electronica</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HC-2000" title="HC-2000">1992</a></td>
+    <td>hc-2000</td><td>ice-felix</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ES%20210" title="ES 210">1992</a></td>
+    <td>es 210</td><td>nakajima</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68000%20XVI%20COMPACT" title="X68000 XVI COMPACT">1992</a></td>
+    <td>x68000 xvi compact</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NC%20150" title="NC 150">1993</a></td>
+    <td>nc 150</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-NC%20200" title="NC 200">1993</a></td>
+    <td>nc 200</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PENPAD" title="PENPAD">1993</a></td>
+    <td>penpad</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MACINTOSH%20COLOR%20CLASSIC" title="MACINTOSH COLOR CLASSIC">1993</a></td>
+    <td>macintosh color classic</td><td>apple</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FALCON%20030%20MICROBOX" title="FALCON 030 MICROBOX">1993</a></td>
+    <td>falcon 030 microbox</td><td>atari</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T3D" title="T3D">1993</a></td>
+    <td>t3d</td><td>cray research</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-FM%20TOWNS%20II%20EX" title="FM TOWNS II EX">1993</a></td>
+    <td>fm towns ii ex</td><td>fujitsu</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-X68030" title="X68030">1993</a></td>
+    <td>x68030 / 68030 compact</td><td>sharp</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T100-X%20DYNAPAD" title="T100-X DYNAPAD">1993</a></td>
+    <td>t100-x dynapad</td><td>toshiba</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-RISC%20PC" title="RISC PC">1994</a></td>
+    <td>risc pc</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-PCW%2016" title="PCW 16">1994</a></td>
+    <td>pcw 16</td><td>amstrad</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-OBJECT.STATION" title="OBJECT.STATION">1994</a></td>
+    <td>object.station</td><td>canon</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-HP-200LX" title="HP-200LX">1994</a></td>
+    <td>hp-200lx</td><td>hewlett packard</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-MICROTIM+" title="MICROTIM+">1994</a></td>
+    <td>microtim+</td><td>iptvt (traian vuia polytechnical institute)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-ARCHIMEDES%20A7000" title="ARCHIMEDES A7000">1995</a></td>
+    <td>archimedes a7000</td><td>acorn computer</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-BEBOX" title="BEBOX">1995</a></td>
+    <td>bebox</td><td>be</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.techcn.com.cn/index.php?doc-innerlink-T-40" title="T-40">1995</a></td>
+    <td>t-40</td><td>medusa</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

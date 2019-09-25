@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title></title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px solid #aaa;
+font-size:1em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:.8em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:.6em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+</p>
+<p>
+世界十大笔记本电脑品牌排行榜(2011年)
+<table id="tbrowser">
+    <col span="7" />
+	<thead>
+    <tr>
+      <th width="22%">Companty Name</td>
+      <th width="78%">Remark</td>
+   </tr>
+	</thead>
+    <tr>
+    <td width="125">  ThinkPad</td>
+    <td width="556">(全球领先pc企业,全球最具价值品牌之一,中国驰名商标,中国名牌,十大笔记本品牌,联想lenovo集团) </td>
+  </tr>
+  <tr>
+    <td>  惠普HP-康柏Q</td>
+    <td>(于1939年美国,财富500强企业,世界品牌500强,<a href="http://www.bosidata.com" target="_blank">笔记本十大品牌</a>,行业领导品牌,惠普(中国)有限公司)</td>
+  </tr>
+  <tr>
+    <td>  华硕ASUS</td>
+    <td>(成立于1990年,财富500强企业,全球领先的3C解决方案提供商之一,上市公司,华硕电脑股份有限公司) </td>
+  </tr>
+  <tr>
+    <td>  索尼Sony</td>
+    <td>(始于1946年日本,全球高端显像领导品牌,十大笔记本电脑品牌,信息技术领先者,索尼(中国)有限公司)</td>
+  </tr>
+  <tr>
+    <td>  三星Samsung</td>
+    <td>(财富500强企业,全球消费电子领域龙头企业,全球电子产业的领导者,十大笔记本电脑品牌,三星集团) </td>
+  </tr>
+  <tr>
+    <td>  戴尔DELL</td>
+    <td>(于1984年美国,世界品牌500强,财富500强企业,全球领先的IT产品及服务提供商,美国戴尔(Dell)公司)</td>
+  </tr>
+  <tr>
+    <td>  东芝Toshiba</td>
+    <td>(于1875年,世界500强,日本最大的半导体制造商之一,致力于电子产品设计研发生产的企业,东芝集团) </td>
+  </tr>
+  <tr>
+    <td>  宏碁Acer</td>
+    <td>(于1976年,全球第二大个人电脑品牌,全球第二大PC制造商,十大笔记本品牌,宏碁电脑(上海)有限公司)</td>
+  </tr>
+  <tr>
+    <td>  苹果Apple-MAC</td>
+    <td>(1976年美国,世界品牌500强,世界上市值最大的科技公司,笔记本电脑<a href="http://www.bosidata.com">十大品牌</a>,苹果股份有限公司)</td>
+  </tr>
+  <tr>
+    <td>  神舟Hasee</td>
+    <td>(最具价值IT服务企业,中国电脑产业的领导厂商之一,十大笔记本品牌,深圳市神舟电脑股份有限公司)</td>
+  </tr>
+  </table>
+  <p>2012年中国域名主机服务商、虚拟主机十大品牌排行榜</p>
+<table id="tbrowser">
+  <tr>
+    <td width="22%">  新网</td>
+    <td width="78%">(国内外知名的信息化基础应用服务提供商,中国十大域名主机商,北京新网数码信息技术有限公司)</td>
+  </tr>
+  <tr>
+    <td>  中国万网</td>
+    <td>(中国领先的互联网应用服务提供商,中国域名注册服务的先行者之一,北京万网新兴网络技术有限公司)</td>
+  </tr>
+  <tr>
+    <td>  新网互联</td>
+    <td>(中国互联网应用服务提供商、移动寻址营销服务领域的先行者之一,北京新网互联科技有限公司)</td>
+  </tr>
+  <tr>
+    <td>  35互联</td>
+    <td>(国内为中小企业信息化建设提供软件应用及服务最主要的提供商之一,厦门三五互联科技有限公司)</td>
+  </tr>
+  <tr>
+    <td>  中资源</td>
+    <td>(中国互联网络品牌50强之一,厦门通信行业协会理事单,高新技术企业,厦门中资源网络服务有限公司)</td>
+  </tr>
+  <tr>
+    <td>  商务中国</td>
+    <td>(向企业及个人提供综合上网服务、具有丰富网络从业经验的现代型企业,厦门华商盛世网络有限公司)</td>
+  </tr>
+  <tr>
+    <td>  时代互联</td>
+    <td>(经ICANN和CNNIC认证的注册商之一,域名和网站托管服务提供商,珠海时代互联信息技术有限公司)</td>
+  </tr>
+  <tr>
+    <td>  西部数码</td>
+    <td>(以ASP互联网基础服务/IDC电信资源服务为主导的企业,,行业著名品牌,成都西维数码科技有限公司)</td>
+  </tr>
+  <tr>
+    <td>  世纪东方</td>
+    <td>(知名互联网服务提供商,中国西部最大的互联网络服务提供商之一,成都世纪东方网络通信有限公司)</td>
+  </tr>
+  <tr>
+    <td>  中国E动网</td>
+    <td>(国内领先的互联网接入方案提供商之一,上海地区最佳IDC服务商之一,上海威多斯数码科技有限公司)</td>
+  </tr>
+</table>
+
+ <p>世界十大移动U盘品牌排行榜(2011年)</p>
+<table id="tbrowser">
+ 
+  <tr>
+    <td width="22%">  金士顿Kingston</td>
+    <td width="78%">(全球存储产品领导品牌,全球规模最大的内存模组制造商之一,美国500强企业,远东金士顿科技股份有限公司)</td>
+  </tr>
+  <tr>
+    <td>  爱国者aigo</td>
+    <td>(于1993年北京,大规模领先国际市场的IT产品品牌,中国驰名商标,高新技术企业,爱国者数码科技有限公司)</td>
+  </tr>
+  <tr>
+    <td>  联想lenovo</td>
+    <td>(世界500强企业,中国驰名商标,中国名牌,全球PC领军企业,<a href="http://www.bosidata.com" target="_blank">U盘十大品牌</a>,跨国大型企业,联想集团有限公司) </td>
+  </tr>
+  <tr>
+    <td>  SanDisk闪迪</td>
+    <td>(全球最大的闪速数据存储卡产品供应商之一,全球最坚固的USB闪存盘之一,行业领导品牌,SanDisk   公司)</td>
+  </tr>
+  <tr>
+    <td>  宇瞻Apacer</td>
+    <td>(1997年台湾,U盘<a href="http://www.bosidata.com">十大品牌</a>,台湾最具影响力的数码存储品牌之一,跨国大型企业,宇瞻科技股份有限公司)</td>
+  </tr>
+  <tr>
+    <td>  惠普HP</td>
+    <td>(创于1939年美国,世界财富500强企业,世界品牌500强,行业领导品牌,跨国大型企业,惠普(中国)有限公司)</td>
+  </tr>
+  <tr>
+    <td>  PNY必恩威</td>
+    <td>(成立于1985年美国,外设内存/闪存领导厂商,美国IC及数码产品最大品牌之一,必恩威科技股份有限公司) </td>
+  </tr>
+  <tr>
+    <td>  威刚ADATA</td>
+    <td>(2001年台湾,第二大内存市场占有率,亚洲最大的记忆体模组厂商之一,十大SD卡品牌,威刚科技有限公司) </td>
+  </tr>
+  <tr>
+    <td>  朗科Netac</td>
+    <td>(广东著名商标,国内主要的移动存储产品供应商与出口商之一,高新技术企业,深圳市朗科科技股份有限公司)</td>
+  </tr>
+  <tr>
+    <td>  忆捷Eaget</td>
+    <td>(国内屈指可数的有自主研发能力的移动硬盘企业之一,行业知名品牌,U盘<a href="http://www.bosidata.com">十大品牌</a>,忆捷科技有限公司)</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

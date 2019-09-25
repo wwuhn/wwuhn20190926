@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  target="_blank"/>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>computer settingⅠⅡⅢ</title>
+<script language="JavaScript" type="text/javascript">
+
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+
+</script>
+<style type="text/css">
+<!--
+
+#browser1 {
+	width: 78.125%;
+	list-style-position:inside;
+	margin:auto;
+	font-family: "MV Boli",arial;
+	line-height:22px;
+
+}
+
+#browser{
+	width: 78.125%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli" arial;
+	text-align:left;
+	line-height:22px;
+}
+
+#browser th,td{
+border:1px solid #aaa;
+font-size:16px;
+color:#000000;
+}
+
+#browser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+padding:5px 0px;
+}
+#browser th{
+background-color:#f2f4b9;
+}
+#browser th.title{
+background-color:#e3e685;
+}
+#browser tfoot td{
+border-width:0px;
+text-align:right;
+font-size:16px;
+color:#777;
+}
+#browser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+text-align:left;
+}
+
+
+#browser .bl{
+border-left:none;
+}
+
+#browser .br{
+border-right:none;
+}
+
+#browser tr{
+height:6px;
+}
+
+#bod1 th.title{
+background-color:#ffd56c;
+}
+#bod1 th{
+background-color:#ffe8ae;
+}
+.clx td{
+background-color:#CCCCFF;
+}
+.lxf td{
+background-color:#f2f4b9;
+}
+.qzwq td{
+background-color:#CCCCCC;
+}
+a:hover{
+background-color:#CCCCCC;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+body {
+	margin-top: 0px;
+	line-height:18px;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+
+}
+#browser1 p{
+height:8px;
+font-weight:bold;
+margin-top:-15px;
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<div id="browser1">
+<p style="margin-top:2px;">一 设置转移和驱动备份</p>
+<ol class="uls">
+	<li>windows easy transfer</li>
+		<ol><li>migwiz.exe：允许您将设置、文件转移到另一台电脑或另一个帐户；</li>
+			<li>Ⅰ包括用户帐户、IE收藏夹、电子邮件及其他文件等；Ⅱ 传输方式：电缆、网络、外部介质；</li>
+			<li>Ⅰ……正在检查传输的内容：自定义选择各帐户的内容；Ⅱ……保存（可达到几百M）</li>
+			<li>传输完成后，您将看到已传输内容的列表、要在新PC上安装的程序、可能需要下载的程序的链接；</li>
+			<li>目标PC上上操作：migwiz---浏览到保存的轻松传送文件---选择内容---高级：</li>
+
+		</ol>
+	<li>驱动备份:用驱动精灵或优化大师</li>
+	<li>reg backup</li>
+</ol>
+<p>二 系统安装</p>
+<ol class="uls">
+	
+	<li>全新安装(系统安装时需重启3次)</li>
+		<ol>
+			<li>旧版windows安装程序必须输入正确的productkey,而新版可选择是否当时输入密钥，如有输入，则根据KEY判断版本；</li>
+			<li> 是否联机激活？（建议安装好再激活)</li>
+
+		</ol>
+
+	<li>已有系统，安装第二个</li>
+		<ol>
+			<li>Ⅰ如果硬盘上有A、B两个分区，不管是进入A还是B，都不能删除A的系统文件；</li>
+			<li>Ⅱ可以先进入系统A，安装一个新系统C,进入c,可删除A的系统文件windowsold文件夹；（diskmgmt.msc查看主分区）</li>
+			<li>安装的分区可以不格式，有不低于8G的空间（可有其它文件，不影响）</li>
+			<li>Ⅰwin7:sources\setup.exe&nbsp;&nbsp;Ⅱwindows xp:i386\winnt</li>
+
+		</ol>
+</ol>
+<p>三 系统安装后的设置</p>
+<ol class="uls">
+<li>God mode:ctrl+shift+N:GodMode.{ED7BA470-8E54-465E-825C-99712043E01C};
+    <li>设备管理器&nbsp;&nbsp;&nbsp;&nbsp;hdwwiz.cpl,&nbsp;&nbsp;devmgmt.msc</li>
+		<ol>
+			<li>检查设备的驱动安装有无异常；特别是显卡驱动不匹配的话，会有诸多问题;</li>
+			<li>关掉不用的设备：Windows XP总是尽可能为电脑的所有设备安装驱动程序并进行管理，这不仅会减慢系统启动的速度，同时也造成了系统资源的大量占用。可将PCMCIA卡、调制解调器、打印机端口(LPT1)或者串口(COM1)等不常用的设备停用;</li>
+
+		</ol>
+	
+	<li>用户文件夹转移出系统分区（包括桌面文件夹）</li>
+		<ol>
+		    <li>在非系统分区新建x:\UserName\desktop|favorite|documents;然后把桌面的文件剪过去(文件夹右击，属性，设置位置）;
+			<li>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders（user shell folders）</li>
+			<li>%userprofile%\documents---properties---location;</li>
+
+		</ol>
+
+	<li>performance options:&nbsp;&nbsp;&nbsp;&nbsp;control system=sysdm.cpl&nbsp;&nbsp;</li>
+		<ol>
+			<li>advanced system settings-performance-setting:adjust for best performance(all setting unselected)</li>
+			<li>temp文件夹目录和快捷方式设置；(c:\users\wwu\appdata\local\temp>(set显示和更改环境变量;%temp%)</li>
+			<li>给系统盘设置还原点:考虑软件的兼容性(系统与硬件)</li>
+
+		</ol>
+
+	<li>personizaion:desk.cpl</li>
+			<ol>
+			<li>resoluton;&nbsp;set custom text size(dpi)</li>
+			<li>select one areo theme;结合performance setting，可以达到较好的性能与显示效果(<a href="javascript:void(null)"  target="_self" title="visual effects,custome,selected:1 aero peek,2 desktop composition,3 transparent glass,4 show shadows under windows,use visual styles on windows and button;如果要求图片在资源浏览器中有预览效果：show thumbnails instead of icons">note</a>)</li>
+			</ol>
+<li>taskbar&start menu&nbsp;&nbsp;autoplay&nbsp;&nbsp;&#13;folder options</li>
+<li>internet options:&nbsp;&nbsp;&nbsp;inetcpl.cpl</li>
+		<ol>
+			<li>tabs apply:general,tabs,settings-when a pop-up encounted:always open pop-up in a new tab(selected)</li>
+			<li>Ⅰ Temporary Internet Files转移和快捷方式的设置；&nbsp;Ⅱ printer setting;</li>
+
+		</ol>
+
+<li>network and sharing:&nbsp;&nbsp;&nbsp;&nbsp;rasphone;&nbsp;&nbsp;</li>
+		<ol>
+		    <li>rasphone-bname1,pw,remember pw;property:cancel option:prompt for name and pw...;</li>
+			<li>taskschd.msc-c:\Windows\System32\rasphone -d 宽带连接名称bname1;(自动运行rasphone，也可以在reg的run)
+			<li>inetcpl.cpl-always dial my default connection;</li>
+			<li>ncpa.cpl&nbsp;&nbsp;ipconfig&nbsp;&nbsp;rasdial(自动建立连接)</li>
+		</ol>
+<li>power options:&nbsp;&nbsp;&nbsp;&nbsp;powercfg.cpl</li>
+		<ol>
+			<li>hibernate:Powercfg –h on\off;</li>
+		</ol>
+<li>user accounts</li>
+		<ol>
+			<li>Ⅰ complicated name and pw;&nbsp;&nbsp;Ⅱ user account control(UAC) setting;</li>
+			<li>Ⅰcmd-net user name1 pw /add;net localgroup administrators name1 /add;Ⅱ control userpasswords2-set
+		</ol>
+
+<li>fonts</li>
+<li>region and language:&nbsp;&nbsp;&nbsp;&nbsp;intl.cpl</li>
+<li>action center,updates&nbsp;&nbsp;&nbsp;&nbsp;wscui.cpl</li>
+		<ol>
+			<li>control panel---category---system and security---
+安装杀毒软件rising.com.cn</li>		
+		</ol>
+		
+<li>禁用Remote Registry服务</li>
+		<ol>
+			<li>Ⅰ 打开开始菜单并单击运行命令；在HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services下，删除Remote Registry;&nbsp;Ⅱ 禁止表服务Remote Registry;</li>
+		</ol>
+		
+<li>第一次系统瘦身（系统安装后）</li>
+		<ol>
+			<li>卸载不常用组件：XP默认给操作系统安装了一些系统组件，而这些组件有很大一部分是你根本不可能用到的，如Internet信使服务、传真服务、Windows messenger等，大约可腾出近50MB的空间。(appwiz.cpl-卸载程序窗口左侧；)</li>
+             <li>Ⅰ 删除驱动程序的备份文件：x:\WINDOWS\Driver Cache\i386下的压缩文件；Ⅱ 删除windows\help目录； </li>
+			 <li>删除不用的输入法：比如IMJP8_1 日文输入法、IMKR6_1 韩文输入法这些输入法:\windows\ime\文件夹中。</li>
+			 
+		</ol>
+<li>启用quick launch</li>
+		<ol>
+			<li>C:\Users\wwu\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch(search)</li>		    
+		</ol>
+		
+<li>共享设置更改</li>
+		<ol>
+			<li>fsmgmt.msc=net share(cmd),可以看到共享的文件夹；</li>		    
+			<li>根据列表的共享,一个个删除:net share c\ipc\admin$ /del</li>
+                        <li>上述操作麻烦，可先设置注册表，然后删除ipc$;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters,右窗口新建dword:1 AutoShareServer=0;AutoShareWks=0;(可以写成.reg文件导入）</li>
+
+			<li>网络连接端口查看:netstat -n</li>
+		</ol>
+</ol>
+<p>四 程序安装</p>
+<ol class="uls">
+<li>设置一个系统还原点</li>
+<li>程序安装目录更改（最好不要改，会有很多问题），另外如果需要做gho的话，系统与程序最好安装到一起；</li>
+		<ol>
+			<li>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion]:ProgramFilesDir</li>
+			<li>把C:\Program Files\Windows Photo Viewer放到更改后的目录,不然看图会有问题;</li>
+		</ol>
+			<li>注意事项</li><ol>
+			<li>一些阉割过的版本会有诸多问题：一些功能用不了，兼容不好；用过一个改动过的会声会影，无法使用分享功能；</li>
+			<li>越大、功能越复杂的程序安装时的要求越高，时间越长，很容易安装失败，需要较优的安装环境；</li>
+			<li>安装时要注意一些开机自运行、快捷方式、关联文件、默认勾选的一些工具的选项选择；尽量选择自定义安装（自定义安装位置、组件等）；</li>
+			<li>一些程序要求先安装一些支持部件或公用程序：.net framework v4.0.30319\microsoft visual c++ 2010;</li>
+			<li>一些程序需要重启一次继续安装，如nero;一些程序需要重启后才可运行，如symantec norton ghost 14;</li>
+			<li>key:Ⅰ 一些程序要求先输入key,才可开始安装，如CAD;Ⅱ 一些需要安装完成后，需要输入key才可运行，如ps;</li><li>Ⅲ 一些程序可以让用户试用一段时间，如ultraiso9;</li>
+			<li>最新版本的程序不一定是最佳的选择：bug、兼容不好、缺少技术支持；</li>
+			</ol>
+  </ol>
+<p>五 程序安装完的后续操作</p>
+		<ol class="uls">
+		<li>第二次瘦身（全部程序安装完后）</li>
+		<ol>
+		<li>Ⅰ Ｍsocache,office安装后的备份文件，400M;Ⅱ temp文件夹,1.4G;Ⅲ hiberfil.sys休眠文件,700M;</li>
+		</ol>
+		<li>软件安装完后启动项设置：msconfig</li>
+		<li>开始菜单的调整和优化；</li>
+		</ol>
+<p>六 Ghost系统</p>
+<ol class="uls">
+<li>Ghost前的工作：系统安装及设置；2 软件安装及软件逐一设置（选项或首选项以符合自己的操作习惯）；</li>
+<li>Ghost image</li>
+	<ol>
+		<li>Ghost不能对自己本身备份,需要在DOS或另一系统进行备份;</li>
+		<li>to partion:只是文件的简单复制;to image:才是做了一个镜像文件;</li>
+		<li>Ghost 9的备份文件是.v2i;v15需要用CD启动来进行恢复;</li>
+	</ol>
+		<li>Ghost双系统&nbsp;<a href="http://www.hunanwb.com/technic/rjjs/20100721/4845.html">jc1</a>&nbsp;<a href="javascript:void(null)"  target="_self" title="已有双系统C（主活动分区）和D，利用深山红叶的Ghost11镜像from image移动盘上的gho文件覆盖D，可正常双系统启动；2 再次镜像到扩展分区E，利用easybce添加e区的启动菜单项即可；">experience</a>&nbsp;<a href="javascript:void(null)"  target="_self" title="未完成：1 sinalive,cbox;2 startmenu setting;3 %userprofile% transfer;4 IE printer preview;">en win7.gho</a></li>
+	<ol>
+		<li>启动电脑，Ghost镜像文件到一个分区E（文件会覆盖）（此时C为系统活动分区）</li>
+		<li>Ⅰ 用PE工具，设置E为活动分区；Ⅱ 启动到E，再设置C为活动分区；</li>
+		<li>启动到到C，用easy BCD修改引导菜单；</li>
+	</ol>
+</ol>
+
+<p>八 延长系统试用11月</p>
+<ol class="uls">
+	<li style="font-size:14px">试用30天后，附件－命令提示符(管理员方式运行):slmgr.vbs /rearm；看到成功运行的对话框后，马上重启即可；此命令可用3次；</li>
+	<li style="font-size:14px">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform,将“SkipRearm”的键值改为dword:00000001后，可再次用上述命令，reg可改8次；(Software License manager vb script)</li>
+</ol>
+
+
+<p style="page-break-before:always;">九 系统、常用软件下载站点</p>
+		<ol>
+		<li>系统下载：<a href="http://www.355189.com/win7/2012/0706/880.html">系统之家</a>&nbsp;<a href="http://www.dedexitong.com/xitong/xp/index.html">得得系统</a>&nbsp;<a href="http://msdn.itellyou.cn/" title="微软原版下载,weibo.com/aoxiang6688">MSDN</a>&nbsp;<a href="http://www.startos.com/">雨林木风</a>&nbsp;<a href="http://www.tomatolei.com/portal.php">番茄花园</a>&nbsp;<a href="http://ghostba.blog.163.com/">XP装机版</a>
+		  <li>软件下载：<a href="http://soft.gougou.com/">狗狗</a>&nbsp;<a href="http://www.skycn.com/">天空</a>&nbsp;<a href="http://mydown.yesky.com/">天极</a>&nbsp;<a href="http://dl.pconline.com.cn/">太平洋</a>&nbsp;<a href="http://www.duote.com/">多特</a>&nbsp;<a href="http://www.onlinedown.net/index.htm">华军</a>
+<a href="http://down.it168.com/">it168</a>&nbsp;<a href="http://download.pchome.net/">电脑之家</a>&nbsp;<a href="http://tech.sina.com.cn/down/">新浪下载</a>&nbsp;<a href="http://www.xiazaiba.com/">下载吧</a>&nbsp;<a href="http://www.xp510.com/">XP系统之家</a>&nbsp;&nbsp;<a href="http://www.33lc.com/">绿茶</a></li>
+			<li>Activation Key:<a href="http://weibo.com/aoxiang6688" title=" wwuhn@,sixthree">翱翔新浪</a>&nbsp;<a href="http://hi.baidu.com/new/guoguo6688">翱翔百度</a>&nbsp;yunfile.com download,copy to address:javascript:redirectDownPage();void(0)</li>
+		</ol>
+
+
+
+</div>
+
+<table id="browser">
+
+<caption>常用软件及官方下载  <a href="http://www.microsoft.com/zh/cn/sitemap.aspx">微软</a>&nbsp;<a href="http://www.adobe.com/products/catalog.html">Adobe</a></caption>
+<thead>
+  <tr>
+    <th width="2.2%" >sn</th>
+    <th width="9.8%" style="font-size:14px;">软件类别</th>
+    <th width="11.9%" >软件名称</th>
+    <th width="7.4%" >最新版本</th>
+    <th width="7.1%" >介绍</th>
+    <th width="46.3%" >备注</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  
+    <tr>
+    <td>1</td>
+    <td>驱动</td>
+    <td><a href="http://www.mydrivers.com/">驱动之家</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/1327944.htm">驱动精灵</a></td>
+    <td>www.mydivers.com驱动备份与还原</td>
+    </tr>
+	
+	
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="http://support-cn.canon-asia.com/">cannon</a></td>
+    <td>mp236</td>
+    <td><a href="http://baike.baidu.com/view/9294670.htm">mp236</a></td>
+    <td>官网最低版本有mp360;对于镜像文件,需要虚拟为光驱再安装;</td>
+    </tr>
+	
+	<tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://h10025.www1.hp.com/ewfrf/wc/softwareCategory?cc=cn&dlc=zh-hans&lc=zh-hans&product=3559184&/" title="dv2623">HP</a></td>
+    <td></td>
+    <td>baidu</td>
+    <td>http://www8.hp.com/cn/zh/home.html</td>
+    </tr>
+	
+  <tr>
+    <td>2</td>
+    <td>输入法</td>
+    <td><a href="http://www.skycn.com/soft/20835.html">极点五笔</a></td>
+    <td>V7.15</td>
+    <td><a href="http://baike.baidu.com/view/16783.htm#3">baidu</a></td>
+    <td>www.freewb.org；有时需要绿化一下;<a href="http://www.freewb-1181786.adminkc.cn/">官方网站</a></td>
+    </tr>
+	
+  <tr>
+    <td>3</td>
+    <td>杀毒</td>
+    <td><a href="http://www.rising.com.cn">瑞星</a></td>
+    <td>v16</td>
+    <td><a href="http://baike.baidu.com/view/5876.htm#6">baidu</a></td>
+    <td>www.rising.com.cn;free</td>
+    </tr>
+ 	
+  <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://www.eset.com/">ESET NOD32</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/435005.htm">baidu</a></td>
+    <td>www.eset.com</td>
+    </tr> 
+ 	
+  <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://cn.norton.com/?inid=CN_overlay_slot1_norton">诺顿</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/44.htm#sub6684709">baidu</a></td>
+    <td>www.symantec.com</td>
+    </tr> 
+   
+  <tr>
+    <td>4</td>
+    <td>压缩、映像</td>
+    <td><a href="http://www.winrar.com.cn">Winrar</a></td>
+    <td>4.20</td>
+    <td><a href="http://baike.baidu.com/view/2345.htm">baidu</a></td>
+    <td>www.winrar.com.cn</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="http://cn.ezbsystems.com/">UltraISO</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/403876.htm#6">baidu</a></td>
+    <td>http://cn.ezbsystems.com/;王涛7C81-1689-4046-626F</td>
+  </tr>
+	
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="http://www.winmount.com/">WimMount</a></td>
+    <td>V3.5.1018</td>
+    <td><a href="http://baike.baidu.com/view/796288.htm#2_1">baidu</a></td>
+    <td>用WimTool备份或增量备份wim文件，用WimMount查看；</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>下载</td>
+   <td><a href="http://dl.xunlei.com/xl7.html">迅雷</a></td>
+    <td>v7</td>
+    <td><a href="http://baike.baidu.com/view/546.htm#7">baidu</a></td>
+    <td>www.xunlei.com，设置好默认的下载目录；</td>
+    </tr>
+	
+		
+  <tr>
+    <td></td>
+    <td></td>
+   <td><a href="http://www.emule-project.net/home/perl/general.cgi?l=42&rm=download" title="还一个everycd--电驴http://www.emule.org.cn/和国外的edondey">emule</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/4611.htm">baidu</a></td>
+    <td></td>
+    </tr>
+	
+	
+  <tr>
+    <td>6</td>
+    <td>办公</td>
+    <td><a href="http://office.microsoft.com/zh-cn/">MS office</a></td>
+    <td>2013</td>
+    <td><a href="http://baike.baidu.com/view/25393.htm#4">baidu</a></td>
+    <td>ms2007key,安装时rising会阻止;安装后设置：选项－加载项：转到，去掉一些勾选项目；</td>
+    </tr>
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://office.microsoft.com/zh-cn/products/?ofcresset=1">office2007</a></td>
+		<td>2007</td>
+		<td><a href="http://baike.baidu.com/view/271693.htm">baidu</a></td>
+		<td>GM26K-7MYV2-338DJ-4DKMG-DTJBJ</td>
+	</tr>	
+	
+  <tr>
+    <td>7</td>
+    <td>播放器</td>
+    <td><a href="http://www.baofeng.com/">暴风影音</a></td>
+    <td>v5</td>
+    <td><a href="http://baike.baidu.com/view/36.htm#14">baidu</a></td>
+    <td>www.baofeng.com</td>
+    </tr>
+	
+   <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://www.kmpmedia.net/">kmplayer</a></td>
+    <td>v3.3.0.33</td>
+    <td><a href="http://baike.baidu.com/view/82296.htm#2">baidu</a></td>
+    <td>www.kmpmedia.net</td>
+    </tr> 
+		
+   <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://www.baidu.com/s?wd=win7codecs&rsv_bp=0&rsv_spt=3&rsv_sug3=6&rsv_sug4=476&rsv_sug1=5&oq=win7co&rsp=0&f=3&rsv_sug2=0&inputT=7510">win7codecs</a></td>
+    <td>v3.8</td>
+    <td><a href="http://baike.baidu.com/view/2502286.htm">baidu</a></td>
+    <td>让Windows MediaPlayer支持各种编码的文件的解码器</td>
+    </tr> 
+
+		
+  <tr>
+    <td>8</td>
+    <td>聊天</td>
+    <td><a href="http://www.qq.com/">QQ</a></td>
+    <td>2012</td>
+    <td><a href="http://baike.baidu.com/view/1535.htm">baidu</a></td>
+    <td>www.qq.com</td>
+    </tr>
+  
+  <tr>
+    <td>9</td>
+    <td>网页制作</td>
+    <td><a href="http://www.adobe.com/cn/products/dreamweaver.html">Dreamweaver</a></td>
+    <td>cs6</td>
+    <td><a href="http://baike.baidu.com/view/7919.htm#1">baidu</a></td>
+    <td>Adobe,v8:WPD800-59139-91432-25145</td>
+    </tr>
+  
+  <tr>
+    <td>10</td>
+    <td>图像编辑</td>
+    <td><a href="http://www.adobe.com/products/photoshopfamily.html?promoid=JOLIW">PS</a></td>
+    <td></td>
+    <td><a href="http://baike.baidu.com/view/2929.htm#2">baidu</a></td>
+    <td>Adobe,<a href="javascript:void(null)"  target="_self" title="1 默认序列号安装；2 安装后第一次打开时会要求激活，选择电话激活；记下激活号（7组28个数字）；3 运行注册机keygen,exe,在“Activation Application”中选“Photoshop CS2 9.0”，
+在“Request Code:”中输入刚才所记下的激活号，按下最下面的“Generate”按纽，就可以得到授权码Answer code（共5组）。返回Photoshop CS2激活界面，输入刚才生成的5组授权码，按“激活”，激活成功。
+">note</a>&nbsp;keygen,activation;</td>
+    </tr>
+	
+  <tr>
+    <td>11</td>
+    <td>视频编辑</td>
+    <td><a href="http://www.corel.com/corel/product/index.jsp?pid=prod3910160&cid=catalog3720069&segid=2100153">会声会影</a></td>
+    <td>x4</td>
+    <td><a href="http://baike.baidu.com/view/402054.htm">baidu</a></td>
+    <td>www.corel.com;安装很慢,重启后才可以使用;需要优化性能的运行环境;</td>
+    </tr>
+	
+  <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://www.adobe.com/cn/products/premiere.html">Premiere</a></td>
+    <td>x4</td>
+    <td><a href="http://baike.baidu.com/view/750295.htm">baidu</a></td>
+    <td>Adobe,系统必须是windows 64位的；</td>
+    </tr>
+		
+   <tr>
+    <td></td>
+    <td></td>
+    <td><a href="http://www.6686.com/soft/418.html" title="官网:http://www.formatoz.com/CN/index.html">格式工厂</a></td>
+    <td>v2.96</td>
+    <td><a href="http://baike.baidu.com/view/1820476.htm">baidu</a></td>
+    <td>视频格式转换</td>
+    </tr>
+   <tr>
+     <td>12</td>
+     <td>CAD</td>
+     <td><a href="http://www.autodesk.com.cn/adsk/servlet/pc/item?siteID=1170359&amp;id=20353518" >AutoCAD</a></td>
+     <td>2013</td>
+     <td><a href="http://baike.baidu.com/view/426247.htm">baidu</a> </td>
+     <td>序列号全是1;系统运行很久后需要重启开始安装,忽略错误1308;</td>
+   </tr>
+	
+  <tr>
+    <td>14</td>
+    <td>光盘刻录</td>
+    <td><a href="http://www.nero.com/chs/">nero</a></td>
+    <td>v12</td>
+    <td><a href="http://baike.baidu.com/view/115506.htm#7">baidu</a></td>
+    <td>www.nero.com;重启后才能继续安装完;<br />serial no.:901E-0190-XL1C-8PML-7P7Z-8H70-CL4Z-X129</td>
+    </tr>
+	
+	<tr>
+   <td>15</td>
+    <td>PDF read</td>
+    <td><a href="http://www.adobe.com/products/reader.html">Acrobat reader</a></td>
+    <td>X</td>
+    <td><a href="http://baike.baidu.com/view/94004.htm">baidu</a></td>
+    <td>Adobe</td>
+    </tr>
+	
+	<tr>
+	  <td>16</td>
+    <td>Flash player</td>
+    <td><a href="http://www.adobe.com/products/flashplayer.html?promoid=DJDWD">Flash player</a></td>
+    <td>v11</td>
+    <td><a href="http://baike.baidu.com/view/748108.htm#3">baidu</a></td>
+    <td>Adobe</td>
+    </tr>
+	
+<tr>
+	<td>17</td>
+	<td>网络电视</td>
+	<td><a href="http://www.sopcast.com/">sopcast</a></td>
+	<td>v3.5</td>
+	<td><a href="http://baike.baidu.com/view/587785.htm#3">baidu</a></td>
+	<td>www.sopcast.com</td>
+</tr>
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://www.pps.tv/">PPS网络电视</a></td>
+		<td>v2.7</td>
+		<td><a href="http://baike.baidu.com/view/188473.htm">baidu</a></td>
+		<td>www.pps.tv</td>
+    </tr>
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://live.pptv.com/">PPTV</a></td>
+		<td>v3.2</td>
+		<td><a href="http://baike.baidu.com/view/3114249.htm">baidu</a></td>
+		<td>live.pptv.com</td>
+    </tr>	
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://zhibo.uusee.com/">悠视</a></td>
+		<td>v7.12</td>
+		<td><a href="http://baike.baidu.com/view/2406262.htm">baidu</a></td>
+		<td>live.pptv.com</td>
+    </tr>	
+
+		<tr>
+		<td>18</td>
+		<td>音乐播放器</td>
+		<td><a href="http://ttplayer.qianqian.com/">千千静听</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/6725.htm">baidu</a></td>
+		<td>http://ttplayer.qianqian.com/</td>
+    </tr>
+
+		<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://mbox.kuwo.cn/">酷我音乐盒</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/1013774.htm">baidu</a></td>
+		<td>http://mbox.kuwo.cn/</td>
+    </tr>
+	
+		<tr>
+		<td>19</td>
+		<td>词霸</td>
+		<td><a href="http://ciba.iciba.com/">金山词霸</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/6599.htm">baidu</a></td>
+		<td>http://ciba.iciba.com/</td>
+    </tr>
+
+	<tr>
+		<td>20</td>
+		<td>百科</td>
+		<td><a href="http://www.google.com/earth/index.html">google earth</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/274822.htm">baidu</a></td>
+		<td>www.google.com/earth/</td>
+	</tr>	
+	<tr>
+		<td>21</td>
+		<td>局域网</td>
+		<td><a href="http://www.antiarp.com/about.htm" >Antiarp</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/1363875.htm">baidu</a>  </td>
+		<td> </td>
+	</tr>
+	<tr>
+      <td>22</td>
+	  <td>资源管理</td>
+	  <td><a href="http://www.jam-software.com/treesize_free/">treesize free</a></td>
+	  <td>v2.7</td>
+	  <td><a href="http://download.pchome.net/system/harddisk/down-89959-1.html">PChome</a> </td>
+	  <td>shows you the size of this folder, including its subfolders</td>
+    </tr>	
+
+	<tr>
+		<td>23</td>
+		<td>partion</td>
+		<td colspan="2"><a href="http://www.acronis.com/homecomputing/products/diskdirector/" >Acronis Disk Director v11</a></td>
+		<td><a href="http://baike.baidu.com/view/3493398.htm">baidu</a>  </td>
+		<td>磁盘分区操作又可能丢失数据，特别是当本身硬盘存在问题时</td>
+	</tr>	
+	
+
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://www.diskgenius.cn/">Disk Genius</a></td>
+		<td>v3.71</td>
+		<td><a href="http://baike.baidu.com/view/2979897.htm">baidu</a>  </td>
+		<td>重建分区表</td>
+	</tr>
+	<tr>
+      <td>24</td>
+	  <td>系统修复</td>
+	  <td><a href="javascript:void(null)"  target="_self" title="CoolMiniPE_V32">深山红叶</a></td>
+	  <td><a href="http://www.33lc.com/soft/7696.html">v32</a></td>
+	  <td><a href="http://baike.baidu.com/view/107796.htm">baidu</a> </td>
+	  <td>工具集，包括Norton Ghost 11,wintool; </td>
+    </tr>	
+
+	
+
+	<tr>
+	  <td>&nbsp;</td>
+	  <td>&nbsp;</td>
+	  <td><a href="http://www.laomaotao.net/">老毛桃</a></td>
+	  <td>v5.12.5.1</td>
+	  <td><a href="http://baike.baidu.com/view/1395036.htm">bd</a></td>
+	  <td>U盘启动，工具丰富</td>
+    </tr>
+	<tr>
+		<td>25</td>
+		<td>启动修复</td>
+		<td><a href="http://neosmart.net/EasyBCD/">easybcd</a></td>
+		<td><a href="http://www.baidu.com/s?ie=utf-8&bs=Bcdedit&f=8&rsv_bp=1&wd=easy+bcd&rsv_sug3=7&rsv_sug=0&rsv_sug1=7&rsv_sug4=548&inputT=9632">v2.2</a></td>
+		<td><a href="http://baike.baidu.com/view/2689164.htm">baidu</a>  </td>
+		<td>多系统启动菜单修复；<a href="http://rss.neosmart.net/neosmart">国外网址</a>;还有<a href="http://baike.baidu.com/view/1295916.htm">bcdedit</a></td>
+	</tr>	
+
+
+
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="https://skydrive.live.com/?cid=305405f66c26f9b3#cid=305405F66C26F9B3&id=305405F66C26F9B3%21105">NTBootAutofix</a></td>
+		<td>v2.5.2</td>
+		<td><a href="http://baike.baidu.com/view/3979446.htm">baidu</a>  </td>
+		<td>多系统启动菜单修复；</td>
+	</tr>	
+	
+
+
+	<tr>
+		<td>26</td>
+		<td>数据恢复</td>
+		<td><a href="Javascript:void=(null)">easyrecovery</a></td>
+		<td></td>
+		<td><a href="http://baike.baidu.com/view/781298.htm">baidu</a></td>
+		<td>好用</td>
+	</tr>
+	<tr>
+      <td>27</td>
+	  <td>优化</td>
+	  <td><a href="http://youhua.com/">win优化大师</a></td>
+	  <td>V7.99</td>
+	  <td><a href="http://baike.baidu.com/view/32293.htm#5">baidu</a></td>
+	  <td>碎片整理、注册表优化都有可能导致系统异常,特别是旧硬盘;</td>
+    </tr>	
+	
+	
+	<tr>
+		<td>28</td>
+		<td>系统镜像</td>
+		<td><a href="http://cn.norton.com/ghost/">Norton Ghost 15</a></td>
+		<td><a href="http://www.3ddown.com/soft/21187.htm">v14</a>&nbsp;<a href="http://pcedu.pconline.com.cn/soft/gj/sys/0911/1939354.html">v15</a></td>
+		<td><a href="http://baike.baidu.com/view/2666.htm">baidu</a></td>
+		<td>深山红叶工具箱有集中Ghost11,不能对系统本身备份,可切换到Dos或另一系统进行;V14安装很慢,无进度条,需要耐心等待;重启后才可使用;</td>
+	</tr>	
+	
+	
+	<tr>
+	  <td>29</td>
+	  <td>数据备份</td>
+	  <td><a href="http://www.cr173.com/html/14063_1.html">Wimtool</a><a href="http://www.xiazaiba.com/html/4966.html">&nbsp;d</a></td>
+	  <td><a href="http://news.newhua.com/news1/Eval_tools/2005-2/4/161124748.shtml">三款比较</td>
+	  <td><a href="software/增量备份/backup.html">备份实操</a></td>
+	  <td><a href="http://www.acronis.com.cn/homecomputing/products/trueimage/">Acronis True Image</a>,<a href="http://diybbs.zol.com.cn/12/225_110840.html" title="V9后支持增量备份">Ghost</a>,<a href="http://bbs.wuyou.com/viewthread.php?tid=201091">Snapshot</a>,<a href="http://baike.baidu.com/view/1038238.htm">ImageX</a>,<a href="http://www.7xdown.com/downinfo/10103.html" title="支持分区的增量备份">ImageX OneKey</a>;智能备份（可选择对象）、增量备份；备份的wim文件可以用wimMount查看；</td>
+    </tr>
+	<tr>
+	  <td>30</td>
+	  <td>启动U盘</td>
+	  <td>USBoot</td>
+	  <td><a href="http://www.crsky.com/soft/4032.html">v 1.7</a> </td>
+	  <td><a href="http://baike.baidu.com/view/658769.htm">baidu</a></td>
+	  <td>U盘插入－运行USBoot-选择U盘－模式：Zip模式－－－</td>
+    </tr>
+	<tr>
+		<td>31</td>
+		<td>公共程序</td>
+		<td colspan="2"><a href="http://msdn.microsoft.com/zh-cn/aa570309.aspx)">.NET Framework</a></td>
+		<td><a href="http://baike.baidu.com/view/18370.htm">baidu</a></td>
+		<td></td>
+	</tr>	
+	
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a href="http://www.microsoft.com/visualstudio/chs/downloads">Visual C++ 2010</a></td>
+		<td><a href="http://www.baidu.com/s?ie=utf-8&bs=Microsoft+Visual+C+2010&f=8&rsv_bp=1&wd=Microsoft+Visual+C%2B%2B++2010&rsv_sug3=3&rsv_sug1=2&rsv_sug4=294&inputT=3530">v2012</a></td>
+		<td><a href="http://baike.baidu.com/view/100377.htm">baidu</a></td>
+		<td>Microsoft Visual C++ 2010</td>
+	</tr>	
+	
+	<tr>
+	    <td></td>
+		<td>Overall</td>
+		<td colspan="4"><a href="http://tv.cntv.cn/live/cctv5">1 cctv5 Cbox;</a>&nbsp;<a href="http://live.video.sina.com.cn/room/nba">2 sinalive</a>&nbsp;<q title="光盘数据检验和恢复">3 cdcheck</q>&nbsp;4 Badcopy</td>
+	</tr>	
+  </tbody>
+  
+  <tbody class="clx">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+<script language="JavaScript" type="text/javascript">
+bg_even("browser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");
+</script>

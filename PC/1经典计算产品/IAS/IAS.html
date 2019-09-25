@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>IAS</title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <p align="left"><strong><a href="http://www.techcn.com.cn/index.php?doc-view-140670.html">IAS</a>   </strong></p>
+  <p align="left">1952年 现代电脑之父的完美理念——IAS</p>
+<p>
+   1952年1月，由计算机之父，冯·诺伊曼（Von Neumann）设计的IAS电子计算机EDVAC问世。这台IAS计算机总共采用了2300个电子管，运算速度却比拥有18000个电子管的“埃尼阿克”提高了10倍，冯·诺伊曼的设想在这台计算机上得到了圆满的体现。 </p>
+<p>
+  <img width="897" height="710" src="IAS_clip_image002.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355hLoOfLSI.jpg" /> </p>
+<p>
+ 1949年5月，英国剑桥大学数学实验室根据冯·诺伊曼的思想，制成电子延迟存储自动计算机埃迪萨克(EDSAC)，这是第一台带有存储程序结构的电子计算机。1952年1月，诺伊曼设计的IAS机制成，使他的设想在这台机器上得到完满的体现。这台IAS机只用了2300个电子管，但速度比拥有18000个电子管的埃尼阿克提高了10倍。IAS被屡屡仿制，成了诺伊曼型机的鼻祖。 </p>
+<p>
+  The IAS machine was the first electronic digital computer built by  the Institute for Advanced Study (IAS), Princeton, NJ, USA.&nbsp;</p>
+<p>
+  <a name="section" id="section">目录</a> </p>
+<p>
+    • <a href="#1">冯·诺伊曼与IAS</a> </p>
+<p>
+    • <a href="#3">高级研究所与IAS计算机</a> </p>
+<p>
+    • <a href="#5">詹姆士·波默林—IAS和HARVEST计算机的首席工程师</a> </p>
+<p>
+    • <a href="#7">IAS设计的相关机器列表</a> </p>
+ 
+  <p align="left"> </p>
+<p>
+    冯·诺伊曼与IAS<a name="1" id="1"></a> <a href="#section">回目录</a> </p>
+<p>
+  <img border="0" width="800" height="577" src="IAS_clip_image003.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355tohIX3nt.jpg" /> </p>
+<p> John von  Neumann (1903--1957) 是这个世纪最传奇的数学人物之一。他是原籍匈牙利的美国人。在他三十多年的学术生涯之中，其工作范围几乎函盖了当时所有的数学，还独自开创了三、四种全新的数学学派。不谈他的数学，在关于计算器的贡献方面，他与当时的工程师共同开创了今日电子计算器的设计，并创造了自动机理论 (automata)。　　 </p>
+<p>
+    关于他的奇闻轶事中，最常见的就是他那惊人的记忆力和推理速度。据说他在刚到纽约的时候，真的表演过翻看电话号码簿，就能在半小时内记得几千人的电话。他写的板书很大，而且速度又快，所以一个黑板立刻就被他写满。因此，在他演讲的时候，总是一边写、一边擦。然后，他会不断地指着黑板的某处，说，根据前三次写在这个位置的式子，或许再加上前五次写在那个位置的式子，可以得到以下的结论，如此这般。所以，有些数学家就说 von Neumann 是个「用板擦证明」数学定理的人。就连当时最聪明的数学家和物理学家，都认为 von Neumann 的脑袋可能不是人类。　　 </p>
+<p>
+    von Neumann 的心念速度是如此之快，快到在他的有生之年，没有一台电子计算器的速度超过了他自己的心算速度。虽然如此，他还是热衷于计算机的设计和发展。或许他知道，虽然计算机算不赢他，但是对旁人而言还是很重要的工具。而且，他当然知道，假以时日，计算器的速度总会超过他自己的速度。　　 </p>
+<p>
+    Von Neumann 逃避纳粹到达美国之后，就进了 Princeton 的高等研究院 (爱因斯坦也在那里)。那是个学术研究气氛最纯的地方，而他在那里是个快乐的 Johnny。大家都喜欢他，甚至「容忍」他制造了一台电子计算器，用以实验他的设计理念。这台计算机，有些人称之为 IAS computer (Institute of  Advance Study，就是高等研究院的名字)，也有人称之为 von Neumann computer。在 1952 年的落成典礼上，他还订制了一个模拟机器的冰雕来庆祝。以下就是这台 IASComputer 的照片。 </p>
+<p>
+    <img border="0" width="728" height="591" src="IAS_clip_image004.gif" alt="[von Neumann's IAS machine]" /> </p>
+<p>
+    [vonNeumann's IAS machine]　　 </p>
+<p>
+    在 ENIAC 这个巨大工程的背后，除了两位伟大的工程师 Mauchly 和 Eckert 之外，还有一位数学家 Goldstine 负责逻辑和程序的设计。 1945 年春, Goldstine 因为不胜压力而到普林斯顿的乡间做短期静养。当他要回费城的时候，在火车站遇到 von Neumann。他们谈话的气氛，原本只是说说天气很好，后来 Goldstine 提到 ENIAC 计划，那种气氛就变得像博士班口试一样。 von Neumann 马上就深入询问了逻辑设计的细节，而且在三天后就亲临现场，参观了 ENIAC 的工程。本来 ENIAC 是个国防机密，但是 von  Neumann 参与了更机密的勾当：原子弹，所以轻易就参与了 ENIAC 的工作群。　　 </p>
+<p>
+    ENIAC 以十进制做数据储存，每个数有四十位固定小数点的有效数字。在做乘法的时候，其实使用了并行计算的设计。最要命的是，只有数据储存在机器里面，程序并不在里面。要改变 ENIAC 的程序，必须以人工重接电路板之间的线路，耗时两小时以上。关于这些，von Neumann 都不以为然。他和一些人合作，连续写出两份报告书，为以后的电子计算器，提出设计蓝图 (那时候 ENIAC 已经来不及修改了)。这份蓝图的某些特点，广被接受，而且实行至今：　　 </p>
+<p>
+    * 用二进制数字 </p>
+<p>
+    * 序列执行 (一个指令接着一个指令地执行，不是并行计算)</p>
+<p>
+    * 程序与数据都储存在计算机里面 (因此需要设计内存)　　 </p>
+<p>
+    英国的 EDSAC 是第一个符合这个蓝图的计算机。 von Neumann 自己的 IAS，并没有赶上第一，甚至第二也可能没有，因为美国的私人公司，也已经急着开始设计、制造自己的计算机了。他们的基本设计蓝图，基本上就是 von Neumann 的蓝图。　　 </p>
+<p>
+    IAS 计算机的设计和经费，大约是在 1948 年确定的。 von  Neumann 运用政治手腕，说服了高等研究院同意他在一个纯理论的天堂中，制造一台脏乱吵闹的电子计算器。他还巧妙地联合了产官学界一起参与，其中负责内存之设计的，就是 RCA 公司。RCA 以其在视讯器材上的经验，利用电视映象管的阴极射线残留性质，设计了第一批的电子内存。但是这套技术现在已经被淘汰了。　　 </p>
+<p>
+    IAS 计算机从 1952 年启用，von  Neumann 邀请了许多科学家来一起试用这台计算器。其中最成功的应该属数值天气预测(numerical weather  prediction)；不论在科学与实用价值上，都极受瞩目。当时的主持人是大气科学家 Jule Charney，他后来到 MIT 开创了一流的数值天气预测研究中心。著名的蝴蝶现象与动态系统，都是在那个中心流传出来的。　　 </p>
+<p>
+  <img border="0" width="574" height="434" src="IAS_clip_image005.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355AvQ3gJZx.jpg" /> </p>
+<p>
+    其实在 1952 年后，von Neumann 已经进入美国政府的决策单位，在学术研究方面稍微放慢了脚步。他的主要身份相当于我们这里说的核能委员会主委，在美国华府有一间办公室。他知道在普林斯顿和高等研究院，计算器科学都很难真的获得同仁们全心全意的支持，所以已经决定将 IAS 计算机从高等研究院迁出来，送给邻近的普林斯顿大学。而他自己要去加州大学洛杉矶分校 (UCLA)，继续计算器科学的研究。可惜在他离开华府的公职之前，就于 1957 年因骨癌逝世，享年 54 岁。以他这样特殊聪明的人来说，已经不算是天忌英才了。　　 </p>
+<p>
+    普林斯顿大学虽然接收了IAS 作为一个免费的礼物，却发现这名娇客非常难养。技术人员建议学校每年准备两万美元来伺候她，普林斯顿很大方地筹划了三万美元的预算。但是第一年就花了十二万美元。因此，在 von Neumann 咽气之后，他们就赶快找个借口把 IAS 关了。但是，因为这短暂的一段因缘，普林斯顿却在这段期间造就了好几个后来在计算器科学界举足轻重的角色，包括 John Hopcroft、Peter Denning、Jeff Ullman、Al Aho、BrianKernighan、 Don Knuth、John  McCarthy，都是这段时间在普林斯顿的研究生或者年轻助理教授。不过，他们也都像von Neumann 一样感受到学校同仁对计算器科学的不友善态度，何况 von Neumann 一死，留在这里就更没意思了。所以这些了不起的开创性人物，在五年内全走光了，没有一个留在普林斯顿的。 </p>
+<p>
+    von  Neumann 对今日的电子计算器设计，有决定性的影响。但是他也有看错的时候。例如他不认为像 FORTRAN 这样的高级语言是必要的。他认为直接用机器码来写程序就好了。 von Neumann 有一个博士班学生，因为用机器码太烦了，着手设计汇编语言。von Neumann 知道了以后大为恼火，认为他不该把宝贵的时间浪费在这种无用的工具上。　　 </p>
+<p>
+    von Neumann 在学术上，当然有他坚持和严肃的一面。但是在日常生活中，他是个和蔼、容易相处的人。在他的周围总是充满了欢笑。为他制造 IAS computer 的电机工程师，说了以下这个故事：大约在 1950 年的夏天，这位工程师独自开车从费城到普林斯顿去见 von Neumann，那是他们第一次的会面，地点就约在 von Neumann 的家里。因为工程师的老爷车沿途抛锚了好几次，他都必须自己动手把它修好再上路。所以到了 von Neumann 家的时候，满身油污。但是 von Neumann 还是跟他握手，请他到客厅里，坐在他洁白的沙发上。在他进门的时候，一只狗也溜了进来。他看到 von Neumann 任由那只狗带着泥巴的爪子，踩在雪白的长毛地毯上，觉得很可惜。但是也想，既然 von Neumann 连一条狗都可以这样纵容，当然也不会介意他的脏裤子坐在白沙发上。会谈愉快地结束，von Neumann 决定请这位工程师负责 IAS computer 的制造。然后他就要告别了。这时候，von Neumann 突然说，「您不要带走您的狗吗？」 </p>
+<p>
+    高级研究所与IAS计算机<a name="3" id="3"></a> <a href="#section">回目录</a> </p>
+<p>
+  二十世纪四十年代中期到二十世纪五十年代初，普林斯顿高级研究所取代了宾夕法尼亚大学莫尔学院成为美国计算机研制中心。莫尔学院是第一台电子计算机ENIAC的诞生地，又是第一个存储程序计算机EDVAC方案诞生地。但随着战争的结束，学校领导对电子计算机的研制不再采取支持的态度，集结在该校的计算机领域的一些著名学者与专家纷纷离去。研制ENIAC的主要成员莫克利和艾克特离开学校，开办了电子控制公司。伟大的计算机思想家冯·诺依曼博土，研制ENIAC的重要成员勃克斯博土与戈尔斯坦博土都来到了普林斯顿高级研究所，从而自然地使中心转移。 </p>
+<p>
+  高级研究所制订了电子计算机计划，研究工作包括逻辑设计与程序设计、工程技术、数值计算方法、数值气象预报四个方面，对计算机一系列重要领域进行开拓性工作。计划的主要目的是研制“完全自动的数字型通用电子计算机”，它以高级研究所(The Institute for Advanced Study)的名字命名为IAS计算机。整个研究工作由冯·诺依曼担任主任总抓，戈尔斯坦当副主任，比奇洛(Julian H.Bigelow)和波墨林(James H.Pomerene)先后任总工程师。这支研究队伍分工协作，一面进行实验室建设，一面进行机器设计。 </p>
+<p>
+  <img border="0" width="600" height="398" src="IAS_clip_image006.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355GbnRErOC.jpg" /> </p>
+<p>
+    1946年6月勃克斯、冯·诺依曼和戈尔斯坦提出了题为“电子计算机逻辑结构初探”的著名报告，以后又发表了几篇论文，这些报告比EDVAC方案更为完整，详细地描述了存储程序计算机的体系结构，具体地探讨了这种计算机如何组织，程序如何编制，可以说是现代通用计算机的奠基工作，流传很广，影响巨大。 </p>
+<p>
+    根据这些报告设计制造的IAS计算机，与EDVAC这一类串行计算机不同，是一台并行计算机。串行计算机逐位顺序运算，而并行计算机各位同时运算。并行计算机需要有一个能并行存取的存储器，IAS采用英国曼彻斯特大学教授威廉(P.C.William)发明的一种电子射线管——威廉管做静态存储器，容量为1024个字，字长40位。这种并行存取的静态存储器比EDVAC所使用的串行的延迟线动态存储器快得多，存取一个数仅需15微秒，而后者需要500微秒。 </p>
+<p>
+    IAS还首次采用异步控制器，它与同步控制器不同，不受固定拍节工作的限制，一个操作完成后，下一操作立即开始。 </p>
+<p>
+    由于采用上述新技术，IAS计算机加减法运算速度比EDVAC快一个数量级，并且结构紧凑，节省器材。全机只用了2300支电子管，而EDVAC却用了3000支电子管和8000支二极管。 </p>
+<p>
+    在美国原子能委员会和军事部门支持下，IAS进展较快，于1951年夏交付使用，1952年正式交机。洛斯·阿拉莫斯实验室的一批科学家在这部机器上进行了热核武器方面的大量计算。机器连续工作六十天，仅发现五、六个错误。计算同样范围的24小时天气预报，在1946年制成的ENIAC上需要24小时，在IAS计算机上只需要6分钟，提高效率240倍。 </p>
+<p>
+  <img border="0" width="414" height="330" src="IAS_clip_image007.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355c26fgS4P.jpg" /> </p>
+<p>
+  IAS计算机的新颖设计吸引了美国不少著名的实验室，在IAS计算机尚未制成之前就纷纷仿制。阿伯丁弹道实验室的ORDVAC，伊利诺斯大学的ILLIAC，兰德公司的JOHNNIAC，原子能委员会洛斯·阿拉莫斯科学实验室的MANIAC，阿尔贡国家实验室的AVIDAC，奥克·里奇国家实验室的ORACLE等计算机，都是IAS计算机的复制品。IBM公司最早投产的IBM701及其他计算机，也很大程度上继承了IAS计算机。IAS计算机的影响并不限于美国之内，对苏联、西德、瑞典等国计算机的最初发展也有很大影响。 </p>
+<p>
+    冯·诺依曼是著名的数学家，计算机科学家，在气象学方面也是一个权威。在他的领导下，高级研究所不仅在计算机研制方面居于领先地位，而且对计算数学，气象学也作出了杰出的贡献，如在数值分析方面发展了蒙特卡洛法，在数值气象预报方面提出了三维模型。这些方面的创造性工作具有巨大的实际意义，为开辟与发展计算机应用起到了强大的推动作用。 </p>
+<p>
+    詹姆士·波默林—IAS和HARVEST计算机的首席工程师<a name="5" id="5"></a> <a href="#section">回目录</a> </p>
+<p>
+  <img border="0" width="478" height="348" src="IAS_clip_image008.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790603OAp7aEcH.jpg" /> </p>
+<p>
+    Jim <strong>Pomerene</strong>,  Bruce Gilchrist and Herman Goldstine</p>
+  <p align="left">&nbsp;&nbsp;  &nbsp;1986年计算机先驱奖获得者之一的詹姆士·波默林(James H．Pomerene)是冯·诺伊曼在普林斯顿高级研究所研制IAS计算机项目中的首席工程师，后来又在IBM公司主持设计了HARVEST计算机。由于他“对IAS和HARVEST计算机”(For IAS  and Harvest Computers)所作出的贡献，IEEE授予他计算机先驱奖。 </p>
+<p>
+      <img border="0" width="574" height="379" src="IAS_clip_image009.gif" alt="http://www.techcn.com.cn/uploads/201001/1262790355VYae2wjB.gif" /> </p>
+<p>
+ 波默林1920年6月22日生于美国纽约州东南端的扬克斯(Yonkers，N．Y．)，离纽约市不远。1942年在西北大学取得电气工程学士学位以后，进入Hazeltine公司工作，曾参与敌我识别雷达(IFF，Identification Of Friend Or Foe或Interrogator Friend Or Foe)的研制，负责微波与脉冲调制器方面的工作。战后，1946年4月，他接受冯·诺伊曼和哥尔斯廷的邀请，到普林斯顿大学参与IAS计算机的研制。IAS计算机决定采用威廉姆斯管作存储器，但威廉姆斯管能否长期保存信息却是一个令大家都十分担心的问题。波默林挺身而出，承担起了解决这一难题的任务。经过反复试验，波默林终于取得成功，使威廉姆斯管能长期地保存16个二进制位。这使IAS方案中的一个关键获得落实，即用40个CRT组成lAS中的并行存储器，每个CRT存储一个计算机字的一位。IAS存储器系统的开发与建造完全由波默林负责。到1951年8月，波默林由于他在项目中的出色表现而被任命为lAS计划的首席工程师(chief engineer)。他担任这个职务直至1956年项目组解散。 </p>
+<p>
+ IAS计算机于1951年1月基本完成，经过洛斯阿拉莫斯实验室用设计氢弹的程序考核(这个程序IAS计算机连续运行了60天才完成)，1952年6月正式向公众展示。以后经过不断改进、完善，于1960年退役。它本身虽作为样机只制造了一台，但在研制过程中，美国的许多研究机构和大学就对IAS进行仿制，比如我们已经提到过，阿尔贡国立实验室的AVIDAC、ORACLE，伊利诺大学的ORDVAC、ILLIAC，洛斯阿拉莫斯国立实验室的MANIAC，等等，就都是以IAS为原型的。所以，IAS在计算机发展史上占有重要地位。 </p>
+<p>
+  <img border="0" width="553" height="426" src="IAS_clip_image010.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355iKe7BvEU.jpg" /> </p>
+<p>
+ 普林斯顿大学的IAS研制组解散以后，波默林加盟IBM公司，参与了IBM公司第一台流水线计算机STRETCH的研制。后来，美国国家安全局NSA(National Security  Agency)要求IBM公司为他们生产一台功能更强的计算机，波默林受命和其他一些人(包括另一位计算机先驱奖获得者布鲁克斯)制定方案和进行设计，这就是后来的HARVEST。波默林在HARVEST的方案和设计中，巧妙地以已经获得成功的STRETCH为基础，加上一个“字节向量流水线部件”(byte vector  pipeline unit)用以处理大量的非数值数据。这个方法既使HARVEST的研制大大缩短了周期，同时又使HARVEST的处理能力获得很大提高，满足了国家安全局的需要。此外，HARVEST还具有以下两个不寻常的特点：第一，它具有两级程序控制，第一级用来建立进程，包括为了从内存进行读写而对字节进行匹配；第二级再对由第一级建立的进程进行操作。第二，它的磁带机和磁带子程序库系统很先进，不但容量很大，而且是完全自动的。 </p>
+<p>
+  <img border="0" width="380" height="512" src="IAS_clip_image011.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262790355scmQwxLf.jpg" /> </p>
+<p>
+ HARVEST于1962年完成以后，波默林开始研究多处理机系统，其结果是推出了IBM公司的第一个商用多处理机系统，即IBMMod65MP。1965年，波默林领导一个小组开始设计并行网络数字计算机PNDC(Parallel  Network Digital Computer)，这是最早的单指令流、多数据流即SIMD机的原型。PNDC虽然只停留在设计阶段，没有实际建造，但它的一些思想，如包含高速缓冲存储器在内的多级存储器系统等，在以后的系统中获得了发展和使用。 </p>
+<p>
+    IAS设计的相关机器列表<a name="7" id="7"></a> <a href="#section">回目录</a> </p>
+<p>
+    IAS&nbsp;&nbsp;——大多数当今机器设备，都采用了这种设计 </p>
+<p>
+    Some of these &quot;IAS machines&quot; were:</p>
+<p>
+    AVIDAC (Argonne National Laboratory)&nbsp; </p>
+<p>
+    BESK (Stockholm)&nbsp;</p>
+<p>
+    BESM (Moscow)&nbsp;</p>
+<p>
+    CYCLONE (Iowa State University)&nbsp;</p>
+<p>
+    GEORGE (Argonne National Laboratory)&nbsp;</p>
+<p>
+    ILLIAC I (University of Illinois at Urbana-Champaign)&nbsp;</p>
+<p>
+    JOHNNIAC (RAND)&nbsp;</p>
+<p>
+    MANIAC I (Los Alamos National Laboratory)&nbsp;</p>
+<p>
+    MISTIC (Michigan State University)&nbsp;</p>
+<p>
+    MUSASINO-1 (Musashino, Tokyo, Japan)&nbsp;</p>
+<p>
+    ORACLE (Oak Ridge National Laboratory)&nbsp;</p>
+<p>
+    ORDVAC (Aberdeen Proving Ground)&nbsp;</p>
+<p>
+    SARA (SAAB)&nbsp;</p>
+<p>
+    SILLIAC (University of Sydney)&nbsp;</p>
+<p>
+    SMIL (Lund University)&nbsp;</p>
+<p>
+    WEIZAC (Weizmann Institute)&nbsp;</p>
+<p>
+    相关链接<a name="9" id="9"></a> <a href="#section">回目录</a> </p>
+<p>
+    ·  <a href="http://www.cbi.umn.edu/oh/display.phtml?sub=354">Oral history interviews concerning the IAS computer</a> -- includes individual interviews with Willis H. Ware, <a href="http://en.wikipedia.org/wiki/Arthur_Burks" title="Arthur Burks">Arthur  Burks</a>, <a href="http://en.wikipedia.org/wiki/Herman_Goldstine" title="Herman Goldstine">Herman Goldstine</a>, <a href="http://en.wikipedia.org/wiki/Martin_Schwarzschild" title="Martin Schwarzschild">Martin Schwarzschild</a>, and others. <a href="http://en.wikipedia.org/wiki/Charles_Babbage_Institute" title="Charles Babbage Institute">Charles Babbage Institute</a>, University of  Minnesota. </p>
+<p>
+    ·  Ware, Willis H. (1953). <a href="http://www.bitsavers.org/pdf/rand/P-377_The_History_And_Development_Of_The_IAS_Computer_Mar53.pdf"><em>The History and Development of the Electronic  Computer Project at the Institute for Advanced Study</em></a>. RAND. <a href="http://www.bitsavers.org/pdf/rand/P-377_The_History_And_Development_Of_The_IAS_Computer_Mar53.pdf">http://www.bitsavers.org/pdf/rand/P-377_The_History_And_Development_Of_The_IAS_Computer_Mar53.pdf</a>. </p>
+<p>
+    ·  <a href="http://americanhistory.si.edu/collections/comphist/objects/ias.htm">The IAS  Computer, 1952</a> - From the <a href="http://en.wikipedia.org/wiki/National_Museum_of_American_History" title="National Museum of American History">National Museum of American  History</a> </p>
+<p>
+    ·  <a href="http://cva.stanford.edu/classes/cs99s/papers/vonneumann-firstdraftedvac.pdf">First Draft of a Report on the EDVAC</a> - Copy of the original draft by <a href="http://en.wikipedia.org/wiki/John_Von_Neumann" title="John Von Neumann">John Von  Neumann</a> </p>
+<p>
+    ·  <a href="http://www.computer50.org/mark1/new.baby.html">The Manchester Small Scale Experimental Machine &quot;The Baby&quot;</a> - The first operational stored programme computer.&nbsp;</p>
+<p>
+    参考文献<a name="11" id="11"></a> <a href="#section">回目录</a> </p>
+<p>
+    http://en.wikipedia.org/wiki/IAS_machine</p>
+<p>
+    http://libai.math.ncu.edu.tw/bcc16/pool/3.02.shtml </p>
+
+
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

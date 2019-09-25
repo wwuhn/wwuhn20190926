@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>史上的首次</title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px solid #aaa;
+font-size:.8em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:1em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <p align="left">计算机发展历史上的诸多第一    </p>
+<p>
+    1</p>
+<p>
+    1623年，法国数学家、物理学家帕斯卡（Blaise Pascal），制造出第一台机械加法器Pascaline。这台机器由一套8个可旋转的齿轮系统组成，只能进行加法和减法，实现自动进位，并配置一个可显示计算结果的窗口。 </p>
+<p>
+    2</p>
+<p>
+    1834年，英国数学家Charles Babbage发明解析机（Analytical Engine），首度提出近似现代电脑组织的观念。虽因机器结构太复杂，非当时技术所能制造，以致Babbage赍志以殁。但解析机的设计理念和Babbage的至交Ada Lovelace女士（首位程序设计师）的程式构想，却开启了近代计算机的先河。 </p>
+<p>
+    3</p>
+<p>
+    1932年，美国科学家Vannevar Bush研制成功微分分析仪（Differential Analyzer），微分分析仪是电子计算机的鼻祖。Bush在1945年写的《As We May Think》一文，预测了未来计算机、数据库、数位相机、语音识别、Internet等功能，人们因此称他为电脑之父。 </p>
+<p>
+    4</p>
+<p>
+    1936年，德国工程师楚泽（Konrad Zuse）研制出了机械可编程计算机Z1，并采用了二进制形式，其理论基础即来源于布尔代数。它的功能比较强大，用类似电影胶片的东西作为存储介质。可以运算七位指数和16位小数。可以用一个键盘输入数字，用灯泡显示结果。 </p>
+<p>
+    5</p>
+<p>
+    1942年，美国爱荷华州立学院数学系教授阿特纳索夫和他的学生助手贝利设计成功阿特纳索夫－贝利－计算机（简称ABC）模型，ABC模型能做加法和减法运算，能存储300个数字，15秒中能进行一次运算，这就是有史以来人类第一次看到用电子管为元件的，有再生存储功能的数字计算机。 </p>
+<p>
+    6</p>
+<p>
+    1944年，美国哈佛大学艾肯（Aiken）博士在IBM的赞助下设计完成Mark I， 又叫做“自动序列受控计算机”。它的外壳用钢和玻璃制成，装备了3000多个继电器，共有15万个元件和长达800公里的电线，用穿孔纸带输入。这台机器每秒能进行3次运算，23位数加23位数的加法，仅需要0.3秒；而进行同样位数的乘法，则需要6秒多时间。 </p>
+<p>
+    7</p>
+<p>
+    1946年，美国宾夕法尼亚大学的的工程师埃克特（Echert）和物理学家莫奇利（Mauchley）设计成功了ENIAC（electronic  numerical integrator and calculator,电子数值积分计算机）。ENIAC是世界上第一台数字电子计算机，人们将此定义为信息革命的起点，它标志着计算机时代的开始。 </p>
+<p>
+    8</p>
+<p>
+    1949年，英国剑桥大学数学实验室的Wilkes和他的小组建成了第一台存储程序的计算机EDSAC（电子离散时序自动计算机），输入输出设备仍是纸带。 </p>
+<p>
+    9</p>
+<p>
+    1951年，美国麻省理工学院（MIT）制造的旋风I号（Whirlwind I）计算机投入运行，这是第一台实时可交互式电脑，杰·弗雷斯特首创了用打字机键盘与电脑“对话”方式。旋风I号还使用了第一台图形显示器，该显示器用一个类似于示波器的阴极射线管（CRT）来显示一些简单的图形。 </p>
+<p>
+    10</p>
+<p>
+    1952年，美国数学家冯·诺伊曼（Von  Neumann）设计的电子计算机EDVAC问世。冯·诺伊曼的“存储程序原理”设想在这台计算机上得到了圆满的体现。现代主流计算机都采用了存储程序原理，因此冯·诺伊曼被誉为“电子计算机之父”。 </p>
+<p>
+    11</p>
+<p>
+    1954年，美国贝尔实验室使用800只晶体管组装了世界上第一台晶体管计算机TRADIC，这是第二代计算机的代表。相比采用定点运算的第一代计算机，第二代计算机普遍增加了浮点运算，计算能力实现了一次飞跃。 </p>
+<p>
+    12</p>
+<p>
+    1960年，DEC公司向市场推出了它的第一台小型机PDP－1的样机。此后，DEC在1965年推出了世界上第一台真正意义的小型计算机PDP-8。数月后，DEC推出了升级产品PDP-8/1，这是首款采用晶体管的小型机。1970年，DEC时推出了第一款16位小型机PDP-11。1977年，DEC推出了第一款32位小型机VAX。DEC公司的创始人奥尔森（Ken Olsen）开拓了小型机产业，因此被成为“小型机之父”。 </p>
+<p>
+    13</p>
+<p>
+    1963年，Burroughs公司推出了第一台堆栈计算机B5000，它可以被认为是第一台在认真考虑硬件权衡问题的基础上设计的机器。这台机器的设计主要是考虑如何高效的支持象ALGOL这样的高级语言，同时这台机器使用了高级语言编写的操作系统MCP。 </p>
+<p>
+    14</p>
+<p>
+    1964年，IBM发布IBM S/360首套系列兼容机。作为第三代计算机的杰出代表，IBM S/360为IBM带来了极大成功，“IBM”几乎成为计算机的代名词。采用集成电路作为逻辑元件成为第三代计算机的最重要特征，系列兼容和采用微程序设计也是第三代计算机的重要特点。 </p>
+<p>
+    15</p>
+<p>
+    1964年，CDC公司的西蒙·克雷（Seymour Cray）设计出了第一台高性能超级计算机CDC 6600。它采用管线标量架构，使用他的小组开发的RISC（精简指令集计算）指令集。在这种架构中，一个CPU交替处理指令的读取、解码和执行，每个时钟周期处理一条指令。作为第一台超级计算机，它每秒钟可以运行300万次浮点运算，并可以在两台计算中并行完成指令。 </p>
+<p>
+    16</p>
+<p>
+    1971年，Intel公司的霍夫（Marcian E.Hoff）研制成功世界上第一枚4位微处理器芯片Intel 4004，标志着第一代微处理器问世，微处理器和微机时代从此开始。1973年，霍夫等人研制出8位微处理器Intel 8080，允许8位的操作数，具备7个寄存器、存储器堆栈以及简单的中断功能，第二代微处理器就此诞生。 </p>
+<p>
+    17</p>
+<p>
+    1972年，西蒙·克雷（Seymour Cray）离开CDC创办了自己的公司Cray Research，他放弃了多处理器架构，转而采用矢量处理技术。1975年，享誉全球的超级计算机Cray-1问世，克雷亲手设计了Cray全部的硬件与操作系统，其中操作系统是他用机器码编写出来的，矢量处理技术到今天为止仍是划分超级计算阵营的分界线。西摩·克雷因此被称为超级计算机之父。 </p>
+<p>
+    18</p>
+<p>
+    1973年，施乐（Xerox）公司的Palo Alto研究中心（PARC）成功地发明了Xerox Alto，它是世界上第一个专门为个人设计使用的电脑，许多计算机的概念都是从Alto实现的。Alto不仅可以在屏幕上显示字符，还利用一个称为位图的程序和可以独立控制的像素实现了同时显示文本和图形功能，以太网和激光打印机也都是PARC的发明。它还支持面向对象的程序语言，并且配备了有意思的点击设备——一个三键鼠标。 </p>
+<p>
+    19</p>
+<p>
+    1976年，1976年，乔布斯和沃兹建立了苹果和公司，在自己的车库里面并开发了苹果公司第一台电脑Apple I，从键盘、主板、存储系统到运算系统，所有软硬件都是两人DIY造出来的。1977年，AppleⅡ研发工作完毕，这是世界上第一台也是最后一台完全由一个人设计的商品化计算机。AppleⅡ有着微机历史上许多第一：第一次将Basci语言固化在 ROM；第一次有塑料外壳；第一次自带电源装置而无须风扇；第一次装有英特尔动态RAM；第一次在主板上带有48K容量；第一次可玩彩色游戏；第一次内置扬声器接口；第一次装上游戏控制键；第一次具有高分辨率图形功能；第一次实现CPU和主板共享RAM……这一切，都属于沃兹。 </p>
+<p>
+    20</p>
+<p>
+    1981年，IBM正式发布历史上第一台微型计算机（即现代PC）IBM 5150。该PC的系统主板上配有64KB内存，可扩展至640KB。它采用的处理器是Intel 8088，运行速度为4.77MHz。它采用开放式结构，因此第二年就出现了兼容机。PC的出现改变了人们心里“计算”的概念，以适中的价格为个人提供高新计算性能的产品，从而开启了个人计算时代。 </p>
+<p>
+    21</p>
+<p>
+    1985年，最早的商业RISC架构芯片之一MIPS出现。MIPS的意思是“无内部互锁流水级的微处理器”（Microprocessor without interlocked piped stages），其机制是尽量利用软件办法避免流水线中的数据相关问题。目前可以从Sony、Nintendo的游戏机、Cisco的路由器和SGI超级计算机等地方看到MIPS产品在销售。 </p>
+<p>
+    22</p>
+<p>
+    1987年，SUN和TI公司合作开发了RISC微处理器——SPARC，与它同时产生的还有Sun那句今天人人皆知的口号“网络就是计算机”。SPARC微处理器最突出的特点就是它的可扩展性，这是业界出现的第一款有可扩展性功能的微处理。 </p>
+<p>
+    23</p>
+<p>
+    1990年，IBM的Power系列CPU出现，IBM以此构建了RS6000处理器与工作站产品。IBM 1975年实施801计划未果，但另一条与801平行的发展线在80年代中期成为America计划，并成功地开发出新的架构产品——架构。1991年，IBM再推出第二代Power架构，并与摩托罗拉和苹果共组一个“PowerPC”联盟，发展新的PowerPC处理器架构。 </p>
+<p>
+    24</p>
+<p>
+    1996年，首款基于Java语言架构的网络计算机——SUN JavaStation推出，它被称做是一个“瘦客户机”，专门用来在网络中执行Java应用程序。其主要应用于通信、金融业机构等，比如可以将出纳员柜台、用户电话咨询中心和交易大厅的单功能PC机替换为更通用的、无须管理的JavaStation网络计算机，以大大减少在信息技术方面的投资。 </p>
+<p>
+    25</p>
+<p>
+    1999年，用于天气分析和仿真的超级计算机Y-MP由Cray Research公司推出，这是一台每秒运算达20—40亿次的超级计算机。它的设计制造者是美籍华裔科学家陈世卿，他被世界电脑界称为“超级巨星”。 </p>
+<p>
+    计算机历史上众多“第一”<a name="3" id="3"></a><a href="http://www.techcn.com.cn/index.php?doc-editsection-140316-3.html">编辑本段 </a> <a href="http://www.techcn.com.cn/index.php?doc-view-140316.html#section">回目录</a> </p>
+<p>
+    向前辈致敬！计算机历史上众多“第一”</p>
+<p>
+  <strong>第一台机械式计算机：算盘 </strong></p>
+<p>
+  把算盘作为计算机的鼻祖我想毫不为过，它是目前所能考究的最早的机械式计算机，因为它具备了快捷的计算能力，应该说它是最原始的计算机了。早在汉代的《数术记遗》一书中，就曾记载了十四种上古算法，其中有一种便是“珠算”。据南北朝时数学家甄鸳的描述，这种“珠算”，每一位有五颗可以移动的珠子，上面一颗相当于五个单位，下面四颗，每一颗相当于一个单位。这是关于珠算的最早记载，与后来流行的算盘并不相同，而且在当时也没有普及流传。 </p>
+<p>
+  <img border="0" width="400" height="300" src="史上的首次_clip_image001.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781351LxPC3St.jpg" /></p>
+<p>
+  大约到了宋元的时候，珠算盘开始流行起来。宋朝著名画家张择瑞所著的《清明上河图》中，可以清晰看到“赵太丞家”店铺的柜台上搁着一把算盘。元代未年有一本书叫  《南村辍耕录》，其中记载了江南的一条俗谚，说新来的奴仆像“擂盘珠”，不拨自动；过了一段日子像“算盘珠”，拨一拨动一动；到最后像“顶珠，拨它也拨不动了。俗谚里都已经有了“算盘珠”的比喻，说明珠算盘的运用在江南一带已有了一段时间和一定程度的普及了。不过当时算筹并没有废除，筹算和珠算同时并用。</p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image002.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135EVHtZrfN.jpg" /></p>
+<p>
+  珠算的普及并最终彻底淘汰筹算，这一过程是在明代完成的。当时，由于实用数学和商业数学的发展，迫切要求计算简捷，速度加快，这就给珠算盘这一计算工具提供了大显身手的机会。另外，传统的筹算方法从唐宋以来已经逐渐简化，并且形成了一套运算口诀。这些口诀用字极少而意义完整，用算筹演算时，往往一念口诀就心算出了结果，而手中的算筹却还在慢慢排列，这样便产生了得心不能应手的矛盾。比较起来，在珠算盘上用手拨动算珠的速度要比筹算的排列移动快得多，珠算具有“随手拨珠便成答案”的优点</p>
+<p>
+  </p>
+<p>
+  </p>
+<p>
+  <strong>1642</strong><strong>年 计算机雏形——Pascaline（加法器）</strong><strong></p>
+<p>
+  </strong></p>
+<p>
+  &nbsp; &nbsp; 今年已经是21世纪的第五个年头了。如今的电脑发展之迅速，已经远远超出了我们的想象。还在疲于追逐科技潮流的我们，是不是该要停下来，回头看看我们已经走过的路、经过的桥、趟过的河呢？</p>
+<p>
+  &nbsp; &nbsp; 当你回头看的时候，你一定会发现，有许多的“第一”已经离我们远去。尽管它们现在早已经不为我们服务，但没有它们的出现，就没有现在如IBM、Intel、微软、HP等大牌企业的崛起。</p>
+<p>
+    ●<strong>Pascaline</strong><strong>（加法器）</strong></p>
+<p>
+    1642年，法国哲学家兼数学家布累斯·巴斯柯(Blaise  Pascal)发明了第一台真正的机械计算器——加法器(Pascaline)。 </p>
+<p>
+  <img border="0" width="400" height="275" src="史上的首次_clip_image003.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135GGUr5v58.jpg" /> </p>
+<p>
+  &nbsp;  &nbsp; 全名为滚轮式加法器，当初发明它的目的是为了帮助父亲解决税务上的计算。其外观上有6个轮子，分别代表着个、十、百、千、万、十万等。只需要顺时针拨动轮子，就可以进行加法，而逆时针则进行减法。原理和手表很像，算是计算机的开山鼻祖了</p>
+<p>
+  </p>
+<p>
+  <strong>1833</strong><strong>年 首款试图建立数字化的计算机</strong></p>
+<p>
+    ●<strong>Analytical  Engine</strong><strong>（分析器）</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="492" src="史上的首次_clip_image004.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781357CrCw6DV.jpg" /></strong> </p>
+<p>
+  &nbsp; &nbsp; 1833年，巴贝奇构想了一种新型的分析机(Analyfical Engine)，分析机不但能够完成所有的算术运算，而且基本上可以将这些运算联系起来解决任何算术问题。该分析机由四个基本部件构成：存储库、运算室、传送机构和送人取出机构。因此说，巴贝奇的分析机的重大贡献在于它包括了现代计算机的五大装置：输入、控制、运算、存储和输出装置。目前，国际计算机界公认巴贝奇为当之无愧的计算机之父</p>
+<p>
+  </p>
+<p>
+  <strong>1931</strong><strong>年 电子计算机的先驱——微分分析仪</strong></p>
+<p>
+    ●<strong>Differential Analyzer</strong><strong>（微分分析仪）</strong> </p>
+<p>
+  <strong><img border="0" width="238" height="180" src="史上的首次_clip_image005.gif" alt="http://www.techcn.com.cn/uploads/200912/1262178135hkeVf6K6.gif" /></strong> </p>
+<p>
+  &nbsp;  &nbsp; 1931年研制成功的“微分分析仪”（Differential  Analyzer），是第一台被用来解决微分方程的机械式计算机，被认为是电子计算机的先驱</p>
+<p>
+  </p>
+<p>
+  <strong>1938</strong><strong>年 首台采用继电器工作的计算机——Z1</strong></p>
+<p>
+    ●<strong>首台采用继电器工作的计算机——Z1</strong> </p>
+<p>
+  <img border="0" width="400" height="290" src="史上的首次_clip_image006.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135If3NVFwe.jpg" /> </p>
+<p>
+  &nbsp; &nbsp; 1938，Zuse完成了Z1电子机械二进制计算机。二次世界大战的开始，军事需要大大促进了计算机技术的发展。1939年， Zuse和Schreyer  开始在他们的Z1计算机的基础上发展Z2计算机。并用继电器改进它的存储和计算单元。但这个项目因为Zuse服兵役被中断了一年</p>
+<p>
+  </p>
+<p>
+  <strong>第一台通用电子计算机：埃尼亚克</strong></p>
+<p>
+  </p>
+<p>
+  <strong>一般认为世界上第一台电子计算机是美国1946年研制出的“电子数值积分计算机”（ENIAC）。但英国争辩说：第一台电子计算机的桂冠应属于英国1940年研制出来的“巨人”计算机。第二次世界大战前，德国发明了一种机械式密码编码机“ENIC─MA（谜）”，它能够编制出无数种同一系列的密码。这种密码十分复杂，德国人对它的保密性能十分自信，认为它所编制的密码几乎是不可破译的，因此在军队的高级保密通信中广泛使用由它所编制的密码。 </strong><strong></p>
+<p>
+  </strong> </p>
+<p>
+  <strong><img border="0" width="158" height="120" src="史上的首次_clip_image007.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135YGma4UV0.jpg" /></strong> </p>
+<p>
+  <strong></strong><strong>英国情报机关从战前就开始注意到了“谜式”密码，经过窃听和谍报人员、破译人员的长时间努力、窃得了“谜式”密码的秘密，终于可以用人工破译出其中部分内容了。但破译一种用“谜”式密码机编制的新密码都要耗费很长时间，难以满足作战的需要。</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="300" src="史上的首次_clip_image008.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135d5rbYHCs.jpg" /></strong> </p>
+<p>
+  <strong></strong><strong>英国情报机关与数学、电子学专家合作，组成了以数学家阿兰·丘利姆为首的研究小组，研制出了一种使用2000多只电子管的大型电子运算装置，被称作“巨人”机，专门用于对德国“谜式”密码的解析和破译。从此人类可以对密码进行机器破译了，并且大同度提高了破译的成功率和速度。英国把这种通过电子窃听、电子破译“谜式”密码得来的情报定为国家最高级机密情报，命名为“超级机（ULTRA）”情报。</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="298" src="史上的首次_clip_image009.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781355Ongd8Az.jpg" /></strong> </p>
+<p>
+  <strong></strong><strong>在抵抗德国空袭英国的“不列颠战役”中，“超级机密”适时地发挥了作用。英国空军通过“超级机密”，事先就得到德国空军的空袭计划、攻击目标及作战要领等许多重要情报，及时调配战斗机和高射炮等防空力量，在最佳时间和地点拦截了德国轰炸机群，使数量处于劣势的英国空军掌握了空战的主动权</strong> </p>
+<p>
+  <strong></strong><strong>后来，由于德军在空中攻势受挫，始终无法获得制空权，希特勒不得不放弃了进攻英国本土的“海狮”计划。英国首相丘吉尔也正是通过“超级机密”获得了这一情报，而长长地郐了一口气。</strong><strong></p>
+<p>
+  </strong><strong>英国为保守“超级机密”的秘密，付出了沉重的代价。1940年11月12日清晨，英国情报机关通过“超级机密”获悉：德国空军在14日夜间和15日凌晨，将出动500多架轰炸机空袭英国的重要工业城市考文垂。可以预料，考文垂市将受到多么巨大的损失。</strong><strong></p>
+<p>
+  </strong><strong>&nbsp;  &nbsp;&nbsp; &nbsp;</strong><strong>除了可以使用战斗机和高射炮迎击德国飞行机外，要不要通知考文垂市居民紧急疏散呢？这样做固然可以减少许多人员伤亡，但也意味着英国通过某种渠道得到了德国的秘密计划，这就有可能暴露“超级机密”，导致这条重要情报来源的中断，造成以后更大的损失。丘吉尔作为英国首相，怀着沉重的心情断然地下了决心：为了今后利益和战争的需要，考文垂市的居民们将不得不付出巨大的牺牲。结果，15 000枚燃烧弹和14 000枚其它炸弹落在了毫无防备的考文垂币民的头上。550人死亡，约5000人受伤，50  000间房里被毁坏，12家工厂受到严重损坏。</strong> </p>
+<p>
+  <strong></strong><strong>英国付出了沉重代价，但它使德国人直到第二次世界大战结束也未能知道”超级机密”的秘密，保证了这条情报来源的畅通。希特勒经常使用“谜式”密码与在北非的德军统帅隆美尔进行通信联络，据说，驻北非英军司令蒙哥马利有时比隆美尔还要先看到希特勒的电文。正是由于英国对“超级机密”的严密保密措施，它才一直不为世人所知，“巨人”机也长期扮演着“无名英雄”。</strong> </p>
+<p>
+  </p>
+<p>
+  </p>
+<p>
+  <strong>1942</strong><strong>年 首台真空管计算机——ABC</strong></p>
+<p>
+    ●<strong>首台电子计算机——ABC</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="316" src="史上的首次_clip_image010.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781351dRUjcND.jpg" /></strong> </p>
+<p>
+  &nbsp;  &nbsp; 由美国爱荷华州立学院（Iowa State  College）物理兼数学教授阿坦那索夫（John Vincent Atanasoff）和研究助理贝利（Clifford Berry）发明，第一部完全采用真空管作为存储与运算元件的电脑。功能方面只能计算联立方程式。由于是由两人共同完成的发明，因此在命名上就被称为了阿坦那索夫贝利电子计算机（Atanasoff Berry Computer），简称ABC</p>
+<p>
+  </p>
+<p>
+  <strong>1943</strong><strong>年 首台可编程计算机——COLOSSUS</strong></p>
+<p>
+  </p>
+<p>
+    ●<strong>第一台可编程电子计算机——COLOSSUS</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="269" src="史上的首次_clip_image011.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135RtSnAR8k.jpg" /></strong> </p>
+<p>
+  &nbsp; &nbsp; 1943年，由英国政府制造的世界上第一台可编程的电子计算机。主要是用来破译密码。 </p>
+<p>
+  &nbsp; &nbsp; 但有消息称，Colossus并不是世界上第一台可编程的计算机。这个荣誉应该属于1941年由德国工程师Konrad Zuse制造的Z3。只是很不幸的，Z3在战争中毁于炸弹的袭击 </p>
+<p>
+  </p>
+<p>
+  <strong>1944</strong><strong>年 首台自动按序控制计算器——Mark Ⅰ</strong></p>
+<p>
+    ●<strong>Mark </strong><strong>Ⅰ——</strong><strong>自动按序控制计算器</strong> </p>
+<p>
+  <img border="0" width="400" height="318" src="史上的首次_clip_image012.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135ilIAtorr.jpg" /> </p>
+<p>
+  &nbsp;  &nbsp; Howard H. Aiken完成&quot;ASCC  Mark I”(自动按序控制计算器 Mark I ，Automatic Sequence -- Controlled Calculator Mark I)，亦称“Haward Mark I”。这部机器有51尺长，重5顿，由 750,000部份合并而成。它有72个累加器，每一个有自己的算术部件，及23位数的寄存器</p>
+<p>
+  </p>
+<p>
+  <strong>1946</strong><strong>年 ENIAC I——现代电脑历史由此开始</strong></p>
+<p>
+    ●<strong>ENIAC </strong><strong>Ⅰ——</strong><strong>电子数字积分计算器</strong> </p>
+<p>
+  <strong><img border="0" width="400" height="452" src="史上的首次_clip_image013.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135nXXd2oPU.jpg" /></strong> </p>
+<p>
+    1946年，第一台电子数字积分计算器(ENIAC Ⅰ)在美国建造完成。现代电脑历史由此开始 </p>
+<p>
+  第二次世界世界大战后期，美国宾夕法尼亚大学受美国陆军委托研制电子化的通用计算机“ENIAC（埃尼阿克）”，目的在于计算炮弹及火箭、导弹武器的弹道轨迹。36岁的物理学家莫克利是主要设计者，24岁的埃克担任总工程师。经过两年多的艰苦努力，“埃尼阿克”终于在1945年底制造完成，1946年初做了公开展示。“埃尼阿克”是个庞然大物，整个机器使用18 000只电子管、6000个继电器、7000个电阻、10 000个电容；总重30吨，机房面积170平方米，耗电150千瓦，耗资约50万美元。这部计算机每秒钟可做5000次加法或500次乘法或50次除法，比人工计算快20万倍。用“埃尼阿克”计算炮弹弹道只要3秒钟。“埃尼阿克”于1955年“退役”，现陈列在华盛顿一家博物馆里 </p>
+<p>
+  <img border="0" width="160" height="118" src="史上的首次_clip_image014.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135RcCZfHUe.jpg" /><img border="0" width="158" height="120" src="史上的首次_clip_image015.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135NZchY5cQ.jpg" /> </p>
+<p>
+    冯.诺依曼和他的埃尼亚克 </p>
+<p>
+  “埃尼阿克”有两大缺点，一是没有内存储器，二是要由人像搭积木一样，将大量运算部件搭配成各种解题布局，每算一题 就要重搭一次，又费时，又麻烦。有的题只要计算1秒钟，准备工作却 要花上几十分钟。对“埃尼阿克“的改进应用归功于匈牙利裔美国数学家冯·诺依曼。</p>
+<p>
+    冯·诺依曼有非凡的数学才能，曾被誉为“万能数学家“。1930年，他到美国普林斯顿大学任教，曾担任过美国陆军弹道研究所、海军兵器研究所等单位的顾问，参与了研制第一批**的曼哈顿计划。1944年夏，冯·诺依曼正在负责研制核武器，需要进行大量高速的计算。他偶然听说“埃尼阿克”小组正在研制计算机，喜出望外，立即参加进去，担任小组顾问。那时“埃尼阿克”的研制已接近尾，为了克服已经意识到的“埃尼阿克”的缺点，通过与小组成员共同研计，冯·诺依曼提出一个全新的存储程序通用电子计算机方案，方案明确规定，新机器有五个组成部分：运算器、控制器、存储器、输出和输入。此外，新方案还有点两重大改进，一是采用二进数制，简化了计算机结构；二是建立存储程序，将指令和数据放进存储器，加快了运算速度。新机器EDVAC于1952年研制成功。冯·诺依曼概念被认为是计算机发展史上的一个里程碑，它标志着电子计算机时代的真正开始。 </p>
+<p>
+  <strong>1949</strong><strong>年 第一台存储程序计算机——EDSAC</strong></p>
+<p>
+  </p>
+<p>
+    ●<strong>EDSAC</strong><strong>——第一台存储程序计算机</strong> </p>
+<p>
+  <img border="0" width="400" height="322" src="史上的首次_clip_image016.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781354BQO5R7y.jpg" /> </p>
+<p>
+  &nbsp; &nbsp; 1949年，第一台存储程序计算机--EDSAC在剑桥大学投入运行，ENIAC和EDSAC均属于第一代计算机 </p>
+<p>
+  </p>
+<p>
+  <strong>1951</strong><strong>年 首台实时可交互式电脑——Whirlwind  Ⅰ</strong></p>
+<p>
+    ●<strong>Whirlwind </strong><strong>Ⅰ——实时可交互式电脑</strong> </p>
+<p>
+  <img border="0" width="400" height="274" src="史上的首次_clip_image017.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135s26Zky2Q.jpg" /> </p>
+<p>
+  &nbsp;  &nbsp;这台被命名为“旋风1号”（Whirlwind Ⅰ）的电脑投入运行，由5000个电子管组成全新的结构，使它成为速度最高的计算机，其技术先进程度大大超过了模拟的需要。美国空军向麻省理工学院求援，  许以每年100万美元的巨额研制经费，让旋风电脑充当SAGE的主要部件。杰·弗雷斯特是位富于创造的思想家，他还首创了用打字机键盘与电脑“对话”方式，为此，麻省理工学院的工程师们戏称“旋风”是一台“昂贵的打字机”</p>
+<p>
+  </p>
+<p>
+  <strong>1952</strong><strong>年 现代电脑之父的完美理念——IAS</strong></p>
+<p>
+    ●IAS&nbsp;&nbsp;——大多数当今机器设备，都采用了这种设计 </p>
+<p>
+  <img border="0" width="400" height="296" src="史上的首次_clip_image018.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135Zwj36frl.jpg" /> </p>
+<p>
+  &nbsp; &nbsp; 1952年：1月，由计算机之父，冯•诺伊曼（Von Neumann）设计的IAS电子计算机EDVAC问世。这台IAS计算机总共采用了2300个电子管，运算速度却比拥有18000个电子管的“埃尼阿克”提高了10倍，冯•诺伊曼的设想在这台计算机上得到了圆满的体现<strong> </strong></p>
+<p>
+  <strong>1960</strong><strong>年 第一款小型机电脑——PDP-1&nbsp;</strong></p>
+<p>
+  <strong>●PDP-1——第一款小型机电脑 </strong></p>
+<p>
+  <img border="0" width="400" height="300" src="史上的首次_clip_image019.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135rWxpg3t4.jpg" /> </p>
+<p>
+  &nbsp;&nbsp; &nbsp;1960年，DEC公司向市场推出了它的第一台计算机PDP—1的样机。这是一种人机对话型计算机，其售价低廉到只是一台大主机的零头，而且体积较小。它成功地把DEC带进了计算机行业，开辟了一个崭新天地。从此，DEC在计算机行业中有了肥沃的土壤，并扎下了根，开始蓬勃生长</p>
+<p>
+  </p>
+<p>
+  <strong>第一颗微处理器：Intel 4004 </strong></p>
+<p>
+  你知道4004吗？这个指甲大的芯片上集成了两千个晶体 管，其处理能力相当于世界上第一台计算机；虽然这在现在不值一提，但它是第一颗微处理器，是现代微处理器的鼻祖。 </p>
+<p>
+  特德·霍夫（Ted·Hoff）就是这第一款微处理器的总设计师。现在人们大都知道，英特尔公司1969年推出的4004是最早问世的微处理器。但说起这颗大名鼎鼎的处理器身后的制作者的故事，就不那么出名了。</p>
+<p>
+  </p>
+<p>
+  <img border="0" width="200" height="149" src="史上的首次_clip_image020.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135X2tkGk0A.jpg" /> </p>
+  <p>第一颗微处理器Intel 4004</p>
+<p>
+  由于种种原因，4004未能迅速占领市场，直到Intel推出功能更强大8008、8080以至IBM PC采用8088芯片，Intel才在微处理器的市场逐渐占据了应有的位置。</p>
+<p>
+  Intel 4004 的的确确宣告了集成电子产品的一个新**！之后微处理器的迅速发展，甚至是霍夫始料未及的。今天当我们  津津乐道486、PENTIUM，PII的时候，我们称霍夫是微处理器之父，他的工作永远不应该被人忘记。</p>
+<p>
+  </p>
+<p>
+  <strong>第一个内存：由16条钢管构成</strong></p>
+<p>
+  1946年5月，英国剑桥大学的莫里斯·威尔克斯的朋友从美国带来一份冯·诺依曼一**发表的长篇报告———《关于离散变量自动电子计算机的草案》，威尔克斯如获至宝，由于那时还没有复印机，而来人次日又要走，他连夜挑灯研读，并做了详尽的笔记。 </p>
+<p>
+  <img border="0" width="400" height="300" src="史上的首次_clip_image021.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135tRZ6uoWw.jpg" /> </p>
+<p>
+  由于年代久远，没有相关图片，就以现代的“现代”颗粒来代替吧 那时，威廉姆斯还刚想到用阴极射线管做静电存储器，技术远未成熟。威尔克斯就另辟蹊径，想到用水银传声延迟线来存储。威尔克斯过不久就设计出一个存储器，由16根钢管组成，每根管子能存储32个17位字长的字。而它所起的作用，就是内存在计算机中所实现的功能。</p>
+<p>
+  </p>
+<p>
+  <strong>第一块硬盘：IBM RAMAC 350 </strong></p>
+<p>
+  <strong>&nbsp;  &nbsp;&nbsp; &nbsp;</strong><strong>最早的硬盘是1956年由蓝色巨人IBM公司展示的RAMAC（Random Access Method of Accounting and  Control），而现代硬盘的雏形“温切斯特”硬盘也同样是出自IBM公司。</strong><strong></p>
+<p>
+  </strong><img border="0" width="220" height="199" src="史上的首次_clip_image022.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135UzvZiGha.jpg" /> </p>
+<p>
+    1956年推出第一个磁盘驱动器——IBM RAMAC 350磁盘存储 </p>
+<p>
+   从1956年9月，IBM的一个工程小组向世界展示了第一台磁盘存储系统IBM 350 RAMAC（Random Access Method of  Accounting and Control）至今，磁盘存储系统已经历了近半个世纪的发展。经历了这45年，磁盘的变化可以说是非常巨大得，最早的那台RAMAC容量只有5MB，然而却需要使用50个直径为24英寸的磁盘。但现在一块容量高达100GB的硬盘只需要3张磁盘片即可。</p>
+<p>
+    其具体规格为：</p>
+<p>
+    容量：5MB</p>
+<p>
+    磁盘数量：50个24英寸磁盘</p>
+<p>
+    每英寸磁道数：20</p>
+<p>
+    每英寸位数：100</p>
+<p>
+    存储密度：每英寸2kb</p>
+<p>
+    传输率：0.0088MB/s</p>
+<p>
+  <img border="0" width="160" height="120" src="史上的首次_clip_image023.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135FMY2Mltc.jpg" /><img border="0" width="158" height="120" src="史上的首次_clip_image024.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135AivLVVAD.jpg" /><img border="0" width="398" height="300" src="史上的首次_clip_image025.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781355XnMauN0.jpg" /></p>
+<p>
+  </p>
+<p>
+  IBM 10MB硬盘 RAMAC（账目和控制读写原理）可以不用连续搜索所有的记录就能定位保存在磁盘上的信息。在不到１秒钟的时间里，RAMAC的随机读写臂能从IBM San Jose的350磁盘的50个旋转磁盘的任何一个上面检索数据。</p>
+<p>
+  </p>
+<p>
+  <strong>第一款键盘：世上最愚蠢的发明？</strong></p>
+<p>
+   最初，打字机的键盘是按照字母顺序排列的，但如果打字速度过快，某些键的组合很容易出现卡键问题，于是克里斯托夫.拉森.授斯（Christopher  Latham Sholes）发明了QWERTY键盘布局，他将最常用的几个字母安置在相反方向，最大限度放慢敲键速度以避免卡键。授斯在1868年申请专利，1873年使用此布局的第一台商用打字机成功投放市场。这就是为什么有今天键盘的排列方式。 </p>
+<p>
+  <img border="0" width="398" height="300" src="史上的首次_clip_image026.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135Cp40rq9W.jpg" /></p>
+<p>
+   QWERT键盘</p>
+<p>
+   但具有讽刺意味的是，这种129**形成的、以放慢敲键速度为目的的键盘排列方式却延续至今。1986年布鲁斯?伯里文爵士曾在《奇妙的书写机器》一文中表示：“QWERTY的安排方式非常没效率。”，比如：大多数打字员惯用右手，但使用QWERTY，左手却负担了57%的工作。两小指及左无名指是最没力气的指头，却频频要使用它们。排在中列的字母，其使用率仅占整个打字工作的30%左右，因此，为了打一个字，时常要上上下下移动指头。</p>
+<p>
+  </p>
+<p>
+  <strong>第一款鼠标：他的名字其实叫“搜寻点击”</strong></p>
+<p>
+   恩格尔巴特是电脑界的一位奇才，被称为“人机交互”领域里的大师。1963年，美国国家专利局批准恩格尔巴特几**提交的一份申请，确认一种叫“搜寻点击”的输入装置是一项独创的技术，“搜寻点击”装置又称为鼠标。 </p>
+<p>
+  1968年，恩格尔巴特应邀参加一次在旧金山举行的电脑会议，在会议上，他拿出鼠标。这是鼠标第一次作为搜寻工具公开亮相。到了70年代初，恩格尔巴特的实验室经费开始缩减，他手下有几位研究人员另谋高就，刚好被正四处招兵买马的施乐公司硅谷研究中心罗致门下。这样在施乐公司的“阿尔托’研制第一台有显示器的微电脑时，恩格尔巴特的发明就有了出路。</p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image027.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135KNAZ1jv3.jpg" /></p>
+<p>
+    恩格尔巴特和他的鼠标 </p>
+<p>
+  “阿尔托”采用新式的人机交互界面，屏幕上经常有许多图像要移动，鼠标是最好的输入工具。这样，鼠标就离开学术讲台，准备跳向市场。可惜，施乐公司的“阿尔托”微电脑造价昂贵，与一般的小型机差不了多少，没有什么商业上的前景。这样，恩格尔巴特的“米老鼠”又黯淡了许多年。</p>
+<p>
+  </p>
+<p>
+  <strong>第一块独立显卡：只能显示256色 </strong></p>
+<p>
+  在微型计算机发展的前期，并没有显卡概念的存在，而所要显示的信息是经过CPU计算后，输出到主板上由若干个集成电路块组成的显示单元，再经过转换后成为显示器所能辨认的信号，进行输出显示，而这种显示设备只能完成一些最基本的显示功能。 </p>
+<p>
+    真正的显卡诞生还要归功于新显示模式的出现，因为在VGA标准出现以前，显示器所支持的最高颜色数也只有8到16种，所以计算机系统和显示系统间所要处理的数据少，色彩组合非常简单，但当VGA标准被采用以后，虽然可提供的色彩数同样为8到16种，但在模拟电路中，可以把每个色彩用64种不同的亮度表示出来，因此系统可支持的色彩数就达到了262144色和6777216色，也就是我们平时所称作的256色和24位色，而在此时，计算机设计者们便将具有显示功能的单元，从主板上分离出来制作成了专门的显卡，但这时的显卡体积庞大，功能单一，而且由于接口的限制，速度很慢，但与在主板上的显示单元相比还是进步了许多的。</p>
+<p>
+  <img border="0" width="400" height="300" src="史上的首次_clip_image028.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135Me16lYRt.jpg" /></p>
+<p>
+    第一代独立显卡——8位ISA显卡</p>
+<p>
+  &nbsp;&nbsp;I BM公司于1981年推出的基于8位机P C/XT的总线，称为PC 线。1984年IBM公司推出了1 位PC机PC/AT，称为AT总线。为了能够合理地开发外插接口卡，由Intel公司、IEEE和EISA集团联合开发了与IBM/AT原装机总线意义相近的ISA总线，即8/16位的“工业标准结构”(ISA,IndustryStandard  Architecture)总线。</p>
+<p>
+  由于年代久远，并且没有任何相关的历史资料能说明谁的显卡是第一块运用在微型计算机上的，因此小编也不能对其下一个准确的定论。但8位ISA插口显卡是第一块独立显卡应该是毫无疑问了。</p>
+<p>
+  </p>
+<p>
+  <strong>第一块声卡：微机民用化的产物</strong></p>
+<p>
+   声卡对于计算机来说是个可有可无的东西，因为计算机的计算并不需要发声。但随着微型计算机的出现，以及逐渐走向民用，并朝着多媒体方向发展，声卡于是出现了。而对于到底谁是第一块声卡的缔造者，由于缺乏相关的资料和依据，小编就不能下定论了。但创新声卡作为声卡界元老级人物，其早期的产品应该能做这方面的代表了。 </p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image029.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135vXcEcxPY.jpg" /></p>
+<p>
+    产于1988年的CT-1300A</p>
+<p>
+  &nbsp;&nbsp;目前，小编所知道的创新最早一款声卡型号为CT-1300A，正式名称为Game Blaster，产于1988年！但由于实在太古老了，所以我们已经无法再找到其相关任何资料了。随后创新公司推出了Sound Blaster系列声卡，凭借8位、单声道的采样率、兼顾音乐与音效的双重处理能力，一举击败了声卡之父ADLib公司同时树立起自己在声卡届中的霸主地位。应该说Sound Blaster是一款具有划时代意义的产品。</p>
+<p>
+  </p>
+<p>
+  <strong>第一台笔记本：你能看出它是笔记本电脑么？</strong></p>
+<p>
+   笔记本电脑发展到今天，移动已经不再是强调的惟一重点。因为今天的笔记本电脑可以轻易做到足够小，因而性能、外观、娱乐等其他因素成为人们衡量笔记本电脑的首要因素。 </p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image030.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621781358rE0uI9a.jpg" /></p>
+<p>
+    和现在的笔记本简直就是两个样子</p>
+<p>
+   相比之下，历史上第一部笔记本电脑可就不一样了。在没有移动处理器，没有成熟LCD技术，没所谓散热性能以及外存储单元都非常笨重的时代，要制作一台便携式“笔记本”可谓难上加难。</p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image031.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135UqQhXi3b.jpg" /><img border="0" width="199" height="150" src="史上的首次_clip_image032.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135Q3GG8ATa.jpg" /><img border="0" width="200" height="149" src="史上的首次_clip_image033.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135tGC8oIo4.jpg" /></p>
+<p>
+  第一台笔记本电脑的发明者是Adam Osborne。他发明并开始销售的第一台“笔记本”名叫Osborne 1，电脑重24磅，价格为1795美元。与当时的电脑不同，它之所以被称作便携式电脑是因为它设计了一个超袖珍的内置显示屏，当然这个显示屏是显像管技术的而非LCD的。而且它的键盘外设计一应俱全，Osborne当时也想到了便携时的软件问题所以将所有软件都与这台电脑**销售，据称这些软件当时就价格1500美元。 </p>
+<p>
+  </p>
+<p>
+  <img border="0" width="400" height="298" src="史上的首次_clip_image034.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262178135p9ixNiQy.jpg" /></p>
+<p>
+    第一台笔记本电脑的主板</p>
+<p>
+   这台电脑采用CP/M操作系统，装有Wordstar字处理软件，SuperCalc电子表格软件，微软MBASICx编程语言，CBASIC语言等。在硬件方面，它内置了两个软驱，当然没有光驱。而且，各种当时的接口一应俱全。 </p>
+<p>
+    计算机发展历史上的诸多第一&nbsp;</p>
+<table id="tbrowser">
+  <col width="64" />
+  <col width="122" />
+  <col width="126" />
+  <col width="394" />
+  <tr>
+    <td width="64">Year&nbsp;</td>
+    <td width="122">Name</td>
+    <td width="126">Made by</td>
+    <td width="394">Comments</td>
+  </tr>
+  <tr>
+    <td>1623</td>
+    <td>Pascaline </td>
+    <td>Pascal </td>
+    <td>First mechanical calculator&nbsp;</td>
+  </tr>
+  <tr>
+    <td>1834</td>
+    <td style="font-size:16px;">Analytical Engine </td>
+    <td>Babbage</td>
+    <td>First attempt to build a digital computer</td>
+  </tr>
+  <tr>
+    <td>1932</td>
+    <td style="font-size:12px;">Differential Analyzer&nbsp; </td>
+    <td>Bush </td>
+    <td>Mechanical calculator for solving differential equations</td>
+  </tr>
+  <tr>
+    <td>1936</td>
+    <td>Z1 </td>
+    <td>Zuse </td>
+    <td>First working relay calculating machine</td>
+  </tr>
+  <tr>
+    <td>1942</td>
+    <td>ABC </td>
+    <td>Iowa</td>
+    <td>State One of the first electronic computers</td>
+  </tr>
+  <tr>
+    <td>1943</td>
+    <td>COLOSSUS </td>
+    <td>British</td>
+    <td>Government First electronic computer</td>
+  </tr>
+  <tr>
+    <td>1944</td>
+    <td>Mark I</td>
+    <td>Aiken</td>
+    <td>First American General Purpose Comput</td>
+  </tr>
+  <tr>
+    <td>1946</td>
+    <td>ENIAC I </td>
+    <td>Eckert/Mauchley </td>
+    <td>Modern computer history starts here</td>
+  </tr>
+  <tr>
+    <td>1949</td>
+    <td>EDSAC </td>
+    <td>Wilkes </td>
+    <td>First stored-program computer</td>
+  </tr>
+  <tr>
+    <td>1951</td>
+    <td>Whirlwind I </td>
+    <td>MIT </td>
+    <td>First real-time computer</td>
+  </tr>
+  <tr>
+    <td>1952</td>
+    <td>IAS </td>
+    <td>Von</td>
+    <td>Neumann Most current machines use this design</td>
+  </tr>
+  <tr>
+    <td>1953</td>
+    <td>650</td>
+    <td>IBM</td>
+    <td>First massed produced computer</td>
+  </tr>
+  <tr>
+    <td>1960</td>
+    <td>PDP-1 </td>
+    <td>DEC</td>
+    <td>First minicomputer (50 sold)</td>
+  </tr>
+  <tr>
+    <td>1961</td>
+    <td>1401</td>
+    <td>IBM</td>
+    <td>Enormously popular small business machine</td>
+  </tr>
+  <tr>
+    <td>1962</td>
+    <td>7094</td>
+    <td>IBM</td>
+    <td>Dominated scientific computing in the early 1960’s</td>
+  </tr>
+  <tr>
+    <td>1963</td>
+    <td>B5000 </td>
+    <td>Burroughs </td>
+    <td>First machine designed for a high-level language</td>
+  </tr>
+  <tr>
+    <td>1964</td>
+    <td>6600</td>
+    <td>CDC </td>
+    <td>First scientific supercomputer</td>
+  </tr>
+  <tr>
+    <td>1964</td>
+    <td>360</td>
+    <td>IBM</td>
+    <td>First product line designed as a family for mainframes</td>
+  </tr>
+  <tr>
+    <td>1965</td>
+    <td>PDP-8 </td>
+    <td>DEC</td>
+    <td>First mass-market minicomputer (50,000 sold)</td>
+  </tr>
+  <tr>
+    <td>1970</td>
+    <td>PDP-11 </td>
+    <td>DEC</td>
+    <td>Dominated minicomputers in the 1970’s</td>
+  </tr>
+  <tr>
+    <td>1973</td>
+    <td>Alto </td>
+    <td>Xerox </td>
+    <td>First prototype of modern PC</td>
+  </tr>
+  <tr>
+    <td>1974</td>
+    <td>CRAY-1 </td>
+    <td>Cray</td>
+    <td>First vector supercomputer</td>
+  </tr>
+  <tr>
+    <td>1974</td>
+    <td>8080</td>
+    <td>Intel </td>
+    <td>First general-purpose 8-bit computer on a chip</td>
+  </tr>
+  <tr>
+    <td>1978</td>
+    <td>VAX </td>
+    <td>DEC</td>
+    <td>First 32-bit superminicomputer</td>
+  </tr>
+  <tr>
+    <td>1981</td>
+    <td>IBM PC </td>
+    <td>IBM</td>
+    <td>Started the modern personal computer era</td>
+  </tr>
+  <tr>
+    <td>1985</td>
+    <td>MIPS </td>
+    <td>MIPS</td>
+    <td>First commercial RISC machine</td>
+  </tr>
+  <tr>
+    <td>1987</td>
+    <td>SPARC </td>
+    <td>Sun</td>
+    <td>First SPARC-based RISC workstation</td>
+  </tr>
+  <tr>
+    <td>1990</td>
+    <td>RS6000 </td>
+    <td>IBM</td>
+    <td>First superscaler machine</td>
+  </tr>
+  <tr>
+    <td>1996</td>
+    <td>UltraSparc </td>
+    <td>Sun</td>
+    <td>64-bit RISC processor machine</td>
+  </tr>
+  <tr>
+    <td>1996</td>
+    <td>JavaStation </td>
+    <td>Sun</td>
+    <td>Network computer based on Java architecture</td>
+  </tr>
+  <tr>
+    <td>1999</td>
+    <td>Y-MP </td>
+    <td>Cray</td>
+    <td>Super computer for weather analysis and simulation</td>
+  </tr>
+  <tr>
+    <td>2000</td>
+    <td>Newton </td>
+    <td>Apple</td>
+    <td>First handheld computer&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>
+    Description:</p>
+<p>
+    Year&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made  by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Comments </p>
+<p>
+    1623 Pascaline Pascal First mechanical calculator&nbsp; </p>
+<p>
+    1834 Analytical Engine Babbage First attempt to build a digital computer </p>
+<p>
+    1932 Differential Analyzer&nbsp; Bush Mechanical calculator for solving  differential equations </p>
+<p>
+    1936 Z1 Zuse First working relay calculating machine </p>
+<p>
+    1942 ABC Iowa State One of the first electronic computers </p>
+<p>
+    1943 COLOSSUS British Government First electronic computer </p>
+<p>
+    1944 Mark I Aiken First American General Purpose Computer </p>
+<p>
+    1946 ENIAC I Eckert/Mauchley Modern computer history starts here </p>
+<p>
+    1949 EDSAC Wilkes First stored-program computer </p>
+<p>
+    1951 Whirlwind I MIT First real-time computer </p>
+<p>
+    1952 IAS Von Neumann Most current machines use this design </p>
+<p>
+    1953 650 IBM First massed produced computer </p>
+<p>
+    1960 PDP-1 DEC First minicomputer (50 sold) </p>
+<p>
+    1961 1401 IBM Enormously popular small business machine </p>
+<p>
+    1962 7094 IBM Dominated scientific computing in the early 1960’s </p>
+<p>
+    1963 B5000 Burroughs First machine designed for a high-level language </p>
+<p>
+    1964 360 IBM First product line designed as a family for mainframes </p>
+<p>
+    1964 6600 CDC First scientific supercomputer </p>
+<p>
+    1965 PDP-8 DEC First mass-market minicomputer (50,000 sold) </p>
+<p>
+    1970 PDP-11 DEC Dominated minicomputers in the 1970’s </p>
+<p>
+    1973 Alto Xerox First prototype of modern PC </p>
+<p>
+    1974 8080 Intel First general-purpose 8-bit computer on a chip </p>
+<p>
+    1974 CRAY-1 Cray First vector supercomputer </p>
+<p>
+    1978 VAX DEC First 32-bit superminicomputer </p>
+<p>
+    1981 IBM PC IBM Started the modern personal computer era </p>
+<p>
+    1985 MIPS MIPS First commercial RISC machine </p>
+<p>
+    1987 SPARC Sun First SPARC-based RISC workstation </p>
+<p>
+    1990 RS6000 IBM First superscaler machine </p>
+<p>
+    1996 UltraSparc Sun 64-bit RISC processor machine </p>
+<p>
+    1996 JavaStation Sun Network computer based on Java architecture </p>
+<p>
+    1999 Y-MP Cray Super computer for weather analysis and simulation </p>
+<p>
+    2000 Newton Apple First handheld computer&nbsp; </p>
+
+
+</div>
+
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>
+</body>
+</html>

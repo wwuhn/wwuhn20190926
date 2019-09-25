@@ -1,0 +1,1018 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title></title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px solid #aaa;
+font-size:1em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:1em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+</p>
+<p>
+<table id="tbrowser">
+<caption>计算机先驱奖获奖人员介绍</caption>
+    <col span="3" />
+	<thead>
+    <tr>
+      <th width="10%">Year</td>
+      <th width="25%">Name</td>
+      <th width="65%">Description</td></tr>
+	</thead>
+
+   <tr>
+    <td>1980年</td>
+    <td>霍华德·艾肯</td>
+    <td>世界上第一台大型自动数字计算机Mark I的设计者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>塞缪尔·阿历克山大</td>
+    <td>美国标准局“东部机”的项目负责人</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>吉纳·阿姆达尔</td>
+    <td>IBM系列机的功臣和“插接兼容式”计算机的创始人</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>约翰·巴克斯</td>
+    <td>FORTRAN和BNF的发明者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>罗伯特·巴登</td>
+    <td>堆栈式计算机的首创者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>切斯特·贝尔</td>
+    <td>“小型机之父”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>弗雷德里克·布鲁克斯</td>
+    <td>IBM 360系列计算机的总设计师和总指挥</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>威斯利·克拉克</td>
+    <td>世界上最早的个人计算机LINC的发明者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>费尔南多·考巴脱</td>
+    <td>实现分时系统的功臣</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>西摩·克雷</td>
+    <td>“超级计算机之父”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>埃德斯加·狄克斯特拉</td>
+    <td>最先察觉“goto有害”的计算机科学大师</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>约翰·埃克特</td>
+    <td>世界上第一台电子计算机ENIAC的设计者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>杰伊·福雷斯特</td>
+    <td>计算机发展史上“最值得记忆的核心人物”</td>
+  </tr>
+  <tr>
+    <td>1980年 </td>
+    <td>赫尔曼·哥尔斯廷</td>
+    <td>ENIAC计算机的“催生者”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>理查德·哈明</td>
+    <td>发明纠错码的大数学家和信息学专家</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>吉恩·霍厄尼</td>
+    <td>半导体平面处理技术的发明</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>格蕾丝·赫柏</td>
+    <td>“计算机软件的第一夫人”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>阿尔斯通·豪斯霍德</td>
+    <td>从数学家到数值分析专家</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>戴维·霍夫曼</td>
+    <td>他发明了著名的“霍夫曼编码”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>肯尼思·艾弗森</td>
+    <td>大器晚成的科学家，APL的发明人</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>托玛斯·基尔蓬</td>
+    <td>引领一代计算机技术世界潮流的英国学者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>唐纳德·克努特</td>
+    <td>经典巨著《计算机程序设计的艺术》的年轻作者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>赫尔曼·儒科夫</td>
+    <td>计算机产业化的先行者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>约翰·莫奇利</td>
+    <td>世界上第一台电子计算机ENIAC的设计者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>戈登·莫尔</td>
+    <td>对IT技术发展作出天才预测的科学家</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>艾伦·纽厄尔</td>
+    <td>人工智能符号主义学派的创始人之一</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>罗伯特·诺伊斯</td>
+    <td>被称为“硅谷市长”的集成电路发明者之一</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>洛伦斯·罗伯茨</td>
+    <td>“计算机网络之父”</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>乔治·斯蒂比茨</td>
+    <td>在厨房里做出计算机模型的发明家</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>许缪尔·维诺格拉特</td>
+    <td>算法复杂性研究的先驱</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>莫里斯·威尔克斯</td>
+    <td>世界上第一台存储程序式St算机EDSAC的研制者</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>康拉特·祖泽</td>
+    <td>在恶劣环境中孤军奋战的成功者</td>
+  </tr>
+  <tr>
+    <td>1981年</td>
+    <td>杰弗里·朱</td>
+    <td>杰出的华裔计算机科学家</td>
+  </tr>
+  <tr>
+    <td>1982年</td>
+    <td>阿瑟·伯克斯</td>
+    <td>ENIAC研制组的骨干成员之一</td>
+  </tr>
+  <tr>
+    <td>1982年</td>
+    <td>哈利·赫斯基</td>
+    <td>美国标准局“西部机”SWAC的研制者</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>约翰·阿塔那索夫</td>
+    <td>先于ENIAC Wa电子数字计算机ABC的建造者</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>杰里尔·哈达德</td>
+    <td>IBM首台科学计算机701的主要负责人之一</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>尼古拉·梅特罗波利斯</td>
+    <td>最早用计算机解决原子能问题的数学家</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>纳撒尼尔·罗切斯特</td>
+    <td>IBM的第一个系统设计师</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>威廉·范德玻尔</td>
+    <td>荷兰著名的ZRBRA计算机的设计者</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>约翰·凯默尼</td>
+    <td>BASIC语言的发明人之一</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>约翰·麦卡锡</td>
+    <td>“人工智能之父”和LISP语言的发明人</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>艾伦·佩利</td>
+    <td>ALCOL语言和计算机科学的“催生者”</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>伊万·萨瑟兰</td>
+    <td>计算机图形学之父</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>戴维·惠勒</td>
+    <td>“子程序跳转”技术的发明者</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>海因茨·泽玛奈克</td>
+    <td>吹拂“五月的微J</td>
+  </tr>
+  <tr>
+    <td>1986年</td>
+    <td>卡斯伯特·赫德</td>
+    <td>IBM创计算机产业之初的功臣</td>
+  </tr>
+  <tr>
+    <td>1986年</td>
+    <td>彼得·诺尔</td>
+    <td>从天文学家到计算机科学家</td>
+  </tr>
+  <tr>
+    <td>1986年</td>
+    <td>詹姆士·波默林</td>
+    <td>IAS和HARVEST计算机的首席工程师</td>
+  </tr>
+  <tr>
+    <td>1986年</td>
+    <td>范·维京格尔藤</td>
+    <td>W文法和A1gol 68的创始人</td>
+  </tr>
+  <tr>
+    <td>1987年</td>
+    <td>罗伯特·埃弗莱特</td>
+    <td>Whirlwind的首席工程师</td>
+  </tr>
+  <tr>
+    <td>1987年</td>
+    <td>雷诺德·约翰逊</td>
+    <td>磁盘存储系统RAMAC的发明人</td>
+  </tr>
+  <tr>
+    <td>1987年</td>
+    <td>阿瑟·塞缪尔</td>
+    <td>“机器学习之父”</td>
+  </tr>
+  <tr>
+    <td>1987年</td>
+    <td>尼克劳斯·沃思</td>
+    <td>PASCAL之父及结构化程序设计的首创者</td>
+  </tr>
+  <tr>
+    <td>1988年</td>
+    <td>弗里德里希·鲍尔</td>
+    <td>“堆栈”概念的首创者</td>
+  </tr>
+  <tr>
+    <td>1988年</td>
+    <td>马西安·霍夫</td>
+    <td>Intel微处理器芯片体系结构的发明</td>
+  </tr>
+  <tr>
+    <td>1989年</td>
+    <td>约翰·科克</td>
+    <td>RISC概念的首创者</td>
+  </tr>
+  <tr>
+    <td>1989年</td>
+    <td>拉尔夫·帕尔默</td>
+    <td>率先采用电子电路的IBM 604穿孔卡片计算器的设计者</td>
+  </tr>
+  <tr>
+    <td>1989年</td>
+    <td colspan="2">米娜·李斯和她在0NR的三位同事:早期计算机研发的组织者和促进者</td>
+    </tr>
+  <tr>
+    <td>1989年</td>
+    <td>詹姆士·威登海姆</td>
+    <td>磁带机高速输入／输出机构的发明人</td>
+  </tr>
+  <tr>
+    <td>1990年</td>
+    <td>维纳·布赫霍尔兹</td>
+    <td>“Byte”的发明者</td>
+  </tr>
+  <tr>
+    <td>1990年</td>
+    <td>查尔斯·霍尔</td>
+    <td>从QUICKSORT、CASE到程序设计语言程序设计语言的公理化</td>
+  </tr>
+  <tr>
+    <td>1991年</td>
+    <td>罗伯特·伊万斯</td>
+    <td>IBM 360之父</td>
+  </tr>
+  <tr>
+    <td>1991年</td>
+    <td>罗伯特·弗洛伊德</td>
+    <td>前后断言法的创始人</td>
+  </tr>
+  <tr>
+    <td>1991年</td>
+    <td>托玛斯·库尔泽</td>
+    <td>BASIC语言的发明人之一</td>
+  </tr>
+  <tr>
+    <td>1992年</td>
+    <td>斯蒂芬·邓维尔</td>
+    <td>STRETCH项目的领导人</td>
+  </tr>
+  <tr>
+    <td>1992年</td>
+    <td>道格拉斯·恩格尔巴特</td>
+    <td>鼠标器的发明人和超文本研究的先驱</td>
+  </tr>
+  <tr>
+    <td>1993年</td>
+    <td>艾利希·布洛赫</td>
+    <td>IBM／360的又一位功臣</td>
+  </tr>
+  <tr>
+    <td>1993年</td>
+    <td>杰克·基尔比</td>
+    <td>集成电路和手持计算机的发明者</td>
+  </tr>
+  <tr>
+    <td>1993年</td>
+    <td>威利斯·韦阿</td>
+    <td>JOHNNIAL的主设计师</td>
+  </tr>
+  <tr>
+    <td>1994年</td>
+    <td>格里特·勃洛夫</td>
+    <td>IBM／360体系结构的主要定义者</td>
+  </tr>
+  <tr>
+    <td>1994年</td>
+    <td>哈兰·米尔斯</td>
+    <td>软件工程的先驱</td>
+  </tr>
+  <tr>
+    <td>1994年</td>
+    <td>丹尼斯·里奇</td>
+    <td>C和UNⅨ的发明者之一</td>
+  </tr>
+  <tr>
+    <td>1994年</td>
+    <td>肯尼思·汤普森</td>
+    <td>C和UNIX的发明者之一</td>
+  </tr>
+  <tr>
+    <td>1995年</td>
+    <td>盖拉特·埃斯特林</td>
+    <td>大有前途的“可重构系统”的首创者</td>
+  </tr>
+  <tr>
+    <td>1995年</td>
+    <td>巴特勒·兰普森</td>
+    <td>从A1to系统的首府科学家到微软的首席技术官</td>
+  </tr>
+  <tr>
+    <td>1995年</td>
+    <td>马文·明斯基</td>
+    <td>“人工智能之父”和框架理论的创立者</td>
+  </tr>
+  <tr>
+    <td>1995年</td>
+    <td>肯尼思·奥尔森</td>
+    <td>敢向“蓝色巨人”IBM挑战的DEC创始人</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>安琪尔·安格鲁夫</td>
+    <td>保加利亚的计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>理查德·克利平格尔</td>
+    <td>把ENIAC改造成存储程序式计算机的数学家</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>诺贝尔·弗里斯塔基</td>
+    <td>斯洛伐克的计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>维克多·格罗希柯夫</td>
+    <td>乌克兰的计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>约瑟夫·格罗斯卡</td>
+    <td>沟通东西方的斯洛伐克学者</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>尤里·霍勒杰斯</td>
+    <td>程序正确性测试方法的发明者</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>鲁鲍米尔·伊里夫</td>
+    <td>保加利亚现代数学与计算机科学的奠基人</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>罗伯特·凯恩</td>
+    <td>TCP／IP协议之父</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>莱斯兹劳·卡尔玛</td>
+    <td>匈牙利“波利雅学派”的中坚和计算机科学的先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>安东尼·克林斯基</td>
+    <td>波兰的计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>莱斯兹劳·柯兹玛</td>
+    <td>匈牙利第一台计算机的研制者</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>谢尔盖·列别杰夫</td>
+    <td>前苏联“计算机之父”</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>阿历克赛·里雅波诺夫</td>
+    <td>前苏联的“软件之父”</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>罗莫德·玛尔津斯基</td>
+    <td>波兰的计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>格里戈尔·毛西尔</td>
+    <td>罗马尼亚的数学家和计算机先驱</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>伊凡·普兰特</td>
+    <td>斯洛伐克第一台工业控制机的开发者</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>阿尔诺斯·莱沙卡</td>
+    <td>爱沙尼亚进入计算机时代的奠基人</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>安东尼·斯伏波达</td>
+    <td>世界上第一台容错计算机SAPO的设计者</td>
+  </tr>
+  <tr>
+    <td>1997年</td>
+    <td>霍默·奥得菲德</td>
+    <td>将计算机用于银行的先驱者</td>
+  </tr>
+  <tr>
+    <td>1997年</td>
+    <td>贝蒂·霍尔勃顿</td>
+    <td>开发出世界上第一个排序—合并程序的程序员</td>
+  </tr>
+  <tr>
+    <td>1998年</td>
+    <td>欧文·古德</td>
+    <td>和图灵共过</td>
+  </tr>
+  <tr>
+    <td>1999年</td>
+    <td>赫伯特·弗里曼</td>
+    <td>Sperry公司首台计算机的研制者和“链码”的发明人</td>
+  </tr>
+  <tr>
+    <td>2000年</td>
+    <td>哈罗德·劳松</td>
+    <td>指针变量的发明人</td>
+  </tr>
+  <tr>
+    <td>2000年</td>
+    <td>格奥尔基·洛帕托</td>
+    <td>明斯克计算机的总设计师</td>
+  </tr>
+  <tr>
+    <td>2000</td>
+    <td>根那蒂·斯托里阿洛夫</td>
+    <td>明斯克计算机软件的主要开发者</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+    </tr>
+  <tr>
+    <td colspan="3">图灵奖获奖人员介绍</td>
+    </tr>
+  <tr>
+    <td>1966年</td>
+    <td>艾伦·佩利</td>
+    <td>ALCOL语言和计算机科学的“催生者”</td>
+  </tr>
+  <tr>
+    <td>1967年</td>
+    <td>莫里斯·威尔克斯</td>
+    <td>世界上第一台存储程序式计算机EDSAC的研制者</td>
+  </tr>
+  <tr>
+    <td>1968年</td>
+    <td>理查德·哈明</td>
+    <td>发明纠错码的大数学家和信息学专家</td>
+  </tr>
+  <tr>
+    <td>1969年</td>
+    <td>马文·明斯基</td>
+    <td>“人工智能之父”和框架理论的创立者</td>
+  </tr>
+  <tr>
+    <td>1970年</td>
+    <td>詹姆斯·威尔金森</td>
+    <td>数值分析专家和研制ACE计算机的功臣</td>
+  </tr>
+  <tr>
+    <td>1971年</td>
+    <td>约翰·麦卡锡</td>
+    <td>“人工智能之父”和LISP语言的发明人</td>
+  </tr>
+  <tr>
+    <td>1972年</td>
+    <td>埃德斯加·狄克斯特拉</td>
+    <td>最先察觉“goto有害”的计算机科学大师</td>
+  </tr>
+  <tr>
+    <td>1973年</td>
+    <td>查尔斯·巴赫曼</td>
+    <td>“网状数据库之父”</td>
+  </tr>
+  <tr>
+    <td>1974年</td>
+    <td>唐纳德·克努特</td>
+    <td>经典巨著《计算机程序设计的艺术》的年轻作者</td>
+  </tr>
+  <tr>
+    <td>1975年</td>
+    <td>赫伯特·西蒙</td>
+    <td>人工智能符号主义学派的创始人</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>艾伦·纽厄尔</td>
+    <td>人工智能符号主义学派的创始人</td>
+  </tr>
+  <tr>
+    <td>1976年</td>
+    <td>米凯尔·拉宾</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>达纳·斯科特</td>
+    <td>非确定性有限状态自动机理论的开创者</td>
+  </tr>
+  <tr>
+    <td>1977年</td>
+    <td>约翰·巴克斯</td>
+    <td>FORTRAN和BNF的发明者</td>
+  </tr>
+  <tr>
+    <td>1978年</td>
+    <td>罗伯特·弗洛伊德</td>
+    <td>前后断言法的创始人</td>
+  </tr>
+  <tr>
+    <td>1979年</td>
+    <td>肯尼思·艾弗森</td>
+    <td>大器晚成的科学家，APL的发明人</td>
+  </tr>
+  <tr>
+    <td>1980年</td>
+    <td>查尔斯·霍尔</td>
+    <td>从QUICKSORT、CASE到程序设计语言的公理化</td>
+  </tr>
+  <tr>
+    <td>1981年</td>
+    <td>埃德加·科德</td>
+    <td>“关系数据库之父”</td>
+  </tr>
+  <tr>
+    <td>1982年</td>
+    <td>斯蒂芬·库克</td>
+    <td>NP完全性理论的奠基人</td>
+  </tr>
+  <tr>
+    <td>1983年</td>
+    <td>肯尼思·汤普森</td>
+    <td>C和UNIX的发明者</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>丹尼斯·里奇</td>
+    <td>C和UNIX的发明者</td>
+  </tr>
+  <tr>
+    <td>1984年</td>
+    <td>尼克劳斯·沃思</td>
+    <td>PASCAL之父及结构化程序设计的首创者</td>
+  </tr>
+  <tr>
+    <td>1985年</td>
+    <td>理查德·卡普</td>
+    <td>发明“分枝限界法”的三栖学者</td>
+  </tr>
+  <tr>
+    <td>1986年</td>
+    <td>约翰·霍普克洛夫特</td>
+    <td>硕果累累的算法设计大师</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>罗伯特·陶尔扬</td>
+    <td>硕果累累的算法设计大师</td>
+  </tr>
+  <tr>
+    <td>1987年</td>
+    <td>约翰·科克</td>
+    <td>RISC概念的首创者</td>
+  </tr>
+  <tr>
+    <td>1988年</td>
+    <td>伊万·萨瑟兰</td>
+    <td>计算机图形学之父</td>
+  </tr>
+  <tr>
+    <td>1989年</td>
+    <td>威廉·卡亨</td>
+    <td>浮点计算的先驱</td>
+  </tr>
+  <tr>
+    <td>1990年</td>
+    <td>费尔南多·考巴脱</td>
+    <td>实现分时系统的功臣</td>
+  </tr>
+  <tr>
+    <td>1991年</td>
+    <td>罗宾·米尔纳</td>
+    <td>标准元语言ML的开发者</td>
+  </tr>
+  <tr>
+    <td>1992年</td>
+    <td>巴特勒·兰普森</td>
+    <td>从Alto系统的首席科学家到微软的首席技术官</td>
+  </tr>
+  <tr>
+    <td>1993年</td>
+    <td>尤里斯·哈特马尼斯</td>
+    <td>计算复杂性理论的主要奠基人</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>理查德·斯特恩斯</td>
+    <td>计算复杂性理论的主要奠基人</td>
+  </tr>
+  <tr>
+    <td>1994年</td>
+    <td>爱德华·费根鲍姆</td>
+    <td>大型人工智能系统的开拓者</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>劳伊·雷迪</td>
+    <td>大型人工智能系统的开拓者</td>
+  </tr>
+  <tr>
+    <td>1995年</td>
+    <td>曼纽尔·布卢姆</td>
+    <td>计算复杂性理论的主要奠基人之一</td>
+  </tr>
+  <tr>
+    <td>1996年</td>
+    <td>阿米尔·伯努利</td>
+    <td>把时态逻辑引入计算机科学</td>
+  </tr>
+  <tr>
+    <td>1997年</td>
+    <td>道格拉斯·恩格尔巴特</td>
+    <td>鼠标器的发明人和超文本研究的先驱</td>
+  </tr>
+  <tr>
+    <td>1998年</td>
+    <td>詹姆斯·格雷</td>
+    <td>数据库技术和“事务处理”专家</td>
+  </tr>
+  <tr>
+    <td>1999年</td>
+    <td>弗雷德里克·布鲁克斯</td>
+    <td>IBM 360系列计算机的总设计师和总指挥</td>
+  </tr>
+  <tr>
+    <td>2000年</td>
+    <td>姚期智</td>
+    <td>世界上首位获奖的亚裔计算机科学家</td>
+  </tr>
+  <tr>
+    <td>2001年</td>
+    <td>Ole Johan Dahl</td>
+    <td>面向对象编程始发于他们基础性的构想</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Kristen Nygaard</td>
+    <td>面向对象编程始发于他们基础性的构想</td>
+  </tr>
+  <tr>
+    <td>2002年</td>
+    <td colspan="2">Ronald L. Rivest，Adi Shamir，Leonard M. AdlemanRSA:公共密钥理论</td>
+    </tr>
+  <tr>
+    <td>2003年</td>
+    <td>Alan Kay</td>
+    <td>面向对象语言方面原创性</td>
+  </tr>
+  <tr>
+    <td>2004年</td>
+    <td>文特瑟夫</td>
+    <td>发明基本的通信协议TCP/IP技术</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>罗伯特卡恩</td>
+    <td>发明基本的通信协议TCP/IP技术</td>
+  </tr>
+  <tr>
+    <td>2005年</td>
+    <td>Peter Naur</td>
+    <td>设计Algol 60语言</td>
+  </tr>
+  <tr>
+    <td>2006年</td>
+    <td>Frances E. Allen</td>
+    <td>IBM历史上第一位女院士</td>
+  </tr>
+  <tr>
+    <td>2007年</td>
+    <td>Edmund M.Clarke，E Allen Emerson，Joseph Sifakis</td>
+    <td>用于判断硬件和软件设计的理论模型检测技术</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">参考文献</td>
+    </tr>
+  <tr>
+    <td colspan="3"><a href="http://en.wikipedia.org/wiki/Category:Computer_pioneers">http://en.wikipedia.org/wiki/Category:Computer_pioneers</a> </td>
+  </tr>
+  <tr>
+    <td colspan="3"><a href="http://www.thocp.net/biographies/biographies.htm">http://www.thocp.net/biographies/biographies.htm</a></td>
+  </tr>
+  <tr>
+    <td colspan="3"><a href="http://www.techcn.com.cn/index.php?doc-edit-130754.html"></a></td>
+  </tr>
+  </table>
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

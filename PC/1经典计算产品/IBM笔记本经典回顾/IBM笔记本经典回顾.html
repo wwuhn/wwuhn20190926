@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>IBM笔记本经典回顾</title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px solid #aaa;
+font-size:1em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:1em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <p align="left"><strong>IBM</strong><strong>笔记本经典回顾 </strong></p>
+  <p align="left"><strong>因为经典，所以回顾</strong> </p>
+<p>
+    在IT圈内，如果有哪个品牌的产品被回顾，那么必备条件是它一定曾经叱咤风云，而且正在经历一些变故，比如3DFX，比如帝盟……在巨人刚刚倒下的时候，业界一片惋惜之声，继而是长篇累牍的回顾与悼念，一时间比他们健在的时候曝光率还要高上几倍。3DFX、帝盟、S3、Cyrix……一个个知名公司的倒下，都曾让人匪夷所思，但今天当回顾对象变成IBM的时候，我们不禁有些迷惘，怎么个人电脑的鼻祖就这样将PC业务出售了呢？虽然这只是IBM的一部分，但其份量绝对是数一数二，价值百亿美元左右的PC业务，足以让联想一跃成为全球三甲，直接实现国际化梦想。 </p>
+<p>
+    一边是全球PC业老大哥，一个部门价值百亿美元；一边是中国IT业龙头，总资产30亿美元左右。全球 VS 中国，100亿 VS 30亿，如果仅仅看力量对比，无疑联想对IBM PC业务的收购完全应该逆向进行，但事实却正好相反。关于联想收购IBM的细节，大小媒体已经炒得沸沸扬扬，我们也没必要再多耗费笔墨。 </p>
+<p>
+    一年半前，联想从LEGEND变成LENOVO，花费数千万，就是为了打入国际市场，成为全球性企业，但是一年多来，收效甚微。其实，IBM与联想的接触早在4年前就已经开始，而实质性的谈判已经历了1年多。6.5亿美元现金，6亿美元股票再加上接手IBM 5亿美元债务，一共17.5亿美元的代价，联想得到了梦寐以求的IBM PC业务部，也得到了进军国际市场的王牌。 </p>
+<p>
+    17.5亿换来了100亿的价值，看来联想占了个大便宜，但如此大的资本差距，到底又意味着什么呢？ </p>
+<p>
+    现在，不少用户都对<a href="http://product.yesky.com/catalog/125/" target="_blank">IBM笔记本</a>情有独钟，那么IBM到底有什么魔力，吸引了这么多忠实用户呢？下面我们就一起回顾一下18年来IBM推出的精品笔记本，让经典重现在大家面前。 </p>
+<p>
+  <strong>　　奇迹创造，<a href="http://product.yesky.com/catalog/125/" target="_blank">ThinkPad</a>之前的历史 </strong> </p>
+<p>
+    ThinkPad是一块金字招牌，它不仅带给IBM颇丰的收入，也拥有其它品牌笔记本并不享有的地位。在消费者眼中，ThinkPad是当之无愧的本机王者。也许有些人说不出ThinkPad这个词，可它却十分清楚IBM笔记本是多么优秀。即使他不懂笔记本，甚至不懂电脑，但那种意识早已渐渐注入脑中。这就是一个品牌发展的最高境界，一种奇妙的感召力，几乎达到让人盲从的地步。 </p>
+<p>
+    ThinkPad只是个工具，是众多笔记本电脑中的一员。这是清醒者的看法，也是正确思维。这个工具之所以取得今天的地位，与其悠久传奇的发展史不无关系。长达18年的笔记本制造经历，孕育了ThinkPad品牌神话，只有读过这段历史的人，才会清楚为什么一个工具，会有那么多无私的追随者。现在，我们就来通过IBM历史上的经典机型，来诉说ThinkPad的传奇历史。 </p>
+<p>
+  <strong>　　●IBM PC convertible 5140 时间：1986年 </strong> </p>
+<p>
+    ThinkPad不是与生俱来的，IBM所制造的第一台笔记本并没有使用这个名字。1986年，一台名为convertible 5140的机器诞生了。虽然之前也有过这种样貌的计算机，但都无法做到离开电源独立工作。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image001.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533vClp8v5P.jpg" /> </p>
+<p>
+    IBM PC convertible 5140是世界上第一台完全通过内置电池，也能工作的计算机。也确立了以后笔记本的设计规范，电池成为不可替代的标准配置。 </p>
+<p>
+    虽然是IBM第一台笔记本电脑，5140却拥有9.5Kg的惊人重量，你根本无法将它与现在的机器联想到一起。它采用了低功耗8080处理器、拥有4.77MHz主频，256kb内存(可扩充至512k)，两个3.5英寸软驱，可附加LCD显示器。现在看来，这样的配置根本无法想象。但在当时，5140却是一款性能强劲的便携电脑。 </p>
+<p>
+  <strong>　　●PS/55 时间：1987-1992年 </strong> </p>
+<p>
+    从5140之后，IBM的笔记本电脑业务步入正轨。随着英特尔80386处理器的发布，IBM本机也进入了长达2年的386时代。1990年推出的PS/55 5535-S是第一台采用STN显示器、386处理器的IBM笔记本电脑，它拥有16MHz主频、2MB内存、40MB硬盘，性能与5140相比，有了质的飞跃。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image002.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533viklI5fA.jpg" /> </p>
+<p>
+    PS/55note C52则是该系列的巅峰之作，它在外观上已经与现代的ThinkPad本机十分相似。它采用了486处理器，拥有25MHz处理器，TFT显示器、60/120MB硬盘，并具有TrackPointII 指点杆鼠标。 </p>
+<p>
+  <img border="0" width="320" height="398" src="IBM笔记本经典回顾_clip_image003.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533LQWrmkYN.jpg" /> </p>
+<p>
+    神话开始，ThinkPad诞生 </p>
+<p>
+  <strong>　　●ThinkPad 700C 时间：1992年 </strong> </p>
+<p>
+    1992年，IBM ThinkPad 700C诞生了，这是第一台以“ThinkPad”命名的笔记本电脑。ThinkPad领导移动计算技术发展的历程从此开始。黑色(外观设计)和红点(TrackPoint)自此成为ThinkPad的独特象征。 </p>
+<p>
+  <img border="0" width="450" height="355" src="IBM笔记本经典回顾_clip_image004.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533bLAYkmhT.jpg" /> </p>
+<p>
+    它采用了10.4英寸TFT显示器，分辨率达到了VGA(640x480)水平。使用了486SL处理器，25MHz主频、16MB内存、120MB硬盘，重量达3.5Kg。 </p>
+<p>
+  <strong>　　●ThinkPad 755CD 时间 1994年 11月 </strong> </p>
+<p>
+    ThinkPad 755CD是世界上第一台拥有CD-ROM的笔记本电脑，于1994年上市。光驱的采用大大提升了笔记本电脑的实用价值，因此755CD意义重大。 </p>
+<p>
+  <img border="0" width="400" height="300" src="IBM笔记本经典回顾_clip_image005.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533b3HEeIvY.jpg" /> </p>
+<p>
+    它的代表配置为：10.4英寸TFT彩色显示器、486DX  100MHz处理器、8/40MB(最大支持)内存、810MB硬盘，重3.5Kg。 </p>
+<p>
+  <strong>　　●ThinkPad 701C 时间：1995年 3月 </strong> </p>
+<p>
+    这是一款划时代的杰作，作为IBM笔记本电脑的10周年纪念作品，于1995年上市。拥有可伸缩<a href="http://diy.yesky.com/input/" target="_blank">键盘</a>，打开屏幕后键盘完全伸展开来，而合上顶盖后，又会完全收缩到机器内部。就像蝴蝶展开翅膀那样，因此被誉为“蝴蝶机”。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image006.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533k5kLvrOZ.jpg" /> </p>
+<p>
+  <img border="0" width="450" height="372" src="IBM笔记本经典回顾_clip_image007.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533nBgHtTVO.jpg" /></p>
+<p>
+  </p>
+<p>
+  <img border="0" width="450" height="286" src="IBM笔记本经典回顾_clip_image008.jpg" alt="http://www.techcn.com.cn/uploads/201001/12626045332AqOquF2.jpg" /></p>
+<p>
+  </p>
+<p>
+  <img border="0" width="319" height="238" src="IBM笔记本经典回顾_clip_image009.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533IewARHH8.jpg" /></p>
+<p>
+    ThinkPad 701C体现了蓝色巨人的独特创新意识，被永久收藏于纽约现代艺术博物馆。它的代表配置为：10.4英寸TFT 彩色显示器、486DX  75MHz处理器、8/24MB内存、540MB硬盘，重2.0kg。 </p>
+<p>
+  <strong>　　颇具使用价值的ThinkPad时代 </strong> </p>
+<p>
+    从1998年开始，ThinkPad历史迎来了崭新的一页，这段时间的笔记本电脑拥有极高的使用价值，依然活跃在今天的二手市场。其中以ThinkPad 600系列最为突出，作为IBM历史上销售量最大的机型，600系列将便携性、使用舒适度(主要指键盘手感)和性能平衡到极致。即使在迅驰技术当道的今天，二手市场的ThinkPad 600系列依然被淘宝者看中，其使用价值可见一斑。这其中以600E、600X尤为明显。 </p>
+<p>
+  <strong>　　●ThinkPad 600E 时间：1999年3月 </strong> </p>
+<p>
+    1999年上市，代表配置为：13.3英寸  TFT XGA LCD、Intel Pentium II 400MHz处理器、64/320MB(最大支持)内存、5GB硬盘，配备CD或DVD光驱并且拥有2.5MB显存的NerMagic 256AV显卡，重量为2.5Kg。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image010.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533FURVYvOR.jpg" /> </p>
+<p>
+  <strong>　　●ThinkPad 600X 时间：2000年3月 </strong> </p>
+<p>
+    600X使用了奔腾三处理器，于2000年上市，性能有了进一步提高。目前在二手市场也能卖到3000元的高价，它凭借超强的键盘手感而广受欢迎。被fans们誉为ThinkPad历史上使用舒适度最强的机器。 </p>
+<p>
+  <img border="0" width="450" height="340" src="IBM笔记本经典回顾_clip_image011.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533cpEcCRw9.jpg" /> </p>
+<p>
+    它的代表配置为：13.3英寸 TFT XGA LCD、Intel  Pentium III 500MHz处理器、64/576MB(最大支持)内存、12GB硬盘、DVD光驱，拥有4MB显存的NerMagic 256ZX(AGP)显卡重量为2.5Kg。 </p>
+<p>
+  <strong>　　●ThinkPad 240X 时间：2000年5月 </strong> </p>
+<p>
+    ThinkPad  240系列是将便携性与性能平衡的最佳产物之一，尽管在使用舒适度不及600系列，但凭借优秀的便携性受到消费者好评。该系列代表作240X于2000年上市。ThinkPad  240X采用了外挂光驱设计，因此重量上得到了很好控制。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image012.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533mGLjmtpS.jpg" /> </p>
+<p>
+    它的代表配置为：10.4英寸 TFT SVGA LCD、Intel  Pentium III 500MHz处理器、64/192MB(最大支持)内存、12GB硬盘，重量1.4Kg。 </p>
+<p>
+  <strong>　　近代体系，X T R A诞生 </strong> </p>
+<p>
+    2000年5月，ThinkPad家族正式步入了全新时代。从此IBM改变了以往以数字命名的方式，推出了T、X、R、A四大体系，定位不同的消费市场，一直延用至今。 </p>
+<p>
+  <strong>　　●ThinkPad T2X 时间：2000年5月—2001年8月 </strong> </p>
+<p>
+    2000年5月T系列开山之作<a href="http://product.yesky.com/product/241/241137/" target="_blank">T20</a>上市，此后IBM以T20为蓝图，连续推出了T21、T22、T23，谱写了辉煌的ThinkPad  T时代，也树立了商务用机典范。 </p>
+<p>
+  <img border="0" width="450" height="338" src="IBM笔记本经典回顾_clip_image013.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533HhiMEgCA.jpg" /> </p>
+<p>
+    T20采用了钛合金复合材料外壳，创造了UltraBay2000接口的坚实基础。随后的T21、T22、T23都在其基础上改进了配置。 </p>
+<p>
+    T20的代表配置为：13.3英寸 TFT  XGA LCD、Intel Pentium III 650MHz处理器、128/512MB(最大支持)内存、12GB硬盘、S3 Savage(8MB)显卡、DVD光驱，重量为2.4Kg。 </p>
+<p>
+    由于采用了图拉丁核心PIII 1.2G处理器，T23是T2X系列性能最高的机器。目前在二手市场有很高的认可度，即使售价高达5000元，依然有人问津。 </p>
+<p>
+    T23的代表配置为：13.3英寸 TFT  XGA/SXGA+ LCD、Intel Pentium III 1.2GHz处理器、830MP芯片组，性能较之前的440BX芯片组大幅提升，128/1024MB(最大支持)内存，20GB硬盘，S3 SuperSavage IXC16(16MB)显卡，重量为2.4Kg。 </p>
+<p>
+  <strong>　　●ThinkPad X2X 时间：2000年10月—2001年10月 </strong> </p>
+<p>
+    2000年10月，ThinkPad  X20上市，从此它统一了IBM轻薄本机规范。所有X2X型号中，X22最为经典，也是二手市场的抢手货。它结合了ThinkPad 经典轻薄机240和570的长处，使用了830MP芯片组、8MB ATi M6显卡，以及4000mAh电池，性能十分强劲。 </p>
+<p>
+  <img border="0" width="400" height="400" src="IBM笔记本经典回顾_clip_image014.jpg" alt="http://www.techcn.com.cn/uploads/201001/12626045330UDWIyQz.jpg" /> </p>
+<p>
+    X22的代表配置为：12.1英寸XGA  LCD、图拉丁核心PIII 800MHz处理器、Intel830MP芯片组、ATi M6显卡、128/256板载内存、15GB硬盘、外挂光驱，重量1.49Kg。 </p>
+<p>
+  <strong>　　●ThinkPad R30 时间：2001年10月 </strong> </p>
+<p>
+    R30是ThinkPad的第一款R系列机型，尽管其性能及做工等方面不及当时的T23，但却在ThinkPad历史中拥有重要地位。从R系列开始，ThinkPad也有了性价比优秀的机型，让普通消费者也能体验IBM笔记本的独特魅力。 </p>
+<p>
+  <img border="0" width="450" height="397" src="IBM笔记本经典回顾_clip_image015.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533QcEBVJtG.jpg" /> </p>
+<p>
+    R30的代表配置为：13.3/14英寸  XGA LCD、赛扬900MHz处理器、ALi整合芯片组、集成Trident显示芯片、128/1024mb(最大支持)、20GB硬盘、CD/DVD光驱，重量：2.7Kg。 </p>
+<p>
+  <strong>　　P4与迅驰主宰的ThinkPad性能时代 </strong> </p>
+<p>
+    随着英特尔移动奔腾4的推出，ThinkPad性能有了历史性飞跃。随后的迅驰概念则将这种趋势发挥到极致，尽管迅驰的核心Pentium M处理器主频并不高，却有着优秀的执行效能。除此之外它还带给笔记本电脑更长的续航时间，以及无线网络规范。凭借这些，ThinkPad也登上了历史顶峰。 </p>
+<p>
+  <strong>　　●ThinkPad A31/P 时间：2002年 </strong> </p>
+<p>
+    A31/P是ThinkPad历史上占有重要地位的一款机型，于2002年10月发布。它几乎整合了IBM以往机型的全部功能，配备了ATi Mobility FireGL 7800显示芯片，是一款移动工作站级本机。 </p>
+<p>
+    例如，它拥有UltraPort 2000与Ultraport Plus接头、ThinkPad FlexView Display 170度视角、嵌入式保全子系统(Embedded  Security Subsystem)，支持新型数字键和Palm底座的Ultrabay Plus、ThinkLight键盘灯功能、内建802.11b无线网络功能、蓝牙模块等等。 </p>
+<p>
+  <img border="0" width="450" height="442" src="IBM笔记本经典回顾_clip_image016.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533VBYAOroA.jpg" /> </p>
+<p>
+    IBM也曾表示A31P的定位是需要处理大量多媒体资料，展示复杂演示文稿，管理大型企划案，并且还需要执行工程用软件的用户。 </p>
+<p>
+    它的代表配置为：15寸UXGA LCD、Pentium  4-M 1.8GHz处理器、ATi Mobility FireGL 7800显卡、512MB DDR内存、5400rpm 60GB硬盘以及Combo光驱，重量3.45Kg。 </p>
+<p>
+  <strong>　　●ThinkPad X31 时间：2003年 </strong> </p>
+<p>
+    尽管X31与<a href="http://product.yesky.com/product/157/157071/" target="_blank">X3</a>0在外形上并没有太大区别，却是至今为止最优秀的X系列本机。由于X30在P4已成主流的时代，倒退的选择了PIII平台，而被媒体和广大Fans们指责。X31与X30最大的不同，在于是第一台采用迅驰平台的ThinkPad X，核心的变化使X31在性能、便携性和节能方面达到最佳平衡，仍然是最值得购买的X系列本机。即使在X40上市的今天，X31还有许多忠实的拥护者。 </p>
+<p>
+  <img border="0" width="450" height="406" src="IBM笔记本经典回顾_clip_image017.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533BnXhcvzk.jpg" /> </p>
+<p>
+    它的代表配置很多，笔者在此就不一一列出，您可以参阅本站文章或官方资料。 </p>
+<p>
+  <strong>　　●ThinkPad T40 时间：2003年 </strong> </p>
+<p>
+    很多人都不认同T40，原因是它的生命周期太短，上市不久就被后来的T41取代。尽管T40看起来更像是一款过渡产品，但它的开创性设计积淀了后来者T41的经典。 </p>
+<p>
+  <img border="0" width="450" height="733" src="IBM笔记本经典回顾_clip_image018.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533WzXxfaHd.jpg" /> </p>
+<p>
+    它的代表配置为：14.1英寸XGA/SXGA LCD、Banias核心Pentium M处理器、Intel855PM芯片组、256或512MB内存(最大支持2GB)、Ati Radeon7500(32MB)，Radeon9000(32MB)显卡、8X DVD光驱或Combo，重量2.22Kg </p>
+<p>
+  <strong>　　●ThinkPad T42/P 时间：2004年 </strong> </p>
+<p>
+    T42/P在设计上其实并没有值得夸耀的地方，它沿用了T4X系列的经典外观，只是在配置和显示器方面有所改动。之所以将它列为最后一款经典机型，完全在于指纹识别系统的采用。 </p>
+<p>
+  <img border="0" width="450" height="458" src="IBM笔记本经典回顾_clip_image019.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533KPqiqQrZ.jpg" /> </p>
+<p>
+  <img border="0" width="230" height="271" src="IBM笔记本经典回顾_clip_image020.jpg" alt="http://www.techcn.com.cn/uploads/201001/1262604533LsuBqZZD.jpg" /> </p>
+<p>
+    自此，我们回顾了IBM历史上最具代表性的机型，由于时间的关系，很多优秀的机型并没有罗列，还望广大读者见谅。 </p>
+<p>
+  <strong>　　如果IBM还是IBM</strong> </p>
+<p>
+    简单回顾了18年来IBM的经典产品，不难发现为什么IBM笔记本一直以来长盛不衰，深受消费者欢迎。在联想收购IBM以后，有不少消费者纷纷表示将会转投其他品牌怀抱，其中最突出的就是HP，这一点在各大论坛上都能得到验证。用户普遍认为IBM电脑质量将会与以前有所区别，并对以后IBM电脑产品持观望态度。对此，IBM发表声明，表示其产品质量绝对不会有所下降，“目前ThinkPad之所以能保证质量，是因为我们确定了工序管理、质量管理等完善的开发管理体制。今后，管理工作仍将由现在的IBM员工负责，所以可保证现有的质量。”收购完成后，联想CEO将由IBM高管Stephen M. Ward,Jr.(史蒂芬-沃德)接任，原班人马的确能让人更安心一些，至少在18个月之内，IBM还是IBM。 </p>
+<p>
+    当然，作为一名中国人，相信大家都希望联想可以做得比IBM更好，当LENOVO最终比ThinkPad更知名，比ThinkPad更高质，当中国品牌成为国际顶尖品牌，我们才能扬眉吐气。相信大多数消费者对IBM的追捧是因为其产品质量出色，那么就让我们自己的民族品牌也缔造一个神话，用精品回击那些不相信国货质量的人们，联想任重道远。 </p>
+
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

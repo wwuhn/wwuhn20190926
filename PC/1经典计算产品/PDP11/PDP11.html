@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>PDP11</title>
+<style type="text/css">
+.container{
+font-size:1.3em;
+text-indent:2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.3em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <p align="left"><strong><a href="http://www.techcn.com.cn/index.php?doc-view-140321.html">PDP-11</a></strong></p>
+  <p align="left">　　PDP-11是计算机历史上最为著名的计算机之一，是数字设备公司（DEC）从1960年代早期到1990年代中期制造的系列产品之一。PDP-11在1970年上市，当时售价为10800美元，是当时唯一的16位计算机。 </p>
+<p>
+  &nbsp;&nbsp;  PDP-11为迪吉多电脑于1970到1980年代所销售的一系列16位元迷你电脑。PDP-11是迪吉多电脑的PDP-8系列的后续机种。PDP-11有着许多创新的特色，而且比起其前代机种更容易撰写程式。当32位元的后续扩充机型VAX-11推出时，PDP-11已经广受程式设计师的喜爱。这两个机型后续的市场，则多由IBM PC、苹果二号与升阳电脑的工作站电脑等个人电脑所取代。 </p>
+<p>
+  <img width="917" height="688" src="PDP11_clip_image002.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391M5vdew2Z.jpg" /> </p>
+<p>
+  <a name="section" id="section">目录</a> <strong> </strong><strong> </strong></p>
+<p>
+  <strong>• <a href="#1">微型机元老：Digital  Equipment Corp. PDP-11 (1970)</a> </strong> </p>
+<p>
+  <strong>• <a href="#3">PDP-11 系列的特色</a> </strong></p>
+<p>
+  <strong>• <a href="#5">PDP-11 的式微</a> </strong></p>
+<p>
+  <strong>• <a href="#7">架构细节</a> </strong></p>
+  
+  <p align="left">微型机元老：Digital Equipment Corp. PDP-11 (1970)<a name="1" id="1"></a> <a href="#section">回目录</a> </p>
+<p>
+      <strong><img border="0" width="595" height="464" src="PDP11_clip_image003.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391xtQ2zPyZ.jpg" /></strong> </p>
+<p>
+    DEC的元老级微型电脑1970年推出，到1997年终结历史任务，期间经历了许多次变动。第一台PDP-11是一台16位机，取代了当时流行的PDP-8，采用了新的Macro-11汇编语言并因此在程序员中大受欢迎。在结束历史的10年后，这些早期机型仍然受到教育机构的青睐，部分原因是因为PDP-11具有对不同系统的仿真能力。 </p>
+<p>
+  <img border="0" width="450" height="600" src="PDP11_clip_image004.jpg" alt="File:Pdp-11-40.jpg" /> </p>
+<p>
+    PDP-11 系列的特色<a name="3" id="3"></a> <a href="#section">回目录</a> </p>
+<p>
+  <img border="0" width="608" height="480" src="PDP11_clip_image005.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391Fl2Jq8iS.jpg" /> </p>
+<p>
+    指令集 </p>
+<p>
+    PDP-11深受程式设计师喜爱的原因，主要是在于其高度正规化指令集的设计，使得程式设计师可以容易地分别记住所有的运算码，以及指定运算子的方法。如此一来，给定运算子的方法（或称之为定址模式）便可以很容易地预测，这样子就不用去背一堆例外条件，或是特别受限的定址方式。 </p>
+<p>
+    PDP-11所使用的指令集结构影响了C语言的语法。例如在c语言中，有着暂存器定址模式的增值与减值语法 ++i 与 i--。 如果 i 与 j 都是暂存器变数，那么 *(--i) = *(j++) 这样子的表示式就可以编译为单一机器码指令。由于对单精确与双精确浮点数没有不同的运算码，也造成C语言中缺乏单精确浮点数运算的运算模式。 </p>
+<p>
+  <img border="0" width="800" height="600" src="PDP11_clip_image006.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391yiskLzyc.jpg" /> </p>
+<p>
+    就某种逻辑来看，指令集中的定址模式可以视为一种&quot;基底&quot;，而指令集中的运算码则为另一个基底。每个双引数指令可以分为两个6位元的引数识别（分别包含了一个3位元的暂存器号码，和一个3位元的定址模式码）与一个4位元的运算码。而单引数指令，则有一个6位元的引数识别和一个10位元的运算码。所有的运算码都可以使用任何的定址模式，双引数指令还可以分别组合使用。在八个暂存器（编号0到7）当中，有七个是一般用途的T暂存器可作为平常运算使用，不过暂存器6则是某些指令下作为硬体识别堆叠指标之用。暂存器7则是程式计数器，是处理器执行程式码的位址标记。这项创新与一些定址模式，提供了暂存器内容定址，绝对位址定址与相对位址定址。 </p>
+<p>
+    16位元字元组是以小端序即低位元在前的方式储存的。而32位元字元组则通常是以一种不常见的混合序格式储存。由于 PDP-11 的风行，这种格式也被引用为pdp-资料次序(PDP-endian)。 </p>
+<p>
+  <img border="0" width="552" height="600" src="PDP11_clip_image007.jpg" alt="File:PDP-11-M7270.jpg" /> </p>
+<p>
+    无专用的输出入埠 </p>
+<p>
+    PDP-11与其他早期电脑最大的差异点，在于没有专用的输出入汇流排。PDP-11 只有一个称作为 Unibus 的记忆体汇流排。所有外部的设备，都分别对应到不同的记忆体位址，所以不需要特殊的 I/O 指令。而其中断系统的设计，也刻意的简单化，以确保没有任何的中断程序会被遗漏。外部的设备可以从单一的输入线到四条优先度线路之一，发出中断要求。而处理器可以从阶层式的接受线路来回应中断要求。（阶层式的架构，是由一系列的逻辑闸所构成，来接受一系列按照优先顺序的事件。就一般来说，第一个逻辑闸的要求会优先被接受。而阶层式的要求，是按照设备的优先度来处理的。） </p>
+<p>
+  <img border="0" width="792" height="584" src="PDP11_clip_image009.jpg" alt="http://www.techcn.com.cn/uploads/200912/12621823912RMlpmpN.jpg" /> </p>
+<p>
+    而就 PDP-11 的设计来说，这代表中断要求被接受的顺序，是根据实际上硬体在汇流排上与处理器的接近程度来决定的。当处理器回应的时候，外部设备会将其向量位址放在汇流排上，这是一个4位元的记忆体。之后处理器会从向量位置表读取到状态寄存器与程式计数器。 而新的状态暂存器会暂时取消掉其他的中断要求，来避免中断的重复发生。而取出的程式暂存器，则是指向中断处理程序的起始位址。中断处理程序将会先处里这个硬体的要求，完成后再重新接受其他的中断要求。最后，一个特别的 RTI 程序（自中断回复）会将处理器回复到发生中断之前的状态。（这也可能是一个优先权较低的中断处理程序）一个值得注意的是，处理器会避免遗漏掉中断要求，假使中断没有被回应，将仍然会被保留着到之后循环。假使程序不正常的启动了，处理器会发生一个特别的逾时错误，使用者将会得知这个硬体的错误。 </p>
+<p>
+    为大量生产而设计 </p>
+<p>
+    最后，由于 PDP-11 的设计，只需要半专业的人员来进行生产组装。产品在尺寸精确上的要求，并不是非常要紧的。PDP-11 的背版使用绕线连接的方式，也就是内部的印刷电路板插入背版上的接头。这个接头上的端子以导线缠绕于上的方式来连接，端子可以切开导线的绝缘层，与导线金属的部份形成气密连接。这种类似型式的接头也可于电信模组上见到。 </p>
+<p>
+  <img border="0" width="500" height="365" src="PDP11_clip_image010.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391PSND0iRD.jpg" /> </p>
+<p>
+    LSI-11</p>
+<p>
+    LSI-11 是第一个使用大型积体电路技术制造的 PDP-11 机型。整个处理器包含了四个由威腾（Western Digital）所制造的大型积体电路晶片。而其汇流排是一个类似 Unibus 的Q-Bus，不同点在于位址与资料以多工的方式来共用资料线，而 Unibus 则是使用分别的线路。 而且另一个不同点在于其 I/O 设备的定址方式，可以容纳到22位元宽的实体位址（Unibus 只有18位元的宽度），并且有支援阻断式（block mode）的运作。 </p>
+<p>
+    处理器的微码包含了一个除错器，可以经由标准的 RS-232 终端机来操作。这在当时是一项创举，因为微码是计算机最基本的一个部份，也是最关键的控制单元。假使无法运作，便称不上是一个计算机。除错器提供了一个检验处理器中暂存器、记忆体与输出入设备的方法。因此，只要处理器可以运作，便能够检验与修正计算机的内部状态。这个内建的除错器，省却了昂贵与不方便操作的一大堆在面板上的开关与灯号，那是传统上唯一能够与快挂掉的电脑沟通的方式。 </p>
+<p>
+    其微码包含了一个通用的开机启动程序，相容于所有 DEC 的磁碟设备。 </p>
+<p>
+    这两项创新使得 LSI-11 总是可以开始运作。当其无法从大型磁碟启动时，会尝试由其软碟启动。而当硬体开始运作后，便可以从熟悉的终端机来使用。 </p>
+<p>
+  <img border="0" width="450" height="538" src="PDP11_clip_image011.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391VkvAcHy2.jpg" /> </p>
+<p>
+    PDP-11 的式微<a name="5" id="5"></a> <a href="#section">回目录</a> </p>
+<p>
+    PDP-11 最基本的设计是非常优良的，而且也一直有更新加入新的技术。然而，PDP-11 还是必须面对其16位元的架构是有极限的，这是没有办法透过校调或是扩充来克服的。虽然有些机型可以支援更大的实体记忆体定址，但所有的应用程式仍然被局限在一个16位元的虚拟定址空间而只能够使用64K的记忆体。当1980年代超大型积体电路的技术使得记忆体晶片能够更便宜，但是 PDP-11 的软体仍然无法享受到更大的记忆体所带来的便利。 </p>
+<p>
+    DEC在 PDP-11  的下一代处理器为 VAX（是 &quot;Virtual  Address Extension (to the PDP-11)&quot;的缩写）克服了这些问题，但最初只针对高阶市场来进行推广。而英代尔的 8086 与 8088 提供了一个四位元的扩充&quot;节&quot;在其16位元的定址上，使得定址空间提升到1M而不需要更改为32位元的设计。这对当时逐渐扩充的IBM个人电脑相容机市场来说，已经是足够的了。虽然在能够支援更大节定址空间的 80286  与拥有32位元定址空间的 80386 推出前，就有到达1M的需求。 </p>
+<p>
+    当工程师转移到有更大的定址空间的架构时，支援32位元的运算也开始在如 摩托罗拉68000 和 英特尔 80386等后续的微处理器晶片上提供了。最后这些晶片的经济规模大到一个程度后，PDP-11  就相对而言不够划算。DEC 的一个 DEC  Professional 系列，也就因此在市场上失败了，同时两个之后的 DEC 个人电脑系列也面临相同的命运。 </p>
+<p>
+    DEC 最后在1997年中止了 PDP-11 的机型，并且把其相关的设计与作业系统授权卖给了一家爱尔兰公司Mentec。这家公司是负责生产 LSI-1 的 Q-Bus 机板与个人电脑的 ISA 架构机板。 </p>
+<p>
+    到了1990年末，DEC与大部分美国东北部六州（New England）的迷你电脑商，都在 UNIX 与 windows 伺服器的兴起下，逐渐衰败。 </p>
+<p>
+  <img border="0" width="618" height="322" src="PDP11_clip_image012.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391hhwbm5mz.jpg" /> </p>
+<p>
+    架构细节<a name="7" id="7"></a> <a href="#section">回目录</a> </p>
+<p>
+    以下内容可参考PDP-11 处理器手册 （详见 Gordon Bell's 1969 年版）.</p>
+<p>
+    通用暂存器的定址模式 </p>
+<p>
+    （R 为通用暂存器，有 0 至 7 号；(R) 为暂存器的内容） </p>
+<p>
+    0. 暂存器 - 数值来自或存入暂存器中：OPR R ; R 含有参数&nbsp; </p>
+<p>
+    1. 暂存器指定位址  - 暂存器用来指定读写的记忆体位址：OPR (R) ; R 存有位址&nbsp;</p>
+<p>
+    2. 自动增值：OPR  (R)+ ; R 记忆体位址上的数值增加 (R)&nbsp;</p>
+<p>
+    3. 自动增值指定位址：OPR @(R)+ ; R 存有位址，其内容 (R) 加 2&nbsp;</p>
+<p>
+    4. 自动减值：OPR  -(R)；记忆体位址 R 上的数值 (R) 减少&nbsp;</p>
+<p>
+    5. 自动减值指定位址：OPR @-(R)；记忆体位址 R 上的数值 (R) 减 2&nbsp;</p>
+<p>
+    6. 索引：OPR  X(R) ; (R)+X 为记忆体位址，在指令的第二字元&nbsp;</p>
+<p>
+    7. 索引指定位址：OPR  @X(R) ; (R)+X 为指令的第二字元记忆体位址的位址&nbsp;</p>
+<p>
+  <img border="0" width="400" height="300" src="PDP11_clip_image013.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391GkrcfIP0.jpg" /> </p>
+<p>
+    程式计数器的定址模式 </p>
+<p>
+    程式计数器（program counter，简称PC）亦可以用来作为一般暂存器使用，因此有以下的定址模式，可参照前面的通用暂存器： </p>
+<p>
+    2. 直接定值：OPR #N；引数包含在指令中&nbsp; </p>
+<p>
+    3. 绝对位址：OPR  @#A；绝对位址包含在指令中&nbsp;</p>
+<p>
+    6. 相对定址：OPR  A ; PC+2+X 为记忆体位址。PC+2 为更新后的  PC&nbsp;</p>
+<p>
+    7. 相对参考定址：OPR  @A ; PC+2+X 为记忆体位址。PC+2 为更新后的  PC&nbsp;</p>
+<p>
+    PDP-11 指令 </p>
+<p>
+    单引数指令 - 指令的长度为双字元组，一部分用来指定动作，称之为&quot;运算码&quot;(OP-Code)或&quot;运算元&quot;。而第二部份则用来指定引数（运算子）的位址。&nbsp;</p>
+<p>
+    15 &nbsp; &nbsp; &nbsp; &nbsp; 6 5 &nbsp;3 2  &nbsp;0&nbsp;</p>
+<p>
+    运算码 模式 暂存器&nbsp;</p>
+<p>
+    CLR（清除）, COM（取一的补数）, INC（增值）, DEC（减值）, NEG（取二的补数之负数）, TST（测试）, ASR（数学位元右移）, ASL（数学位元左移）, ROR（向右位元转动）, ROL（向左位元转动）, SWAB（字元置换）, ADC（加法进位）, SBC（减法进位）, SXT（扩张正负号）.&nbsp; </p>
+<p>
+    双引数指令 - 指令双字元组的一部分用来指定动作，而其余的部份则用来指定两个引数的位址。&nbsp;</p>
+<p>
+    15 &nbsp; 12 11 &nbsp;9 8 &nbsp;6 5 &nbsp;3 2  &nbsp;0&nbsp;</p>
+<p>
+    运算码 模式 暂存器  模式 暂存器&nbsp;</p>
+<p>
+    MOV（资料搬移）, ADD, SUB（加减法）, BIT（位元测试）, BIC（位元清除）, BIS（改动位元）, XOR（互斥或运算）.&nbsp; </p>
+<p>
+    程式控制指令 - 指令双字元组的第一部分用来指定动作，而第二部份则用来指定要执行的程式码位址。&nbsp;</p>
+<p>
+    15 &nbsp; &nbsp; &nbsp; 8 7 &nbsp; &nbsp; &nbsp; 0&nbsp;</p>
+<p>
+    运算码 位移值&nbsp;</p>
+<p>
+    BR（无条件分支）, BNE（非零值时分支）, BEQ（数值为零时分支）, BPL（正数时分支）, BMI（负数值时分支）, BVC（溢位清除时分支）, BVS（发生溢位时分支）, BCC（进位清除时分支）, BCS（发生进位时分支）.&nbsp; </p>
+<p>
+    BLE（分支 if  &lt;= 0）, BGE（分支 if &gt;= 0）, BLT（分支 if &lt; 0）,  BGT（分支 if &gt; 0）（正负号比较）&nbsp;</p>
+<p>
+    BLO（小于时分支）,  BHI（大于时分支）, BLOS（小于或等于时分支）,  BHIS（大于或等于时分支）（无正负号比较）&nbsp;</p>
+<p>
+    SOB（暂存器减一后为零时分支）.&nbsp;</p>
+<p>
+    跳跃与子程序指令&nbsp;</p>
+<p>
+    JMP（跳跃）,  JSR（跳入副程式）, RTS（自副程式跳回主程式）&nbsp;</p>
+<p>
+    EMT（模拟器错误时触发）, TRAP, BPT（中断点触发）, IOT（输出入错误时触发）, RTI &amp; RTT（自副程式跳回时触发）&nbsp;</p>
+<p>
+    其他指令&nbsp;</p>
+<p>
+    HALT, WAIT（等候中断触发）, RESET（重置 UNIBUS）, MTPD（移至前一个资料空间）, MTPI（移至前一个指令空间）, MFPD（移自前一个资料空间）, MFPI（移自前一个指令空间）, MTPS（移至处理器状态字元组）, MFPS（移自处理器状态字元组）&nbsp; </p>
+<p>
+    条件码操作&nbsp;</p>
+<p>
+    CLC, CLV, CLZ, CLN, CCC（清除相关的条件码）, SEC, SEV, SEZ, SEN, SCC（设定相关的条件码）&nbsp;</p>
+<p>
+    处理器状态字元组（processor status word - 简称 PSW）的状态码共有四种：&nbsp;</p>
+<p>
+    N 负数&nbsp;</p>
+<p>
+    Z 零值&nbsp;</p>
+<p>
+    V 溢位&nbsp;</p>
+<p>
+    C 进位&nbsp;</p>
+<p>
+  &quot;扩充指令集&quot; (EIS)，在 11/35/40 和 11/03 为选购，在更新的处理器则为内建功能&nbsp;</p>
+<p>
+    MUL, DIV 暂存器组的整数相乘与相除&nbsp;</p>
+<p>
+    ASH, ASHC 算数位元位移暂存器或暂存器组，正数位移向左，负数向右&nbsp;</p>
+<p>
+  &quot;浮点数指令集&quot; (FIS)，在 11/35/40 和 11/03 为选购&nbsp;</p>
+<p>
+    FADD, FSUB, FMUL, FDIV 堆叠位址上的单精数运算，由暂存器定址&nbsp;</p>
+<p>
+  &quot;浮点数处理器&quot; (FPP)，在 11/45 和大部分该系列的机种为选购&nbsp;</p>
+<p>
+    完整的浮点数运算，包含单精数与倍精数运算子，以浮点状态暂存器指定精确度&nbsp;</p>
+<p>
+    单精浮点数运算的资料格式为 IEEE 754 格式的基础：正负位元，8位元指数，23位元底数与第24位隐藏用&nbsp;</p>
+<p>
+    商用指令集 (CIS), 11/23/24为选购微码，11/44 为附加模组与 11/74 的其中一版&nbsp;</p>
+<p>
+    支援 COBOL 与 Dibol 的多种字串与十进位数相关指令&nbsp;</p>
+<p>
+  <img border="0" width="640" height="480" src="PDP11_clip_image014.jpg" alt="http://www.techcn.com.cn/uploads/200912/126218239132WB6XNS.jpg" /> </p>
+<p>
+    组合语言范例 </p>
+<p>
+  &nbsp;PDP-11 使用的 打孔带以下是一个完整的&quot;Hello,  world!&quot;巨集组合语言程式，可以在组译后于 RT-11 执行： </p>
+<p>
+    .TITLE HELLO WORLD .MCALL .TTYOUT,.EXIT HELLO:: MOV  #MSG,R1；字串起始位址 1$: MOVB (R1)+,R0；回圈取得下一个字元 BEQ DONE；遇到字串结尾跳出 .TTYOUT；输出至TTY BR 1$；回圈结尾 DONE: .EXIT </p>
+<p>
+    MSG: .ASCIZ /Hello, world!/ .END HELLO </p>
+<p>
+    假设档名为 HELLO.MAC，RT-11 的组译，连结与执行的指令为： </p>
+<p>
+    .MACRO HELLO ERRORS DETECTED: 0 </p>
+<p>
+    .LINK HELLO </p>
+<p>
+    .R HELLO Hello, world! . </p>
+<p>
+    （RT-11 的命令提示字元为 &quot;.&quot;）而更复杂的 MACRO-11 程式，以下是两个随意选自Kevin Murrell's  KPUN.MAC 与 Farba Research's JULIAN 程式。 更进阶的 PDP-11 函式库程式码可免费从 Metalab 和 Trailing Edge 来查阅。 </p>
+<p>
+    这些程式也可以在 PDP-11 模拟器上运行。 Bob  Supnik 所写的名为 SIMH 模拟器，可以优秀地模拟  PDP-11 与许多其他的架构，同时包含了软体套件与原生作业系统（包含 RT-11）。 </p>
+<p>
+  <img border="0" width="550" height="749" src="PDP11_clip_image015.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391zv5odfyx.jpg" /> </p>
+<p>
+    PDP-11 的机种<a name="9" id="9"></a> <a href="#section">回目录</a> </p>
+<p>
+    PDP-11 处理器依据其原始设计，以及I/O汇流排的种类，可以归类为以下几种系列。在这些类别当中，大部份都有两种以上的版本，其中一种为OEM代工的机型，另一种则是提供给最终使用者。 </p>
+<p>
+    Unibus的机种 </p>
+<p>
+    下列机种使用 Unibus 作为其扩充汇流排： </p>
+<p>
+    PDP-11（后称为 PDP-11/20）和 PDP-11/15 -- 原始，无微程式的处理器，由 Jim O'Loughlin 所设计。&nbsp; </p>
+<p>
+    PDP-11/35 和 11/40 -- 微程式化的／20 后续机型，由 Jim O'Loughlin 所带领的团队设计的。&nbsp;</p>
+<p>
+    PDP-11/45，11/50，和 11/55 -- 更快的微程式化的处理器，并且可以使用半导体记忆体或是  核心记忆体。&nbsp;</p>
+<p>
+    PDP-11/70 -- 11/45 的扩充机型，经由独立记忆体汇流排支援 4 MB 实体记忆体与 2 KB快取记忆体，并借由 Massbus 提供更快的 I/O 设备连结。&nbsp;</p>
+<p>
+    PDP-11/05 和 11/10 -- 11/20 的精减版。&nbsp;</p>
+<p>
+    PDP-11/34 和 11/04 -- 11/35 和 11/05 的后续精减版。 PDP-11/09 和 11/39 机型只有 DEC 内部文件记载，并没有生产销售。PDP-11/34 的概念是由 Bob Armstrong 提出的。&nbsp;</p>
+<p>
+    PDP-11/44 -- 11/34 的扩充型，增加了 快取记忆体  和 浮点 运算单元为标准功能。这一型并有一个特别的序列埠终端且支援 4 MB 实体记忆体。设计团队由 John Sofio 所带领。&nbsp;</p>
+<p>
+    PDP-11/60 -- 有使用者可程式化微控制码的 PDP-11，这是由 Jim O'Loughlin 所带领的另一组团队所设计的。&nbsp;</p>
+<p>
+    PDP-11/24 - 最早使用超大形积体电路 PDP-11 和 Unibus，使用  &quot;Fonz-11&quot; (F11) 晶片组&nbsp;</p>
+<p>
+    PDP-11/84 - 使用超大形积体电路 &quot;Jaws-11&quot; (J11) 晶片组&nbsp;</p>
+<p>
+    PDP-11/94 - J11为基础，比 11/84 更快&nbsp;</p>
+<p>
+  <img border="0" width="604" height="454" src="PDP11_clip_image016.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391E4WkmNlW.jpg" /> </p>
+<p>
+    Q-Bus 的机种 </p>
+<p>
+    下列机种使用 Q-Bus 作为其扩充汇流排： </p>
+<p>
+    PDP-11/03（也称为 LSI-11/03）-- 第一个大型积体电路（LSI）技术的 PDP-11，使用威腾（Western  Digital）生产的晶片组。&nbsp; </p>
+<p>
+    PDP-11/23 -- 第二代大型积体电路 (F-11)，早期只支援 248KB 记忆体，但可以修改支援到 4MB 记忆体。&nbsp;</p>
+<p>
+    PDP-11/23+／MicroPDP-11/23 -- 11/23 改良版，在处理器卡上提供更多功能（实际上为四倍大小）&nbsp;</p>
+<p>
+    MicroPDP-11/73 -- 第二代大型积体电路 PDP，这个系统使用 &quot;Jaws-11&quot; (J-11) 晶片组。&nbsp;</p>
+<p>
+    MicroPDP-11/53 -- 较慢的 11/73 有内建记忆体&nbsp;</p>
+<p>
+    MicroPDP-11/83 -- 更快的 11/73 有内部记忆体连结 (PMI)&nbsp;</p>
+<p>
+    MicroPDP-11/93 -- 更快的 11/83，最终 DEC Q-Bus PDP-11 机型。&nbsp;</p>
+<p>
+    Mentec M100 -- Mentec 重新设计的 11/93，使用 J-11 晶片组时脉为 19.66MHz，含4个内建序列埠，1-4MB  内建记忆体，FPU 为选购。&nbsp;</p>
+<p>
+    Mentec M11 -- 处理器升级子板，最后的微码 PDP-11 架构，指令集是由 Mentec 设计的。使用 TI 8832 ALU 和 德州仪器 Texas Instruments 制造的 TI 8818 微序列器。&nbsp;</p>
+<p>
+    Quickware QED-993 -- 高性能 PDP-11/93 处理器升级子板&nbsp;</p>
+<p>
+    无汇流排的机种 </p>
+<p>
+    PDT-11/110&nbsp;</p>
+<p>
+    PDT-11/130&nbsp;</p>
+<p>
+    PDT-11/150&nbsp;</p>
+<p>
+    PDT 为桌上型系统，以&quot;智慧型终端机&quot;来销售。 其中／110 与／130  使用 VT100 终端机模式。 </p>
+<p>
+    PRO-325&nbsp; </p>
+<p>
+    PRO-350&nbsp;</p>
+<p>
+    PRO-380&nbsp;</p>
+<p>
+    DEC Professional 系列为桌上型个人电脑，作为对抗 IBM 早期基于 8088 与  80286 个人电脑的竞争机种。这些机型配备有5 1/4&quot; 软碟机与硬碟机，而 325 则是没有配备硬碟的机型。 中央处理器为 LSI-11 产品线，以 P/OS 为作业系统，这是以 RSX-11M+ 为基础的选单式系统。由于设计上刻意避免与 PDP-11 机种的软体相容性，其市场上最后失败的命运并不令人意外。 </p>
+<p>
+  <img border="0" width="384" height="500" src="PDP11_clip_image017.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391qAUATH3B.jpg" /> </p>
+<p>
+    计划中但未上市机种 </p>
+<p>
+    PDP-11/27 -- Jaws-11 机型的实作，计划采用 VAXBI Bus 作为 I/O 汇流排。&nbsp;</p>
+<p>
+    PDP-11/68 -- PDP-11/60 的后续机型，支援 4 MB 的实体记忆体。&nbsp;</p>
+<p>
+    PDP-11/74 -- PDP-11/70 扩充为多处理器的机型。最多可以使用四颗处理器，但是电缆线也会因此多到难以管理。另一个 11/74 的变形则是可以支援多处理器与内建商用指令集。有相当数量的 11/74 原型机（包含数种不同的子机型）生产出来以及至少二路的多处理器系统提供给客户作为外部测试（beta test）使用。但是实际上自始至终这个机型都没有正式的进行销售过。一套四路的多处理器系统由 RSX-11 作业系统的开发团队所维护，作为测试使用。而一套单处理器的版本则作为  PDP-11 工程一般时程分割之用。11/74 之所以没有上市，主要是由于刚好与新的32位元产品与 VAX 11/780 这个第一个 VAX 机型的上市撞期。谣言流传与阴谋论者认为 11/74 被取消的原因，是由于其效能相较于 11/780 系列要来得更佳：鉴于行销的考量，推出效能更好的的 PDP-11 机型将会影响并减缓客户转移到新的 VAX 机型的速度。然而，在该领域中维护产品的能力才是主要的原因。要说是阴谋论也好，DEC  始终无法成功地将其所有的客户从 PDP-11 转移到 VAX 系列，这个主要的原因不是在于效能好坏，而是在于 PDP-11 优良的即时回应能力。&nbsp;</p>
+<p>
+  <img border="0" width="600" height="798" src="PDP11_clip_image018.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391etTaFPFo.jpg" /> </p>
+<p>
+    特殊用途版本 </p>
+<p>
+    运行‘登月小挺’游戏的 DEC GT40GT40 -- 使用  PDP-11/05 的向量图形终端机&nbsp; </p>
+<p>
+    GT44 -- 使用 PDP-11/40 的向量图形终端机&nbsp;</p>
+<p>
+    H-11 -- Heathkit 代制版的 LSI-11/03&nbsp;</p>
+<p>
+    VT103 -- VT100 使用 LSI-11 背版&nbsp;</p>
+<p>
+    VT173 -- 使用 PDP-11/03的顶级终端机系列&nbsp;</p>
+<p>
+    MINC-11 -- 使用 PDP-11/03 或 11/23 的实验室系统&nbsp;</p>
+<p>
+    C.mmp -- 来自卡内基美隆大学的多处理器系统&nbsp;</p>
+<p>
+  <img border="0" width="500" height="333" src="PDP11_clip_image019.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391ytXmTKT3.jpg" /> </p>
+<p>
+    海盗版相容机 </p>
+<p>
+    由于 PDP-11 相当风行的缘故，在当时遭受禁运的东欧社会主义国家有许多未经授权的相容机被生产出来。有些甚至与 DEC 的 PDP-11 各系列接脚相容，而可以与原厂产品共用周边设备与软体。这些包含了： </p>
+<p>
+    SM-4，SM-1420，SM-1600，Electronics BK-0010，DVK，UKNC（苏联）&nbsp; </p>
+<p>
+    SM-4，SM-1420，IZOT-1016 与周边设备（保加利亚）.&nbsp;</p>
+<p>
+    SM-1420（东德）&nbsp;</p>
+<p>
+    Mera（波兰）&nbsp;</p>
+<p>
+    SM-4（匈牙利）&nbsp;</p>
+<p>
+    独立设备（罗马尼亚）&nbsp;</p>
+<p>
+    作业系统 </p>
+<p>
+    PDP-11 有数种可用的作业系统 </p>
+<p>
+    迪吉多电脑： </p>
+<p>
+    DOS/BATCH&nbsp; </p>
+<p>
+    IAS&nbsp;</p>
+<p>
+    P/OS&nbsp;</p>
+<p>
+    RSX-11&nbsp;</p>
+<p>
+    CAPS-11&nbsp;</p>
+<p>
+    RT-11&nbsp;</p>
+<p>
+    RSTS/E&nbsp;</p>
+<p>
+    Ultrix-11&nbsp;</p>
+<p>
+    协力厂商： </p>
+<p>
+    ANDOS&nbsp; </p>
+<p>
+    MKDOS&nbsp;</p>
+<p>
+    MONECS&nbsp;</p>
+<p>
+    CSIDOS&nbsp;</p>
+<p>
+    TRIPOS&nbsp;</p>
+<p>
+    MUMPS&nbsp;</p>
+<p>
+    Unix（有许多版本，包含 Version 7 Unix 与 2BSD）&nbsp;</p>
+<p>
+    DEMOS（苏联）&nbsp;</p>
+<p>
+    TSX-Plus&nbsp;</p>
+<p>
+  <img border="0" width="628" height="800" src="PDP11_clip_image020.jpg" alt="http://www.techcn.com.cn/uploads/200912/1262182391sttQ4v2B.jpg" /> </p>
+<p>
+    外部链接<a name="11" id="11"></a> <a href="#section">回目录</a> </p>
+<p>
+    ·  <a href="http://www.village.org/pdp11/faq.html">PDP-11 的 FAQ</a> </p>
+<p>
+    ·  <a href="http://www.pdp11.org/">保留 PDP-11 系列的 16位元 迷你电脑</a> </p>
+<p>
+    ·  <a href="http://www.psych.usyd.edu.au/pdp-11/">另一个 PDP-11 爱好者网站</a> </p>
+<p>
+    ·  <a href="http://www.pdp11.org.ru/">俄国 PDP-11 相容机</a>（俄语网站）. </p>
+<p>
+    ·  <a href="http://www.bashedu.ru/konkurs/tarhov/english/index_e.htm">苏联计算机历史博物馆</a> </p>
+<p>
+    ·  <a href="http://zh.wikipedia.org/w/index.php?title=Gordon_Bell&amp;action=edit&amp;redlink=1" title="Gordon Bell（尚未撰写）">Gordon Bell</a> 与 Bill Strecker 于1975年发表的论文： <a href="http://research.microsoft.com/users/GBell/Digital/Bell_Strecker_What_we%20_learned_fm_PDP-11c%207511.pdf">我们从 PDP-11 学到了什么</a> </p>
+<p>
+    ·  <a href="http://research.microsoft.com/users/GBell/Digital/DECMuseum.htm">Gordon Bell  的网站</a> 可以找到更多的论文与连结。 </p>
+<p>
+    ·  <a href="http://www.telegraphics.com.au/sw/info/lcc-pdp11.html">PDP-11 后端程式</a>（程式范本产生器）支持可重定位 ANSI <a href="http://zh.wikipedia.org/w/index.php?title=Little_C_compiler&amp;action=edit&amp;redlink=1" title="Little C compiler（尚未撰写）">Little C</a> 编译器 </p>
+<p>
+    ·  <a href="http://www.mentec-inc.com/">Mentec</a>，PDP-11 系统软体目前的所有者（除 IAS 外）&nbsp; </p>
+<p>
+    参考文献<a name="13" id="13"></a> <a href="#section">回目录</a> </p>
+<p>
+    http://www.village.org/pdp11/faq.html<a href="http://www.village.org/pdp11/faq.html">&nbsp;&nbsp;go</a></p>
+<p>
+    http://en.wikipedia.org/wiki/PDP-11<a href="http://en.wikipedia.org/wiki/PDP-11">&nbsp;&nbsp;go</a></p>
+<p>
+    http://zh.wikipedia.org/zh-sg/PDP-11<a href="http://zh.wikipedia.org/zh-sg/PDP-11">&nbsp;&nbsp;go</a></p>
+
+
+</div>
+</body>
+</html>

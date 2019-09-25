@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<base target="_blank" />
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>computer setting 3</title>
+<script language="JavaScript" type="text/javascript">
+
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+//软件下载
+function search(){
+		if(formmain.rdonlinedown.checked)
+		window.open("http://search.newhua.com/search_list.php?searchname="+encodeURI(formmain.searchkey.value));
+		if(formmain.rdskycn.checked)
+		  window.open("http://www.skycn.com/search.php?sf=default&ss_name="+formmain.searchkey.value);
+ 	  	if(formmain.rdmydown.checked)
+ 	  	     window.open("http://search.yesky.com/searchdownload.do?ss=%26%23160%3B&wd=" + formmain.searchkey.value);
+		if(formmain.rdsoftgougou.checked)
+          window.open("http://www.gougou.com/search?suffix=&restype=2&id=2&search="+formmain.searchkey.value);
+        if(formmain.rdxinlang.checked)
+         window.open("http://www.google.com/custom?btnG=%D5%BE%C4%DA%CB%D1%CB%F7&sitesearch=tech.sina.com.cn/down/&ie=GB2312&oe=GB2312&hl=zh-CN&lr=&q="+formmain.searchkey.value);
+        if(formmain.rdsoft8.checked)
+        window.open("http://www.soft8.net/soft8.php?page=1&by=name&site=all&word="+formmain.searchkey.value);
+        if(formmain.rdgooglesoft.checked)
+             window.open("http://www.google.com.hk/search?q=" + formmain.searchkey.value+" .rar OR "+ formmain.searchkey.value+" .iso");
+        if(formmain.rdbaidusoft.checked)
+           window.open("http://www.baidu.com/baidu?tn=zhongguosou&ct=&lm=&z=&rn=&word=" + formmain.searchkey.value+" .rar");
+			if(formmain.rdpconline.checked)
+		  window.open("http://ks.pconline.com.cn/download.jsp?forumName=%C8%AB%B2%BF%C0%E0%D0%CD&qx=%C8%AB%B2%BF%C0%E0%D0%CD&forumValue=&forumOrgID=&forumOrgName=&q="+formmain.searchkey.value);
+		if(formmain.rdduote.checked)
+		  window.open("http://www.duote.com/search.php?searchType=&so="+formmain.searchkey.value);
+		  if(formmain.rdit168.checked)
+		  window.open("http://down.it168.com/soft_search.html?keyword="+formmain.searchkey.value);
+		  if(formmain.rdpchome.checked)
+		  window.open("http://download.pchome.net/search-"+formmain.searchkey.value+"---0-1.html");
+		  if(formmain.rdxiazaiba.checked)
+		  window.open("http://www.xiazaiba.com/word/"+formmain.searchkey.value);
+		  if(formmain.rdxp510.checked)
+		  window.open("http://www.xp510.com/index.php?m=search&c=index&a=init&typeid=2&q="+formmain.searchkey.value);
+		  if(formmain.rd331c.checked)
+		  window.open("http://www.33lc.com/index.php?m=search&c=index&a=init&typeid=2&siteid=1&q="+formmain.searchkey.value);
+
+
+		  if(formmain.rdxtzj.checked)
+		  window.open("http://www.355189.com/plus/search.php?q="+formmain.searchkey.value+"&submit=&mid=1&dopost=search");
+		  if(formmain.rdddxt.checked)
+		  window.open("http://www.dedexitong.com/plus/search.php?q="+formmain.searchkey.value+"&submit=&mid=1&dopost=search");
+		  if(formmain.rdylmf.checked)
+		  window.open("http://www.startos.com/cms/apps/search.php?searchtype=titlekeyword&keyword="+formmain.searchkey.value);
+		  if(formmain.rdfqhh.checked)
+		  window.open("http://search.tomatolei.com/f/discuz?mod=forum&formhash=1c5bd8fe&srchtype=title&srhfid=0&srhlocality=portal%3A%3Aindex&sId=7413162&ts=1359996706&cuId=0&cuName=&gId=7&agId=0&egIds=&fmSign=&ugSign7=&sign=53e51ff13b4588f6a47cc3708088efc7&charset=gbk&source=discuz&fId=0&q="+formmain.searchkey.value+"&srchtxt=ghost&searchsubmit=true");
+
+		   if(formmain.rd51dd.checked)
+           window.open("http://www.51dd.com/Search.asp?classID=&t=name&image.x=12&image.y=7&q="+formmain.searchkey.value);
+		  if(formmain.rd_cnd8.checked)
+        window.open("http://www.cnd8.com/search.asp?type=soft&k="+formmain.searchkey.value);
+if (formmain.rdmydrivers.checked)
+         window.open("http://so.mydrivers.com/drivers.aspx?classtype=all&q="+formmain.searchkey.value);
+		 if(formmain.rd_download_enet.checked)
+       window.open("http://download.enet.com.cn/search.php?platformid=&submit.x=8&submit.y=12&keyword="+formmain.searchkey.value);
+		 if(formmain.rd_ttdown.checked)
+        window.open("http://www.google.com/custom?btnG=%CB%D1%CB%F7&sitesearch=www.pcpop.com&ie=GB2312&oe=GB2312&hl=zh-CN&lr=&q="+formmain.searchkey.value);
+		 if(formmain.rddownloadcom.checked)
+      window.open("http://www.download.com/3120-20-0.html?qt="+formmain.searchkey.value);
+
+		   }
+</script><script type="text/javascript">
+
+ function goTopEx(){
+        var obj=document.getElementById("goTopBtn");
+        function getScrollTop(){
+                return document.documentElement.scrollTop;
+            }
+        function setScrollTop(value){
+                document.documentElement.scrollTop=value;
+            }
+        window.onscroll=function(){getScrollTop()>0?obj.style.display="":obj.style.display="none";}
+        obj.onclick=function(){
+            var goTop=setInterval(scrollMove,10);
+            function scrollMove(){
+                    setScrollTop(getScrollTop()/111);
+                    if(getScrollTop()<1)clearInterval(goTop);
+                }
+        }
+    }
+
+
+</script>
+<style type="text/css">
+<!--
+#goTopBtn {
+	width: 18px;
+    line-height: 1.2;
+    padding: 5px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    position: fixed;
+    _position: absolute;
+
+    right: 10px;
+    bottom: 100px;
+    _bottom: "auto";
+    cursor: pointer;
+    opacity: .6;
+    filter: Alpha(opacity=60);
+}
+ #goTopBtn:hover{
+ background-color:white;
+ border:#ccc 1px solid;
+ color:red;
+ }
+#browser1 {
+	width: 88.125%;
+	list-style-position:inside;
+	margin:auto;
+	font-family: "MV Boli",arial;
+	line-height:22px;
+
+}
+
+#browser{
+	width: 88.125%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli" arial;
+	text-align:left;
+	line-height:22px;
+}
+
+#browser th,td{
+border:1px solid #aaa;
+font-size:16px;
+color:#000000;
+}
+
+#browser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+padding:5px 0px;
+}
+#browser th{
+background-color:#f2f4b9;
+}
+#browser th.title{
+background-color:#e3e685;
+}
+#browser tfoot td{
+border-width:0px;
+text-align:right;
+font-size:16px;
+color:#777;
+}
+#browser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+text-align:left;
+}
+
+
+#browser .bl{
+border-left:none;
+}
+
+#browser .br{
+border-right:none;
+}
+
+#browser tr{
+height:6px;
+}
+
+#bod1 th.title{
+background-color:#ffd56c;
+}
+#bod1 th{
+background-color:#ffe8ae;
+}
+.clx td{
+background-color:#CCCCFF;
+}
+.lxf td{
+background-color:#f2f4b9;
+}
+.qzwq td{
+background-color:#CCCCCC;
+}
+a:hover{
+background-color:#CCCCCC;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+body {
+	margin-top: 0px;
+	line-height:18px;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+
+}
+#browser1 p{
+height:8px;
+font-weight:bold;
+margin-top:5px;
+}
+.table1{
+border-collapse:collapse;
+border-bottom:1px black solid;
+border-top:0px black solid;
+margin-bottom:6px;
+
+}
+.table1 td{
+text-align:left;
+border:0px red solid;
+padding:3px;
+}
+-->
+</style>
+</head>
+
+<body onload="document.formmain.searchkey.focus();">
+
+<blockquote>&nbsp;</blockquote>
+<table id="browser">
+<caption>
+常用软件及官方下载 <strong>3</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="常用软件list.html">[1]</a>
+<a href="常用软件list2.html">[2]</a>
+<span style="color:red;">[3]</span>
+</caption>
+<thead>
+  <tr>
+    <th width="2%" >sn</th>
+    <th width="9%" style="font-size:14px;">软件类别</th>
+    <th width="11%" >软件名称</th>
+    <th width="6%" >ver</th>
+    <th width="4%" >size</th>
+    <th width="6%" >N ver</th>
+    <th width="6%" >company</th>
+    <th width="4%" >介绍</th>
+    <th width="51%" >备注</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+    <td>1</td>
+    <td>系统</td>
+    <td>win7cn32</td>
+    <td>ultimate</td>
+    <td>2.43G</td>
+    <td>&nbsp;</td>
+    <td>ms</td>
+    <td>&nbsp;</td>
+    <td><a href="http://msdn.itellyou.cn/"> [下载位置1：MSDN]</a> <a href="http://bbs.pcbeta.com/viewthread-695496-1-1.html"> [下载位置2]</a> 需要先有安装下载软件；</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>win7cn64</td>
+      <td>ultimate</td>
+      <td>3.11G</td>
+      <td>&nbsp;</td>
+      <td>ms</td>
+      <td>&nbsp;</td>
+      <td>硬件驱动，和软件都要相互匹配；</td>
+    </tr>
+<tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>win8.1en</td>
+      <td>enterprise</td>
+      <td>2.7G</td>
+      <td>&nbsp;</td>
+      <td>ms</td>
+      <td>&nbsp;</td>
+      <td>如果不是企业版则在安装时需提供密钥；详情见<a href="../pctips/win8.1setup.html">win8.1setup</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>录屏</td>
+      <td><a href="http://www.enen6.com/index.htm">轻松录屏</a></td>
+      <td><a href="http://www.duote.com/soft/6437.html">5.16</a></td>
+      <td>0.9</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>录制后的avi文件需要先安装qingsonglup\NNPlayer\codec下的一个解码器（dll),然后才可以使用暴风影音查看；</td>
+    </tr>
+    <tr>
+	      <td>&nbsp;</td>
+	      <td>&nbsp;</td>
+	      <td><a href="http://www.tlxsoft.com/index1.htm">屏幕录像专家</a></td>
+	      <td><a href="http://www.onlinedown.net/softdown/3442_2.htm">2013</a></td>
+	      <td><a href="http://soft.hao123.com/soft/appid/6457.html">8.9</a></td>
+	      <td>&nbsp;</td>
+	      <td>&nbsp;</td>
+	      <td>&nbsp;</td>
+	      <td>可以选择lxe，exe,,avi等格式；lxe文件在其它电脑上打开需要lxe播放器支持；</td>
+    </tr>
+    <tr>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td><a href="http://www.kkcapture.com/">视频录制专家</a></td>
+		      <td><a href="http://soft.hao123.com/soft/appid/16780.html">2.3.5</a></td>
+		      <td>2.46</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>KK录像机是一款免费的集游戏录像、视频录制、视频剪辑、添加字幕、添加音乐等功能于一体的高清视频录制软件。</td>
+    </tr>
+    <tr>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td><a href="http://www.dvdvideosoft.com/">Free Screen Video Recorder </a></td>
+		      <td><a href="http://soft.hao123.com/soft/appid/6660.html">2.5</a></td>
+		      <td>10.4</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>屏幕录制和截图软件。它能让你简单地记录屏幕上的任何活动，或者截取屏幕上的任何图像，这包括打开的窗口、菜单和全屏图像等。</td>
+    </tr>
+
+<tr>
+		      <td>3</td>
+		      <td>视频下载</td>
+		      <td><a href="http://www.flvcd.com/">flvcd 硕鼠</a></td>
+		      <td><a href="http://download.flvcd.com/">.47</a></td>
+		      <td>6.8</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td><a href="http://soft.hao123.com/soft/appid/5401.html">dl</a> 将播放视频的网址复制至表单，点击"go!",或“开始”，此时flvcd开始分析下载地址，然后可以使用默认下载程序或其它下载程序下载；可自动合并分段视频。</td>
+    </tr>
+<tr>
+		      <td>4</td>
+		      <td>天文地理</td>
+		      <td><a href="http://www.asynx-planetarium.com/">AsynxPlanetarium</a></td>
+		      <td><a href="http://soft.hao123.com/soft/appid/11045.html">2.61</a></td>
+		      <td>1.69</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td>有三种观测方式：1 shows the sky from any location on earth(lelect location after registration);2 shows the geocentric view;3 shows the heliocentric view;</td>
+    </tr>
+<tr>
+		      <td></td>
+		      <td></td>
+		      <td><a href="http://www.asynx-planetarium.com/">Stellarium</a></td>
+		      <td><a href="http://soft.hao123.com/soft/appid/10831.html">.12.2</a></td>
+		      <td>74.2</td>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		      <td><a href="http://baike.baidu.com/view/553375.htm">baidu</a></td>
+		      <td>鼠标移动左下角有相应的图标对应操作功能；动态观察斗转星移；</td>
+    </tr>
+<tr>
+  <td>5</td>
+  <td>注册表操作</td>
+  <td>Resplendent Registrar</td>
+  <td><a href="http://www.onlinedown.net/soft/75061.htm">7.52</a></td>
+  <td>4.7</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>可以如同操作资源管理器一样操作注册表；</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>日历制作</td>
+  <td><a href="http://www.calendarpad.com/">calendarPad</a></td>
+  <td>&nbsp;</td>
+  <td>15</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>solar calendar; 自动生成web,可添加event;</td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td><a href="http://www.albumdiy.com/1rjxz.aspx">AECalendar</a></td>
+  <td><a  href="http://soft.hao123.com/soft/appid/11647.html">1.2.8</a></td>
+  <td><a href="http://www.skycn.com/soft/appid/11647.html">10.9</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>lular calendar; 可生成图片； </td>
+</tr>
+
+
+<tr>
+<td></td>
+<td>围棋</td>
+<td><a href="http://sports.sina.com.cn/chess/">新浪围棋</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>阅读器</td>
+  <td>超星阅读器</td>
+  <td><a href="http://dl.pconline.com.cn/html_2/1/81/id=665&pn=0.html">4.1.2</a></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>打开pdg文档；</td>
+</tr>
+
+  </tbody>
+
+
+
+
+  <tbody class="clx">
+ <tr>
+    <td>sn</td>
+    <td>分类</td>
+    <td>软件名称</td>
+    <td>ver</td>
+    <td>大小</td>
+    <td>N ver</td>
+    <td>公司</td>
+    <td>baidu</td>
+    <td>remark</td>
+    </tr>
+  </tbody>
+<tfoot>
+<tr><td colspan="9">
+常用软件及官方下载 <strong>3</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="常用软件list.html">[1]</a>
+<a href="常用软件list2.html">[2]</a>
+<span style="color:red;">[3]</span></td></tr>
+</tfoot>
+</table>
+<DIV style="DISPLAY: none" id=goTopBtn>回到顶部</DIV>
+
+<SCRIPT type=text/javascript>goTopEx();</SCRIPT>
+</body>
+</html>
+<script language="JavaScript" type="text/javascript">
+bg_even("browser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");
+</script>

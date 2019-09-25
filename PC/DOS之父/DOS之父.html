@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title></title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:75.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+strong{
+color:red;
+font-size:120%;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container"><a name="section" id="section"></a>
+<p align="left">Digital Research, Inc. (aka DR or DRI; originally  Intergalactic Digital Research) was the company created by Dr. Gary Kildall to  market and develop his CP/M operating system and related products. It was the  first large software company in the microcomputer world. Digital Research  should not be confused with Digital Equipment Corporation; the two were not  affiliated. DR was based in Pacific Grove, California.</p>
+
+<p>
+
+  The company's operating systems, starting with CP/M for  8080/Z80-based microcomputers, were the de facto standard of their era, as  MS-DOS and MS Windows came later. DR's product suite included the original CP/M  and its various offshoots; DR-DOS which was a MS-DOS compatible version of  CP/M, and MP/M, the multi-user CP/M. The first 16-bit system was CP/M-86, which  was to be unsuccessful in competition with MS-DOS. There followed Concurrent  CP/M, a single-user version of the multi-tasking MP/M-86 featuring  &quot;virtual consoles&quot; from which applications could be launched to run  concurrently. Successive revisions of this system, which gradually supported  MS-DOS applications and the FAT filesystem, were labelled Concurrent DOS,  Concurrent DOS XM and Concurrent DOS 386.</p>
+
+<p>
+
+  Soon after the introduction of the Intel 80286, DR  introduced a radical new real-time system, initially called DOS-286 and  subsequently Flex OS. This exploited the greater memory addressing capability  of the new CPU to provide a more flexible multi-tasking environment. There was  a small but powerful set of system APIs, each with a synchronous and an  asynchronous variant. Pipes were supported, and all named resources could be  aliased by setting Environment variables. This system was to enjoy enduring  favour in point-of-sale systems and was adopted by the IBM 4690 OS.</p>
+
+<p>
+
+  Digital Research was purchased by Novell in 1991,  primarily for Novell to gain access to the OS line. </p>
+
+<p>
+
+  DR produced a selection of programming language compilers  and interpreters for their OS-supported platforms, including C, Pascal, COBOL,  Forth, PL/I, PL/M, BASIC, and Logo. They also produced a microcomputer version  of the GKS graphics standard (related to NAPLPS) called GSX, and later used  this as the basis of their GEM GUI. Less known are their application programs,  limited largely to the GSX-based DR-DRAW and a small suite of GUI programs for  GEM. </p>
+
+<p>
+
+  CP/M-86 and DOS</p>
+
+<p>
+
+  When the IBM Personal Computer was being developed, DR  was asked to supply a version of CP/M written for the Intel 8086 microprocessor  as the standard operating system for the PC, which used the code-compatible  Intel 8088 chip. DR, which had the dominant OS system of the day, was uneasy  about the agreement with IBM and refused, Microsoft seized this opportunity to  supply the OS in addition to other software (e.g. Basic) for the new IBM PC.  When the IBM PC arrived in late 1981, it came with PC-DOS, which was developed  from 86-DOS, which Microsoft acquired for this purpose. By mid-1982, it was  marketed as MS-DOS for use in hardware compatible non-IBM computers. This one  decision resulted in Microsoft becoming the leading name in computer software.  This story is detailed from Microsoft and IBM's point of view in the PBS series  Triumph of the Nerds and from Gary Kildall's friends and coworkers point of  view on The Computer Chronicles.</p>
+
+<p>
+
+  Digital Research developed CP/M-86 as an alternative to  MS-DOS and it was made available through IBM in early 1982. DR later created an  MS-DOS clone with advanced features called DR-DOS, which pressured Microsoft to  further improve its own DOS. The competition between MS-DOS and DR-DOS is one  of the more controversial chapters of microcomputer history. Microsoft offered  the best licensing terms to computer manufacturers that committed to selling  MS-DOS with every processor they shipped, making it uneconomical for them to  offer both systems. This practice led to a 1994 government antitrust lawsuit  against Microsoft that barred it from per-processor licensing. DRI (and later  its successor Caldera Systems) accused Microsoft of announcing vaporware  versions of MS-DOS to suppress sales of DR-DOS. Microsoft refused to support  DR-DOS in Windows; in one beta release of Windows, Microsoft included code that  detected DR-DOS and displayed a warning message. Other versions of Windows  deliberately crashed the system if DR-DOS was detected so as to give the  impression that DR-DOS was unstable. These activities came to light when the  discovery process of the subsequent lawsuit uncovered emails from senior  Microsoft executives that showed this virus plant was part of a concerted  program to drive DRI out of the PC operating systems business. DRI's successor  Caldera Systems raised these disputes in a 1996 lawsuit, but the case was  settled without a trial. As a condition of the settlement Microsoft paid  Caldera $150 million and Caldera destroyed all documents it had produced in  connection with the case. Although a costly settlement to Microsoft, this eliminated  the most damning evidence of Microsoft's anti-trust behaviours, and allowed  Microsoft to control and dominate this sector of the marketplace without  concerns about any further serious competitor. </p>
+
+<p>
+
+  <strong>DOS之父：加里·基尔代尔</strong><a name="5" id="5"></a> <a href="#section">回目录</a> </p>
+
+<p>
+
+  加里·基尔代尔 （1942.05.19 ~ 1994.07.11）</p>
+
+<p>
+
+  姓名(英文)：Gary  Kildall </p>
+
+<p>
+
+  出生年月：1942年5月19日 </p>
+
+<p>
+
+  出生国家、地点：美国西北部西雅图 </p>
+
+<p>
+
+  1994年7月11日在美国逝世 </p>
+
+<p>
+
+  教育背景 </p>
+
+<p>
+
+  1967年，获得华盛顿大学计算机科学学士学位 </p>
+
+<p>
+
+  1969年初，获得华盛顿大学计算机科学硕士学位 </p>
+
+<p>
+
+  1972年，获得华盛顿大学计算机科学博士学位 </p>
+
+<p>
+
+  职业背景 </p>
+
+<p>
+
+  1972年-1976年，加入海军 </p>
+
+<p>
+
+  1976年，创办星系数字研究所(很快改名为数字研究公司(DRI)) </p>
+
+<p>
+
+  1991年，数字研究公司(Digital Research, Inc.)被Novell公司所兼并 </p>
+
+<p>
+
+  作为个人电脑软件开发的真正先驱人物，是基尔代尔最早创造了磁盘操作系统(DOS)，是基尔代尔为今天广为使用的A盘、B盘和C盘(CD-ROM)最早编写了驱动程序，他也是图形用户界面(GUI) 的先驱之一。还开发了“Dr Logo”计算机语言。在1974年，帮助创建了硅谷最富盛名的“家酿俱乐部”(Home Brew Club)，成为计算机业余爱好者交流的天堂，也是硅谷点燃PC革命的中心。他还为微机首创了世界上第一个实用的软件API。随后微软推出的MS-DOS 操作系统的BIOS程式，几乎原封不动地从CP/M BIOS拷贝过去。 </p>
+
+<p>
+
+  <strong>天才与幸运无缘</strong></p>
+
+<p>
+
+  大家都知道，PC的腾飞依靠两个最主要的翅膀：微处理器和操作系统。这也是PC业中最大的两棵摇钱树。特德·霍夫发明的微处理器为英特尔种下了摇钱树。基尔代尔的DOS操作系统则为微软的霸业铺下基石。英特尔和微软成为PC业的最大赢家，而霍夫和基尔代尔则在贡献了自己的智慧后，两袖清风，而且在历史的页码中始终受排挤。 </p>
+
+<p>
+
+  钱是会说话的，它能编写历史；钱是有手的，还能改写历史。基尔代尔的朋友和崇拜者说：“每一位PC用户都欠基尔代尔一份情，而比尔·盖茨和他的微软公司欠得比谁都多。”正如盖茨对待自己的领路人罗伯茨一样，为了掩盖自己的“债务”，盖茨的做法就是：淡化基尔代尔，并树立另一位DOS之父，将他挤出历史！ </p>
+
+<p>
+
+  但是，历史不可能用金钱彻底改写，基尔代尔作为计算机软件领域的主要人物之一，其地位不可动摇，盖茨依靠基尔代尔的发明而起家的事实无法掩饰。 </p>
+
+<p>
+
+  <img border="0" width="420" height="450" src="DOS之父_clip_image002.jpg" alt="http://www.techcn.com.cn/uploads/200910/1254579396P3Libbi6.jpg" /><img border="0" width="245" height="284" src="DOS之父_clip_image003.jpg" alt="http://www.techcn.com.cn/uploads/200910/12545793969EdGQvv8.jpg" /> </p>
+
+<p>
+
+  1973年，加里·基尔代尔（Gary Kildall）看到对个人计算机操作系统的需求，设计了CP/M操作系统（Control Program/Microprocessor or  Microcomputer），CP/M操作系统有较好的层次结构。它的BIOS把操作系统的其他模块与硬件配置分隔开，所以它的可移植性好, 具有较好的可适应性和易学易用性。用基尔代尔的话说，CP/M“携带了基本的制造块”，它使整个计算机业界的设备变得更加统一。很快，约2000家计算机公司使用了他的程序。到1979年，CP/M已经成为8位数微处理器计算机的实际标准。而随后微软推出的MS-DOS操作系统的BIOS程式，几乎一位元不变地从基尔代尔的CP/M BIOS拷贝过去。 </p>
+
+<p>
+
+  软件不同部分之间的交互接口，就是所谓的API——应用程序编程接口。API的发明和发展大大促进了计算机产业的进步，它几乎决定着计算机日常应用的各个方面。所有在应用上获得成功的软件或者Web应用无一不是首先在API的设计上满足了用户的需求。也是基尔代尔为微机首创了世界上第一个实用的软件API。这个初生的API大致上有20多个对操作系统的简单函数调用组成，这个操作系统就是CP/M——那时可是相当的简单和粗糙，而同样简单的API 却让整个计算机世界发生了重大变化。基尔代尔这个软件天才希望自己设计的API能被其他科学工作者采用，而商用方面的考虑没多想。而比尔·盖茨认识到， API绝对是商业软件获得成功的关键之一，随后微软推出的MS-DOS操作系统全盘拷贝了CP/M及其API，并在这些API的基础之上又增加了一些简单特性，比尔·盖茨将基尔代尔的发明变成了巨大的商业应用，并让MS-DOS的API在软件开发中占据了主导地位。 </p>
+
+<p>
+
+  这大概是计算机天才的典型命运。虽然在软件方面，比尔·盖茨还不是基尔代尔真正势均力敌的对手，但盖茨更钻心于商业。而基尔代尔纯粹是学者，从事计算机也纯粹是满足智力的好奇。他不赞同盖茨的人生哲学，在他眼里，“我要赢”还不如“我要幸福”。这种哲学下，基尔代尔的结局可想而知。 </p>
+
+<p>
+
+  <strong>计算机人生</strong></p>
+
+<p>
+
+  1942年5月19日，加里·基尔代尔出生于美国西北部的西雅图，他在那里生活到27岁。是盖茨的同乡。在高中，他并不是明星学生，他喜欢新奇的玩意儿和汽车。他设计制造过一个自动防盗报警器，一个用磁带录音机来使用摩斯代码的机器，和一个触发二进制转换器。他喜欢长时间地摆弄电话装置，其沉迷程度就像后来的黑客沉迷于计算机。 </p>
+
+<p>
+
+  1960年初，在基尔代尔上大学前两年，他在西雅图他父亲的航海学校任教。在那里，他对数学产生了浓厚的兴趣，但是航海是一个以老技术为主的领域。他去了华盛顿大学学习，本科念的是数学。刚进大学时，他选修了两门计算机编程方面的课程，这决定了他的将来。他用老式手工计算器进行数字分析方面的研究，但当他学完课程时，他已经涉入FORTRAN程序。他被计算机的缺陷所困扰，整晚把时间花在大学的计算机中心。1962年，基尔代尔与多露西·麦克艾文结婚，他们的婚姻维持了20年，有两个孩子。 </p>
+
+<p>
+
+  越战开始，基尔代尔应征入伍。他加入了海军预备队，因此可以继续完成学业。他在罗德岛的军官后备学校呆了两个夏天。1967年，他获得计算机科学学士学位，留在华盛顿大学学习计算机科学的研究生课程。在大学的计算机中心，基尔代尔晚上在Burroughs 5500计算机上工作，通过它，基尔代尔学到了许多有趣的新概念，包括块存贮分配技术。深夜的时候，这台机器实质上是他一个人的。他为Burroughs 5500做ALGOL编译，这为他提供了编译经验，这也是他研究生学习的主攻方向。 </p>
+
+<p>
+
+  1969年初，在基尔代尔获得硕士后，他应召为军队服务，他有两个选择：登上开往越南的驱逐舰或在加利福尼亚蒙特雷的海军研究生院教计算机科学。  “我只用了两毫秒就做出了选择。”他在海军研究生院教了三年计算机科学，又开始了博士生学习，方向是编译代码的优化，他的论文题目是《总流量分析》，用来决定如何使机器代码尽可能地简洁。1972年，获华盛顿大学计算机科学博士学位，参加了美国海军，秋天被分到加州蒙特利的海军研究生院，担任电脑讲师，主要从事软件方面的研究。 </p>
+
+<p>
+
+  基尔代尔喜欢这个滨海城市的风光，青松笼罩着薄雾的环境很合他的喜好，他说话柔和，才智过人，穿着运动衫和紧身裤。当他想要表达什么时，往往先找支粉笔或铅笔，喜欢用图解答是他一生难改的嗜好。 </p>
+
+<p>
+
+  他喜欢教书，是位出色的教师，和学生关系融洽，出过几本著作。他的工作也使他有时间编程序。可以说，学术界的氛围让他如鱼得水。 </p>
+
+<p>
+
+  <strong>赋予微处理器以生命</strong></p>
+
+<p>
+
+  1972年，他偶然发现在华盛顿大学公告板上有一则广告：“25美元卖一台微机”。因为教学需要，他买下了它，这是一台英特尔4004的4位微处理器，是第一台使用芯片的计算机。甚至当时没有人认为微处理器有什么用处，包括英特尔。此前，他一直用的是海军学校价值300万美元的IBM 360系统计算机。基尔代尔计划用这个芯片制作一个导航计算器，他父亲一直想有一个可以计算导航三角形的设备。基尔代尔试着在4004上写一些技术性的程序，但很快意识到指令到指令集很有限。他又询问英特尔是否对他在4004上编的程序感兴趣，虽然英特尔对导航应用并无特别兴趣，但他们发现他的数学程序很诱人。 </p>
+
+<p>
+
+  以往，计算机存储数据、数据处理和数据控制三部分是分开的。微处理器的出现实现了使其三合一。因此程序也需要“微小化”。基尔代尔使用二级法，先在DEC的PDP—10小型机上为4004创建新的“微程序”。1973年，他参观了英特尔的微机部，当时这家刚刚创办的公司只有几间破房屋。基尔代尔与英特尔的人很投缘，他用每周一天的休息日担任英特尔的顾问。他不但喜欢上了新职务，而且也迷上了微处理器。不久英特尔又让他试用新出炉的8008，只用了几个月，基尔代尔创建了PC史上革命性的微处理程序设计语言PL/M，为微处理器赋予了真正的生命，打通了微处理器与微电脑的通道。它很容易被接受了，它用于大量的开发系统软件如字处理器、编辑器和汇编语言。然后，基尔代尔开始为8080微处理器开发PL/M的不同版本，这个芯片取代了8008，并成为微型计算机革命的真正开始。 </p>
+
+<p>
+
+  当时，英特尔觉得微处理器没有什么前景，当然对基尔代尔的程序也无动于衷。英特尔也失去了同时拥有微处理器和操作系统的大好机会。将另一半江山让拱手让给了微软。 </p>
+
+<p>
+
+  英特尔8008问世后，自制了几台叫Intellec-8的微机。英特尔送了一台计算机作为基尔代尔的部分酬劳，他把这台机器放在教室后方，成为海军研究生院的第一个微机实验室。好奇的学生下课后都来滴滴答答玩上几个小时。当8008升级为8080时，Intellec-8变成了Intellec-80，性能高出10倍。英特尔又加送了一台显示器和一台高速纸带阅读机。基尔代尔和学生们大受鼓舞。这时，刚好遇上IBM发明8英寸软盘的艾伦·舒加特，立刻和一位戈登·恩巴克斯的学生一起，开发微机和控制程序CP/M的操作系统，这是世界上第一个磁盘操作系统(DOS)。 </p>
+
+<p>
+
+  当然，那时候没有人能够预见到未来PC业的辉煌。基尔代尔与英特尔的设计师一样，觉得微机最终会应用在家用搅拌器、食物汽化器上。基尔代尔曾与几名程序员为4004编写了一个游戏程序，他们找到英特尔的头头罗伯特·诺伊斯，来推销这个程序。诺伊斯没有同意。诺伊斯深信微处理器的未来在其他方面，他认真地说：“在钟表方面。” </p>
+
+<p>
+
+  CP/M的发展十分奇特。当时基尔代尔一边教书，一边参与本·库珀搞的一个项目，准备做占星机。他俩对占星术既无兴趣也不相信，都认为这是明显的胡闹。但断定销路会不错。于是库珀造机器，基尔代尔编程序。这种机器放在杂货铺，吃着25美分的硬币，印出算命天宫图，基尔代尔觉得这台机器简直美得很。 </p>
+
+<p>
+
+  两位发明人把机器放在旧金山市内许多地方。可是顾客却大为不满，因为机器吃进去硬币，纸就堵成一团。两人不知怎么办才好。后来基尔代尔说：“这在商业上完全是失败。” </p>
+
+<p>
+
+  然而占星机还是让基尔代尔的部分程序，即CP/M第一次受到了商业上的考验。在此过程中，他还对调试程序和汇编程序的工具进行了改写，这些都是操作系统的关键部分。他还创造了一种Basic语言汇编程序，符合指令码的翻译器。 </p>
+
+<p>
+
+  70年代中期，微机领域比较有影响的公司有两家，一是生产“Altair 8800”的MITS，另一个是今日早无声息的IMSAI公司。两个公司用的都是8080，于是开始在操作系统上比试。前者与盖茨合作，盖茨用Basic语言开发出一个很简单的DOS，但很不好使，而且和别的微机不兼容。后者则找基尔代尔，以25000美元买下CP/M的许可使用权，马上把盖茨的“杰作” 给盖了。 </p>
+
+<p>
+
+  <img border="0" width="450" height="450" src="DOS之父_clip_image005.jpg" alt="http://www.techcn.com.cn/uploads/200910/12545793961sAVtevj.jpg" /> </p>
+
+<p>
+
+  <strong>学者企业家</strong></p>
+
+<p>
+
+  基尔代尔并没有想到自己写了一个多么有价值的程序。他只是想，他怎么能写出很有价值的程序呢？能使用他的软件开发人员又有几个人呢？显然他缺乏盖茨的商业眼光和商业手段。作为一名有所作为的大学教授，当然不可能像那班野心小子们一样异想天开，当然事实证明，这班野小子们绝对是对的。 </p>
+
+<p>
+
+  基尔代尔对硬件没有特别的兴趣，他更喜欢研究操作程序，找到一种方法使磁盘存贮管理与微处理器连接起来，因此他开始用PL/M语言编写软件，在大型计算机系统上模拟运行。这种软件给磁盘提供高级存取，而且是一个紧凑的操作系统。在模拟中，操作系统可以工作，但基尔代尔在有控制器以前不能确定用软盘是否起作用。1974年，他请他的朋友、后来数字微系统公司的总裁托拉德尔的帮助，他刚刚在华盛顿大学取得了博士学位。托拉德尔成功地让这台设备运转起来。基尔代尔回到苏格特公司，说服他们又提供了一个驱动器，他把它装在了装有控制器和开发系统的盒子中。当硬件界面完成时，整个系统运转起来了，而且运转得不错。这就是第一个CP/M系统，它花了苏格特一两个月时间编写，它的最大优点之一是只需要3K的内存。 </p>
+
+<p>
+
+  基尔代尔知道单有一个操作系统还不足以进行程序开发，他又增加了额外的应用程序如文本编辑、动态纠错和一个简单的汇编器。直到1975年他才完成了CP/M的全套应用系统，包括用于拷贝文件的PIP(外设互换程序)。CP/M使从磁盘上把数据传到微型计算机上打印和使所有属于物理操作功能的微型计算机系统的操作成为可能。 </p>
+
+<p>
+
+  在妻子的鼓动下，1976年，基尔代尔离开海军研究生院，与妻子多露西一起创办了星系数字研究所，很快改名为数字研究公司(DRI)。由多露西负责经营。两口子并没有预计到会有巨大成功。多露西·麦克艾文说：“我们以前从没有想过会拥有一家大公司。它就这样发生了，似乎就是应该这样做。1976年她曾怀疑公司能赚到的钱会超过1.5万美元，而事实上它赚了60万~80万美元。在开始的五六年中，公司的收益每年都翻了一番，1981年销售额达到520万美元，三年后达到4460万美元。 </p>
+
+<p>
+
+  显然，公司最早的主顾占了大便宜，例如最早以公司名义购买CP/M的托马斯·拉夫勒，只化了90美元就买到了CP/M的使用权。而不到一年，搞一份CP/M许可证要花上万美元。 </p>
+
+<p>
+
+  1977年，与以姆赛(IMSAI)公司的合同是个转折，他们以2.5万美元购买了CP/M。以姆赛公司经理鲁宾斯坦认为基尔代尔是个软件天才，可做买卖却象个不懂事的孩子。他认为自己几乎是从作者那里把操作系统偷过来。基尔代尔则十分知足，这笔生意使数字研究公司成了正式营业的公司。 </p>
+
+<p>
+
+  那时，基尔代尔已经开发了5个CP/M版本，是专为装有不同磁盘驱动器的不同计算机设计的。一天下午，他与一位以前的学生，现在是IMSAI雇员格兰·埃文坐下交谈。他说：“瞧，我要把这个小东西(CP/M)叫做Bios(基本内存输入输出系统)，它将适用于任何人们希望的操作环境。”Bios成为通用部分，人们可以自己对它进行修改，使他们的磁盘驱动器可以与计算机匹配。这使得 CP/M更容易被接受。IMSAI的购买后，订单滚滚而来。在第一个100万后，基尔代尔就再也不计算CP/M的销售额了。他估计目前已经有2000万套拷贝在使用。CP/M也成了70年代、80年代初最有影响的PC操作系统，到80年代中期，它将运行在300种计算机模型上，而且3000种软件支持 CP/M机，CP/M成了事实标准。 </p>
+
+<p>
+
+  <strong>错失计算机历史上最大的一笔生意</strong></p>
+
+<p>
+
+  1980年，IBM PC正在酝酿之中，幸运之神降到比尔·盖茨的头上。但当时他根本没有想到，自己会从磁盘操作系统(DOS)上大赚特赚，而且后来会以DOS牢牢控制整个计算机业。当时盖茨真正在行的是编写程序语言Basic。他只希望自己的Basic能挂在IBM的系统上。而且盖茨并不看好DOS的前景，他认为程序语言才是真正的大钱眼。而且当时市场上已经有了最流行的CP/M DOS，它是由基尔代尔的DRI(数据研究公司)开发的。再说，盖茨和数字研究公司有个不成文的协定，那就是他不能涉足操作系统领域，数字研究公司也不进入他的程序语言范围，因此他慷慨地将IBM的代表介绍给了基尔代尔。双方约好在蜿蜒海岸边的一号高速公路旁，秀丽的加州太平洋林园见面。 </p>
+
+<p>
+
+  关于基尔代尔如何错失这笔本世纪最具价值的生意，流传着许多版本。有的说这位电脑博士骄傲自大，所以当IBM带着一生难遇的大生意找他时，他竟然驾着他的双引擎小飞机兜风去了，留下当律师的太太和IBM打交道。面对IBM一大堆不泄密的限制协议，她不乐意了，一天的大部分时间都花在讨价还价上，双方达成的唯一协议就是要数字研究公司不泄露IBM来访这件事。但基尔代尔断然否定这种说法，他说上午去处理一件紧急事务，下午3点就赶回来以便和IBM的人见面。对于IBM要签署的文件，他赞同妻子的做法。对于失去这次机会，他也只是耸耸肩而已。基尔代尔猜想盖茨“做出了他认为是最好的生意决定”。 </p>
+
+<p>
+
+  IBM没能与基尔代尔做成生意，盖茨就自告奋勇揽下了这笔生意。但是编写一个操作系统起码要花一年时间，但IBM要求几个月内就完成。盖茨急得象热锅上的蚂蚁。这时，保罗·艾伦发挥了极大的作用。他听到风声，知道有一套圈内人自编的QDOS。QDOS本意为快速而肮脏的操作系统(Quick and Dirty Operating System)，意指借用了CM/P操作系统的构想和名称，不过那时尚未出现巨额罚金的法律诉讼。程序员对非法拷贝他人作品还不以为然。艾伦把电话给QDOS的作者蒂姆·帕特森。最后，微软付了大约7.5万美元，连人带产品一起买下，改名为MS-DOS。并倒手给了IBM，开始了微软飞黄腾达之路。 </p>
+
+<p>
+
+  1981年，IBM推出第一台带有PC—DOS(微软MS—DOS前身)的PC， “我对和CP/M的相似感到惊讶，它们太相像了，系统功能简直一模一样。我对IBM和微软的做法非常愤怒。我们在这里与IBM诚心诚意地谈判，结果却被他们敲了竹杠。毫无疑问，业内任何一个看到它的人都知道，它甚至连指令都跟CP/M一样。我可以坐下来，完全不用任何说明就可以使用它。这简直让人难以置信。” </p>
+
+<p>
+
+  基尔代尔找上门来，提出可能危及IBM软件计划的诉讼。基尔代尔对IBM的人来说，他看到他们的产品了，它简直是“彻头彻尾的CP/M界面”，他告诉他们这不公平，“我不知道你们怎么可以毫无顾忌地把别人的发明拿来就用，而且基本上全盘照抄。”IBM回答说，根据基尔代尔所说的，它的人没有意识到该操作系统与CP/M那么近似。(核查IBM对基尔代尔的回答，从IBM的项目主管约翰·H·麦克尔1987年3月的一封信中得知，“任何IBM不合法、不道德和不适当地为IBM—PC获取操作系统软件使用权力的说法绝对是错误的。”) </p>
+
+<p>
+
+  <img border="0" width="404" height="450" src="DOS之父_clip_image006.jpg" alt="http://www.techcn.com.cn/uploads/200910/12545793964LwOgIUd.jpg" /> </p>
+
+<p>
+
+  IBM连忙派出几位律师去找基尔代尔。见了面，才发现这个书呆子太容易摆平了。因为基尔代尔告状的真正目的，只是希望IBM在PC中采用他下一版的CP/M。IBM当然乐于从命，坏事成了好事。微软也躲过了致命的一劫。 </p>
+
+<p>
+
+  为此IBM策划了一个广告，显示标志着DOS、CP/M和UCSD的三扇门，最后一种操作系统也是替PC编写的，但从来未成气候。更关键的是，基尔代尔不明白以超低级价格占领市场树立事实标准的策略，他的CP/M售价大约是MS-DOS 40美元的6倍。而且在版本更新上也明显落后于微软。因此正像基尔代尔说的，“CP/M基本上中途就夭折了”。 </p>
+
+<p>
+
+  IBM对PC市场的渗透影响了数字研究的操作系统市场。1983年底，数字研究推出了并行CP/M，其优点是计算机用户可以一次做几种操作。比如，在打印机打印时，他可以写信。它卖得很好，因为当时IBM还没人多任务操作系统。但是，由于它没有PC-DOS的兼容性，因此销售数量有限。后来，根据基尔代尔的建议，他们达成了一项重要决定：“如果这是人们的需要，我们将继续下去……既然 PC—DOS是CP/M的翻版，为什么我们不回到原处，使CP/M与PC—DOS完全兼容呢？”因此诞生了并行PC—DOS，一个并行CP/M的多任务版。1984年问世时，它获得了巨大的成功。 </p>
+
+<p>
+
+  但到了80年代末，MS-DOS已经成为操作系统上的事实标准。 </p>
+
+<p>
+
+  <strong>被金钱淹没</strong></p>
+
+<p>
+
+  1981年，数字研究公司收入600万美元，基尔代尔本人财富1500万美元。相比之下，当时的微软和盖茨还是小虾米。但是，随后，微软的BASIC嵌入了IBM PC系统内部，微软DOS已紧紧绑上IBM。1982年，基尔代尔还没有真正被挫败。他判断作为一个产品，BASIC是个灾难。在很大程度上他是对的。对初学者来说，BASIC并不是一种简单易用的语言。作为编程大师的基尔代尔，准备开发一种比BASIC更简单且视觉效果更佳的语言，这就是DR LOGO。不幸的是，这个倾注了大量财富和金钱的产品，从未真正流行起来。因为，此时人们对编程语言已经不再关心那么多了。市场的重心开始偏向应用软件。 </p>
+
+<p>
+
+  基尔代尔是个技术中人。他认为，如果他在自己的操作系统上开发出一套关键的应用软件 (对基尔代尔来说是驾轻就熟的事)，那么就是不道德地与自己的客户竞争，有昧自己的良心。因此，他决定不与编写WordStar、VisiCalc之类的软件公司进行一对一的直接竞争。这些软件都依靠他的操作系统。这样，基尔代尔的业务过于单一，十分危险。 </p>
+
+<p>
+
+  而盖茨则没有这种内疚感。相反，他认为在应用软件领域，必须心狠手辣，不择手段。他一开始就着手部署，为一系列有利可图的应用软件打好坚实的基础，而且这些软件可以在各种平台上运行，包括基尔代尔的操作系统。这样，有了雄厚的业务基础，就可以更野蛮地在市场上冲杀。而且，盖茨也得到了另一大启示：软件业中发现创新的产品和技术太容易了，而模仿起来也太简单了。但是把它们转化为市场的成功就需要另一种能力和手段。而这些手段基尔代尔永远不可能学会。这就是为什么没有创新的微软能够横扫天下，而一代软件天才基尔代尔却只能迅速走向衰弱的根本原因。 </p>
+
+<p>
+
+  从占星机到CP/M错失良机，再到最后的软件定价，都说明了基尔代尔永远不是商场中人。可以说，基尔代尔是电脑史上第一位全能的专家，同时在硬件和软件上做出非凡的贡献。尤其是他在最早的个人电脑Altair之前就准备好了操作系统，为 PC业的喷发创造了条件。但他只是一个比较单纯的技术天才，注定要被盖茨踩在脚下。 </p>
+
+<p>
+
+  <strong>被历史淹没</strong></p>
+
+<p>
+
+  如今人们早已将基尔代尔淡忘了，甚至比尔·盖茨在其畅销书《未来之路》中大言不惭地将蒂姆·帕特森捧了出来，冠之于“DOS之父”的头衔，而对基尔代尔只字未提。 </p>
+
+<p>
+
+  但是有一部分历史是金钱和名望难以改写的。因为是基尔代尔，而不是帕特森最早创造了磁盘操作系统(DOS)，是基尔代尔划定了今天人们广为使用的A盘、B盘和C盘(CD-ROM)驱动程序的编写者，基尔代尔也是图形用户界面(GUI)的先驱之一。他还开发了“Dr Logo”计算机语言。同时，在1974年，他和戈登·恩巴克斯一起，帮助创建了硅谷最富盛名的“家酿俱乐部”(Home  Brew Club)，成为计算机业余爱好者交流的天堂，也是硅谷点燃PC革命的中心。基尔代尔的CP/M还被美国国防部用作导弹制导系统的开发环境。 </p>
+
+<p>
+
+  基尔代尔主要是在家里工作(“只是因为工作环境安静”)，只到办公室开会。他妻子多露西说：“他有技术头脑，但没有商业头脑，他只专注于他研究的项目，而且很关善于钻研。如果他得整晚工作，那没关系，他一周工作100个小时，因为他太专注了，他所有的热情都在这上面。” </p>
+
+<p>
+
+  基尔代尔在数学研究公司工作了10年，他先后担任主席、总裁以及首席执行官。但自从 1984年以来，他逐渐淡出。除了担任董事会主席一职外，基尔代尔于1985年创建了另一家公司Knowledge-Set，这是最早为新兴的大容量存储介质CD-ROM开发应用软件的公司。总是寻找技术突破口的基尔代尔看到了连接PC和磁带播放器的未来。基尔代尔的新产品Vidlink把视频播放器、彩电和PC连接起来，提供了一个非常巨大的存贮容量。一个独立磁盘可容纳180卷微型胶卷或54000幅静止电视图像。 </p>
+
+<p>
+
+  另一个新产品是知识磁盘，它是一个视频磁盘，可以用遥控装置或视频播放器控制。基尔代尔还研究了CDROM(小型磁盘只读存贮器)，目的是在单磁盘里存放10本百科全书。“那很有趣”，他说。1985年，基尔代尔的公司最先提出他们的计划，以CDROM的格式发行《格罗里尔(Grolier)百科全书》。 </p>
+
+<p>
+
+  但基尔代尔还是卖掉了公司的大部分股份，转而为视频设计公司(VDG)生产商用和视频内容。 </p>
+
+<p>
+
+  随着微软的如日中天，基尔代尔的数字研究公司江河日下。1991年，数字研究公司被Novell公司所兼并。他本人也从硅谷搬到了德克萨斯州奥斯汀附近的一座小镇，淡出人们的视野。开始将钱财和精力投入到儿童艾滋病受害者的援助工作中。 </p>
+
+<p>
+
+  如今，大概只有极少数专业人员和发烧友还会摆弄一下CP/M。从80年代末，基尔代尔就变得有些压抑和消沉。因为他发现自己，已被自己开天辟地的PC产业无情地抛弃了。基尔代尔开始借酒浇愁，成了不折不扣的酒徒，并和曾一同创业的妻子多露西离婚。 </p>
+
+<p>
+
+  <img border="0" width="714" height="760" src="DOS之父_clip_image007.gif" alt="PC操作系统发展史图示" /> </p>
+
+<p>
+
+  1994年7月，年仅52岁的基尔代尔在加州蒙特利的寓所里，头部撞地，三日后不治身亡。一代大师凄凉离世，彻底告别了他爱恨交加的电脑业。 </p>
+
+<p>
+
+  媒体只是轻描淡写地提及了几句，在如火如荼的产业中，作为多才多艺的飞行员、教师、软件大师、作家和计算机先驱，基尔代尔彻底进了历史，走入被人遗忘的角落。 </p>
+
+<p>
+
+  <strong>真实与谎言</strong></p>
+
+<p>
+
+  在PC行业中毫无创新的微软却能成为霸主，而技术天才却最终被人遗忘和排挤。以下这副图示就是对PC操作系统发展史的真正简述。 </p>
+
+<p>
+
+  CP/M<a name="7" id="7"></a> <a href="#section">回目录</a></p>
+
+<p>
+
+  CP/M是數位研究公司（1991年被Novell所兼并）在1974年开发，为8位CPU（如Intel 8080、Zilog Z80等）的个人电脑（PC）所设计的操作系统。在PC市场的黎明阶段，它成为被广泛应用的操作系统。可是因为在向16位CPU的转化上错失机会，在以IBM PC/AT以及IBM PC兼容机为中心的16位PC市场上惨败给Microsoft的MS-DOS，从而从市场上消失。虽然CP/M推出了为Intel 8086而设计的“CP/M 86”以及为Motorola 68000而设计的“CP/M 68k”等版本，但使用者几乎不存在。 </p>
+
+<p>
+
+  <strong>CP/M操作系统</strong></p>
+
+<p>
+
+  1973年，PL/M的创始人Gary Kildall博士决定“挂帅亲征”，很快在DEC公司的主机TOPS-10上，培植成功一个管理程序和数据的“胚胎”。博士旗开得胜，感觉当然是“味道好极了！”，但Intel 公司及其它著名电脑公司却对此充耳不闻，这使“元帅”和“士兵”们很是光火，1974年，“胚胎”得以向全世界公布：版本号V1.3；大名：CP/M；全称：Control  Program/Monitor （控制程序或监控程序）。 </p>
+
+<p>
+
+  虽然CP/M V1.3 是为肩任“控制程序和数据”的“上帝”而来的，但“上帝一世”却颇受冷落，电脑业者依旧冷眼旁观。1975年，CP/M V1.4 继承“王位”，开始大造舆论，加之Kildall 博士创建了Digital Research（数字研究公司），为CP/M呐喊欢呼，CP/M陆续被各国微机厂商采用，围绕他的软件也爆炸般地得到了开发。CP/M变红发紫，神话般普及，被推崇为“标准八位机软件总线”，Kildall 博士更是声名远播。 </p>
+
+<p>
+
+  CP/M其实就是第一个微机操作系统，享有指挥主机、内存、磁鼓、磁带、磁盘、打印机等硬设备的特权。通过控制总线上的程序和数据，操作系统有条不紊地执行着人们的指令，如同指挥一台晚会或乐队，高效率地合奏美妙的乐章。 </p>
+
+<p>
+
+  繁荣的CP/M家族不断添丁。运行在Intel 8080芯片上的CP/M—80；运行在8088、8086芯片上的叫CP/M—86；而在Motorola（摩托罗拉）68000 上运行的CP/M叫做CP/M-68K。CP/M—80、CP/M—86、CP/M-68K等组成了庞大的CP/M家族。 </p>
+
+<p>
+
+  单用户的CP/M—80操作系统，后来发展成多用户的MP/M—80，单用户的CP/M—86又发展成并发的CP/M—86和多用户MP/M—86，它们成为家族的新生力量。 </p>
+
+<p>
+
+  CP/M开创了软件的新纪元，称得上是计算机改朝换代的里程碑。 </p>
+
+<p>
+
+  可是因为在向16位CPU的转化上错失机会，在以IBM的PC/AT以及兼容机机为中心的16位PC市场上，惨败给Microsoft的MS-DOS、从而从市场上消失。 </p>
+
+<p>
+
+  <strong>DR-DOS</strong><a name="9" id="9"></a> <a href="#section">回目录</a></p>
+
+<p>
+
+  DR-DOS是Digital Research数位研究公司（很多人都将数位研究公司和迪吉多（Digital  Equipment Corporation, DEC）混淆，其实两家公司完全没有关系）开发的，最初用于个人电脑上的一种DOS操作系统。DR-DOS的全称是Digital  Research-Disk Operating System（数字研究—磁盘操作系统）。 主要支持IBM PC兼容机。 </p>
+
+<p>
+
+  从1990年PC机广泛使用Windows  3.x开始，DR-DOS系统被逐步被MS-DOS取代。到1995年全面采用Windows 95时，DOS的影响开始减小，DR-DOS也随之在桌面市场迅速衰落。1999年DR-DOS推出7.03版本，随后在一段时间内一直未有正式更新。目前DR-DOS在单任务嵌入式设备中还有少量应用，另有极少数DOS爱好者还在研究或使用DR-DOS。 </p>
+
+<p>
+
+  2004年推出了DR-DOS 8.0版本，功能上仅做了很小修改，支持FAT32和大硬盘。2005年又曾一度推出DR-DOS 8.1版，但由于版权纠纷，随后DR-DOS 8.x从市场上撤回。目前其公司开始重新销售DR-DOS 7.03版本。 </p>
+
+<p>
+
+  相关网站<a name="11" id="11"></a> <a href="#section">回目录</a> </p>
+
+<p>
+
+  ·  <a href="http://www.digitalresearch.biz/">Digital Research</a> </p>
+
+<p>
+
+  ·  <a href="http://www.joewein.de/dri.html">Joe Wein's page  on Digital Research</a> </p>
+
+<p>
+
+  ·  <a href="http://www.crossloop.com/">Tom Rolander's,  Employee#1 at Digital Research, current company - CrossLoop</a> </p>
+
+<p>
+
+  ·  <a href="http://maben.homeip.net:8217/static/S100/software/DRI/index.html">Marcus Bennett's DRI Documentation Store</a> </p>
+
+<p>
+
+  <a name="13" id="13"></a> <a href="#section">回目录</a> </p>
+
+<p>
+
+  <a href="http://www.sysun.com/museum/cpmhist.html">http://www.sysun.com/museum/cpmhist.html</a></p>
+
+<p>
+
+  <a href="http://en.wikipedia.org/wiki/Gary_Kildall">http://en.wikipedia.org/wiki/Gary_Kildall</a></p>
+
+<p>
+
+  <a href="http://www.digitalresearch.biz/">http://www.digitalresearch.biz/</a></p>
+
+<p>
+
+  <a href="http://en.wikipedia.org/wiki/Digital_Research">http://en.wikipedia.org/wiki/Digital_Research</a></p>
+</p>
+
+<p>
+
+</div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>

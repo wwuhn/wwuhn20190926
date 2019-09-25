@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>数据我搜－一次输入，全方位、定向、立体搜索，助您简单、方便地找到理想、优质资源</title>
+<base target="_blank" />
+<script language="JavaScript" type="text/javascript" src="isou.js"></script>
+ 
+
+<STYLE type=text/css>
+#container{
+width:66%;
+margin:auto;
+
+}
+#zs {
+border:1px black solid;
+border-collapse:collapse;
+clear:both;
+width:100%;
+}
+#zs td, #zs th {
+FONT-SIZE: 15px;
+ 
+text-align:left;
+border:1px white solid;
+border-collapse:collapse;
+height:18px;
+padding:2px;
+table-layout:fixed;
+font-family:mv boli;
+}
+#zs tr>th{
+text-align:center;
+font-size:105%;
+color:#804000;
+}
+
+.zh{background-color:#e6e6fa}
+.xw{background-color:#ffe4e1}
+.wk{background-color:#e6e6fa}
+.bk{background-color:#ffe4e1}
+.book{background-color:#ffe4e1}
+.cidian{background-color:#ffe4e1}
+
+.gw{background-color:#e6e6fa}
+.bt{background-color:#ffe4e1}
+.sp{background-color:#e6e6fa}
+.tp{background-color:#ffe4e1}
+.rj{background-color:#e6e6fa}
+.mp{background-color:#ffe4e1}
+/*
+//1 综合搜索zh
+//2 新闻搜索xw
+//3 百科bk
+//4 文库wk
+//5  book
+//6 词典cidian
+//7 图片tp
+//8 MP3
+//9 视频电影sp
+//10 bt
+//11 软件rj
+//12 购物搜索gw
+*/
+.zh, .bk,  .wk, .cidian, .bt, .mp, .gw {
+background-color:#e6e6fa;
+
+border:#996600 solid 1px;
+}
+.xw, .wenda, .book, .tp,  .sp, .rj { 
+background-color:#f0f8ff;
+
+border:red solid 1px;
+color:blue;
+}
+.iCiBa_open_suggest_input {
+	
+}
+a:link {text-decoration: none;color:black;
+}
+a:visited {text-decoration: none;color:black;
+}
+a:hover {text-decoration: none;color:black;
+}
+a:active {text-decoration: none;color:black;
+}
+.arrow{
+color:#fff;
+}
+.topcontainer{
+border:0px red solid;
+height:57px;
+}
+.left{
+margin:5px 0px 0px 0px;
+width:19%;
+float:left;
+font-family:"华文行楷";
+font-size:110%;
+font-weight:bold;border:0px red solid;
+height:50px;
+}
+.left3{
+font-family:"宋体";
+font-size:70%;
+border:0px red solid;
+color:red;
+}
+.right{
+margin:8px 0px 0px 0px;
+width:40%;
+float:right;
+text-align:right;
+border:0px red solid;
+height:50px;
+}
+.middle{
+margin:8px 0px 0px 0px;
+width:40%;
+float:left;
+text-align:;eft;
+border:0px red solid;
+height:50px;
+}
+.middle2{
+height:33px;
+padding-top:8px;
+}
+.rightl1{
+margin:18px 0px 0px 0px;
+border:0px red solid;
+height:24px;
+}
+.rightl2{
+font-size:79%;
+color:#FFCC33;
+margin:opx 0px 0px 0px;
+border:0px red solid;
+height:17px;
+}
+div{
+border:0px red solid;
+}
+.iso{
+color:#FF0000;
+}
+</STYLE>
+
+<!--特别注意，如果在Html文档中删除了一个单选框，则下面对应的函数必须删掉，否则会出错；即html与js对应，js不能多；所以删时要同步；-->
+<BODY onload=document.formmain.searchkey.focus();d();getkey(); leftMargin=0 topMargin=0>
+<div id="container">
+	<div class="topcontainer">
+		<div class="left">
+			<div><span style="font-family:mv boli">Data<span class="iso">I</span>SO</span></div>
+			<div>数据<span class="iso">我</span>搜</div>
+			<div class="left3">www.dataiso.com</div>
+		</div>
+		<div class="middle">
+		    <div>一次输入，全方位、定向、立体搜索</div>
+			<div class="middle2">助您简单、方便地找到您需要的资源</div>
+		</div>
+		<div class="right">
+			<div>
+<!--calendar--一部分写在Html,一部份写在JS-->
+		<script language="JavaScript1.2" type="text/javascript">     //农历的另一年份时，需更改6处（第6处是节气更改，作为变量中的字符的"2011"不更改）	
+		if (document.all){<!--时间显示-->
+				document.write(Year+"-"+"<font color=#008040>"+"<strong>"+"<span style='FONT-SIZE: 12px'>"+enym+"&nbsp;"+isnDay[today.getDay()]+"</font>"+"</strong>"+"</span>"+"&nbsp;")
+				}
+				document.write("壬辰龙年"+"<strong>"+"<span style='FONT-SIZE: 12px'>"+"<font color=#0000FF>"+cnym+"</span>"+"</strong>"+"</font>"+"<br />")/*农历月日*/
+				document.write("<style='font-align:right; '>"+"已逝:"+cndayed+"天"+"&nbsp;")
+				document.write("可期:"+"<font face='Arial' size='2px' color=#FF8040>"+"<strong>"+haveday+"</strong>"+"</font>"+"天"+"</style>")
+		</script>
+<!--calendar一部分写在Html,一部份写在JS--></div>
+			<div class="rightl2">收藏本页到>><a href="#" onClick="javascript:window.external.AddFavorite('http://www.dataiso.com/', '数据我搜')" target="_self">IE收藏夹</a> | <a href="#" onClick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('www.dataiso.com');">设为首页</a></div>
+		</div>
+	</div>
+<FORM id=formmain onsubmit=search() name=formmain style="margin:4px 0px 2px 0px;">
+<table align="left" bgcolor="#8fbc8f">
+<tr>
+	<td valign="center">
+		<INPUT id=searchkey size=45  name=searchkey class="iCiBa_open_suggest_input" onfocus=this.select(); onmouseover=this.select(); title="输入关键字,单击按钮选择某一网站，单击“搜索”！" > 
+		<INPUT id=searchbutton onclick=search() value="搜 索" type=button name=Submit> 
+	</td>
+	<td width="2%" align="center" valign="center" style="font-family:mv boli; ">Site:</td>
+	<td align="left" valign="center" style="width: 30%"><!--30%由两部分组成:1 地址输入框，2 箭头-->
+		<div style="position:relative;">
+		<span style="margin-left:22%;width:21px;overflow:hidden;">
+			<select style="width:210px;margin-left:-22%; margin-bottom:2.5px;" onChange="this.parentNode.nextSibling.value=this.value">          <option value="">&nbsp;</option>
+				<option value="www.ifeng.com"> 凤凰网</option>
+				<option value="www.sohu.com"> 搜狐</option>
+				<option value="www.sina.com"> 新浪</option>
+				<option value="www.163.com"> 网易</option>
+				<option value="www.qq.com"> 腾讯</option>
+				<option value="www.xinhua.net"> 新华网</option>	
+				<option value="www.people.com.cn">人民网</option>
+				<option value="">&nbsp;</option>
+				<option value="www.tao.com"> 淘宝</option>
+				<option value="www.dangdang.com"> 当当</option>
+				<option value="www.joyo.com"> 卓越</option>
+				<option value="www.zhongguosou.com">cn搜</option>
+			</select>
+		</span>
+		<input name="sitesearch" style="width:185px;position:absolute;left:0px;" title="在前面输入框中输入关键字后，在此处可输入（如www.sohu.com）或选择某一特定网站，然后单击“谷歌”或“百度”即可开始定向搜索！"  onfocus=this.select(); onmouseover=this.select();>
+		</div>
+	</td>
+	<td width="40px" valign="center"><input name="btnG" type="button"  value="谷歌" onclick="googleSearch();"  /></td>
+	<td width="40px" valign="center"><input name="btnG3" type="button"  value="百度" onclick="baiduSearch();"  /></td>
+</tr>
+</table>
+
+
+<table id="zs">
+	<col width="12%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+	<col width="11%" />
+<tbody class="zh">
+<tr>
+	<th rowspan="2">综合<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input name=radio type=radio id="rdbaidu" checked><a href="http://www.baidu.com" checked="checked" rel="nofollow">百度</a>     </td>
+	<td><input name=radio type=radio id="rdgoogle"><a href="http://www.google.com/intl/zh-cn/" rel="nofollow">谷歌</a></td>
+	<td><input name="radio" type="radio" id="rdyahoozhongguo" /><a href="http://www.yahoo.com.cn/" rel="nofollow">雅虎</a></td>
+	<td><input name="radio" type="radio" id="rdbingzonghe" /><a href="http://cn.bing.com/?FORM=HPENCN" rel="nofollow">必应</a></td>
+	<td><input name="radio" type="radio" id="rdsoso"><a href="http://www.soso.com" title="腾讯旗下搜索"  rel="nofollow" >腾讯soso</a></td>
+	<td><input name="radio" type="radio" id="rdsogou" /><a href="http://www.sogou.com" title="搜狐旗下搜索"  rel="nofollow">搜狐搜狗</a></td>
+	<td><input name="radio" type="radio" id="rdyoudao" /><a href="http://www.yodao.com/" title="网易旗下搜索" rel="nofollow">网易有道</a></td>
+	<td><input name="radio" type="radio" id="rdzhongsou" /><a href="http://www.zhongsou.com/" title="原慧聪搜索" rel="nofollow">中搜</a></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td><input name="radio" type="radio" id="rdgoogleen" /><a href="http://www.google.com.hk/webhp?hl=en"  rel="nofollow" >Google</a></td>
+	<td><input type="radio" name="radio" id="rd_yahoo" /><a href="http://www.yahoo.com/" >Yahoo</a></td>
+	<td><input type="radio" name="radio" id="rd_bing" /><a href="http://www.bing.com/?FORM=HPCNEN" >bing</a></td>
+	<td><input type="radio" name="radio" id="rd_panggu" /><a href="http://search.panguso.com" >盘古</a></td>
+	<td><input id="rdxinhuanews" type="radio" name="radio" /><a href="http://www.xinhuanet.com/"  >新华网</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody><!--// 综合搜索zh-->
+
+<tbody class="xw">
+	<tr>
+	  <th rowspan="2">新闻<span class="arrow">&nbsp;&raquo;</span></th>
+	  <td><input id="rdbaidunews" type="radio" name="radio" /><a href="http://news.baidu.com/index.html?tn=zhongguosou"  >百度新闻</a></td>
+	  <td><input id="rdgooglenews" value="3" type="radio" name="radio" /><a href="http://news.google.com/nwshp?hl=zh-CN&amp;gl=cn">谷歌新闻</a></td>
+	  <td><input id="rdyahoocnnews"  type="radio" name="radio" /><a href="http://www.yahoo.com.cn/"  >雅虎新闻</a> </td>
+	  <td><input id="rdcctvnews" type="radio" name="radio" /><a href="http://www.cntv.cn/" style="font-family:'宋体';">CCTV新闻</a></td>
+		  <td><input id="rdqqnews" type="radio" name="radio" /><a href="http://news.qq.com" >腾讯新闻</a></td>
+	  <td><input id="rdsouhunews" type="radio" name="radio" /><a href="http://news.sogou.com">搜狗新闻</a></td>
+	  <td><input id="rd163news" type="radio" name="radio" /><a href="http://www.163.com/"  >网易新闻</a></td>
+	  <td><a href="http://www.ifeng.com">凤凰</a>&nbsp;<a href="http://www.cankaoxiaoxi.com/">参考</a></td>
+</tr>
+<tr><td><a href="http://www.chinadaily.com.cn/">ChinaDaily</a></td><td><input type="radio" name="radio" id="rd_news_google" /><a href="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;q=">Google</a></td>
+  <td><input type="radio" name="radio" id="rd_news_yahoo" /><a href="http://www.yahoo.com/"  >Yahoo</a></td>
+  <td><input type="radio" name="radio" id="rd_news_msn" /><a href="http://www.msn.com/" >MSN</a></td>
+  <td><input type="radio" name="radio" id="rd_news_aol" /><a href="http://www.aol.com/" >AOL</a></td>
+  <td><a href="http://www.abc.com" >ABC</a></td><td><a href="http://www.usatoday.com/" >USAToday</a></td><td><a href="http://espn.go.com/" >ESPN</a>&nbsp;<a href="http://www.nba.com" >NBA</a></td>
+</tr>
+</tbody><!--// 新闻搜索xw-->
+<tbody class="bk">
+<tr>
+	<th>百科<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input type="radio" name="radio" id="rd_bdbk" ><a href="http://baike.baidu.com/" >百度百科</a></td>
+	<td><input type="radio" name="radio" id="rd_hd" ><a href="http://www.hudong.com/">互动百科</a></td>
+	<td><input type="radio" name="radio" id="rd_wk" ><a href="http://zh.wikipedia.org/w/index.php?title=Wikipedia:%E9%A6%96%E9%A1%B5&amp;variant=zh-cn">维基cn</a></td>
+	<td><input type="radio" name="radio" id="rd_wken" ><a href="http://en.wikipedia.org/wiki/Main_Page">wiki</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody><!--// 百科bk-->
+<tbody class="wenda">
+<tr>
+  <th>问答<span class="arrow">&nbsp;&raquo;</span></th>
+  <td><input type="radio" name="radio" id="rd_bdzhidao"><a href="http://zhidao.baidu.com/" >百度知道</a></td>
+  <td><input type="radio" name="radio" id="rd_iask"><a href="http://iask.sina.com.cn/">新浪爱问</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody><!--// wenda-->
+
+<tbody class="wk">
+<tr>
+	<th>文库<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input type="radio" name="radio" id="rd_bd" ><a href="http://wenku.baidu.com/" title="wuwanqunhn01:sixthreewu or wufuqun01 byb">百度文库</a></td>
+	<td><input type="radio" name="radio" id="rd_xl" ><a href="http://ishare.iask.sina.com.cn/" title="wwuhn@hotmail.com byb">爱问</a></td>	
+	<td><input type="radio" name="radio" id="rd_119" ><a href="http://d.119g.com/class0/1.html" >119网盘</a></td>	
+	<td><input type="radio" name="radio" id="rddoc88" ><a href="http://www.doc88.com/" title="wwuhn sixthree">doc88</a></td>
+	<td><input type="radio" name="radio" id="rddocin" ><a href="http://www.docin.com/" title="195579221@ sixthree">docin</a></td>
+	
+	<td><input type="radio" name="radio" id="rd360doc" ><a href="http://www.360doc.com/index.html">360doc</a></td>
+	<td><a href="http://www.gougou.com" >狗狗下载</a></td>
+	<td>&nbsp;</td>
+</tr>
+</tbody><!--// 文库wk-->
+
+
+<tbody class="book">
+<tr>
+  <th>Book<span class="arrow">&nbsp;&raquo;</span></th>
+  
+  <td><input type="radio" name="radio" id="rd_ggbook" ><a href="http://books.google.com.hk/books?hl=zh-CN">谷歌图书</a></td>
+  <td><input type="radio" name="radio" id="rd_ggbooken" ><a href="http://books.google.com.hk/books?hl=zh-eN">Google</a></td>
+  <td><a href="http://www.shuku.net">亦凡图书</a></td>
+  <td><a href="http://www.sbkk8.cn/mingzhu/" title="各类名著一网打尽">随便看看吧</a></td>
+  <td><a href="http://www.tianyabook.com/index.htm">天涯在线</a></td>
+  
+  <td><a href="http://www.sidamingzhu.org/">四大名著</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody><!--//  book-->
+
+<tbody class="cidian">
+<tr>
+  <th>词典<span class="arrow">&nbsp;&raquo;</span></th>
+  <td><input type="radio" name="radio" id="rd_baiducidian" /><a href="http://dict.baidu.com" >百度词典</a></td>
+  <td><input type="radio" name="radio" id="rd_iciba"><a href="http://www.iciba.com" >iciba</a></td>
+  <td><input type="radio" name="radio" id="rd_handian" ><a href="http://www.zdic.net" >汉典(字)</a></td>
+  <td><a href="http://www.zdic.net" >汉典(词)</a></td>
+  <td>&nbsp;</td>
+  <td bordercolor="#ffffff" >&nbsp;</td>
+  <td bordercolor="#ffffff" >&nbsp;</td>
+  <td bordercolor="#ffffff" >&nbsp;</td>
+</tr>
+</tbody><!--// 词典cidian-->
+
+<tbody class="tp">
+<tr>
+	<th>图片<span class="arrow">&nbsp;&raquo;</span></th>
+	<td bordercolor="#ffffff" 
+	><input id="rdbaiduimage" type="radio" name="radio" /><a href="http://image.baidu.com/"  >百度图片</a> </td>
+	<td bordercolor="#ffffff" ><input id="rdgoogleimagecn" type="radio" name="radio" /><a href="http://www.google.com/imghp?hl=zh-CN&amp;tab=wi&amp;q=" >谷歌图片</a></td>
+	<td bordercolor="#ffffff" ><input id="rdyahoozhongguoimage" type="radio" name="radio" /><a href="http://image.yahoo.cn" >雅虎图片</a> </td>
+	<td bordercolor="#ffffff" ><input id="rdmsnimage" type="radio" name="radio" /><a href="http://cn.msn.com/"  >MSN图片</a></td>
+	<td bordercolor="#ffffff" ><input id="rdyahooimage" type="radio" name="radio" /><a title="使用中文 英文进行搜索" href="http://www.yahoo.com/"  >Yahoo</a> </td>
+	<td bordercolor="#ffffff" ><input id="rdsouhuimage" type="radio" name="radio" /><a href="http://pic.sogou.com/"  >搜狗图片</a> </td>
+	<td borderColor=#ffffff ><INPUT id=rd163pic type=radio name=radio><A href="http://image.yodao.com/" >网易有道</A> </td>
+	<td borderColor=#ffffff><INPUT id=rd_aol_image type=radio name=radio><A href="http://www.aol.com/" >AOL</A></td>
+</tr>
+</tbody><!--// 图片tp-->
+<tbody class="mp">
+<tr>
+<th>音乐<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><INPUT id=rdbaidump3 type=radio name=radio><A href="http://mp3.baidu.com/"  >百度音乐</A> </td>
+	<td><input id="rdgooglemusic" type="radio" name="radio" /><a href="http://www.google.com/"  >谷歌音乐</a></td>
+	<td><input id="rdyahoomp3" type="radio" name="radio" /><a href="http://music.yahoo.com/"  >Yahoo</a> </td>
+	<td><input id="rdmp3zhongsou" type="radio" name="radio" /><a href="http://mp3.zhongsou.com/" >中国搜索</a></td>
+	<td><input id="rd_soso_music" type="radio" name="radio" /><a href="http://music.soso.com/"  >soso</a>&nbsp;</td>
+	<td><input id="rddsogou" type="radio" name="radio" /><a href="http://d.sogou.com/index.html?kw="  >搜狗音乐</a> </td>
+	<td></td>
+	<td>&nbsp;</td>
+</tr>
+</TBODY><!--// MP3-->
+
+
+<tbody class="sp">
+<tr>
+	<th rowspan="3">视频<span class="arrow">&nbsp;&raquo;</span><br />
+	  电影<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input id="rdbaiduvideo"  type="radio" name="radio" /><a title="影片 电视剧 戏剧 视频片断搜索" href="http://video.baidu.com/" rel="nofollow" >百度视频</a> </td>
+	<td><input id="rdtoudushipin"  type="radio" name="radio" /><a title="电影电视剧" href="http://www.tudou.com/" rel="nofollow" >土豆网</a></td>
+	<td><input id="rdyahoovideo" type="radio" name="radio" /><a title="搜索结果可以直接播放，可使用中文搜索" href="http://video.search.yahoo.com/"  
+	>雅虎视频</a></td>
+	<td><input id="rdkxsp"  type="radio" name="radio" /><a href="http://v.kaixin001.com/">开心视频</a></td>
+	<td><input id="rddy161"  type="radio" name="radio" /><a href="http://www.dy161.com/">161电影</a></td>
+	<td><input id="rdsohuship"  type="radio" name="radio" /><a href="http://tv.sohu.com/">搜狐视频</a></td>
+	<td><input id="rdxlkk"  type="radio" name="radio" /><a href="http://kankan.xunlei.com/">迅雷看看</a></td>
+	<td ><input id="rdyoutubevideo"  type="radio" name="radio" /><a href="http://www.youtube.com/ " title="需免费注册后，方可观看" rel="nofollow" >YouTube</a>&nbsp; </td>
+</tr>
+
+<tr>
+
+	<td ><input id="rdyes80"  type="radio" name="radio" /><a href="http://www.yes80.net/index.html">影视搜索</a></td>
+	<td><input id="rdyoukushipin"  type="radio" name="radio" /><a href="http://www.youku.com/" rel="nofollow" >优酷视频</a></td>
+	<td><input id="rdqiyi"  type="radio" name="radio" /><a href="http://www.iqiyi.com/">奇艺网</a></td>
+	<td><a href="http://www.dianyinghai.cc/">电影海</a></td>
+	<td><input id="rdm1905"  type="radio" name="radio" /><a href="http://www.m1905.com/">M1905</a></td>
+	<td><input id="rdsougoushipin"  type="radio" name="radio" /><a title="各种视频文件，如音乐电视 MTV等，也可搜索到" href="http://v.sogou.com/" rel="nofollow" >搜狗视频</a> </td>
+	<td><input id="rdgougou" type="radio" name="radio" /><a title="电影搜索" href="http://movie.gougou.com/" rel="nofollow" >迅雷狗狗</a></td>
+	<td><input id="rdgooglevideo"  type="radio" name="radio" /><a title="现仅支持英文搜索，需下载Google的视频播放插件，具体使用看搜索学校中的帮助" href="http://www.google.com.hk/videohp?hl=zh-cn&amp;tab=wv" >Google</a></td>
+</tr>
+
+<tr>
+  <td><input id="rdbabykan"  type="radio" name="radio" /><a href="http://www.babykan.com/index.html">babykan</a></td>
+  <td><input id="rdsheshou"  type="radio" name="radio" /><a href="http://shooter.cn" title="字幕搜索下载">射手网</a></td>
+	<td><input id="rdmtime"  type="radio" name="radio" /><a href="http://search.mtime.com" title="电影百科">Mtime</a></td>
+	<td>&nbsp;</td>
+	<td >&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td><a href="http://www.dianyinghai.cc/"></a></td>
+</tr>
+</tbody><!--// 视频电影sp-->
+
+<tbody class="bt"> 
+<tr><th>BT<span class="arrow">&nbsp;&raquo;</span> </th>
+  <td><input id="rdbaidubt" type="radio" name="radio" /><a href="http://d.baidu.com/index.php?tn=zhongguosou"  >百度搜种</a> </td>
+  <td><input id="rdgooglebt" type="radio" name="radio" /><a href="http://www.google.com/intl/zh-cn/"  >谷歌搜种</a> </td>
+  <td><INPUT id=rdyahoobt type=radio name=radio><A href="http://www.yahoo.com/"  >雅虎搜种</A></td>
+<td><INPUT id=rdgougoubt type=radio name=radio><A href="http://www.gougou.com/"  >迅雷狗狗</A> </td>
+<td><input id="rdverycdbt" type="radio" name="radio" /><a href="http://www.verycd.com/"  >VeryCd</a> </td>
+<td><input id="rdsougoubt" type="radio" name="radio" /><a href="http://www.sogou.com/"  >搜狗搜种</a> </td>
+<td><INPUT id=rdisohuntbt type=radio name=radio><A href="http://www.isohunt.com/"  >isoHunt</A> </td>
+<td><INPUT id=rdbtbotbt type=radio name=radio><A href="http://www.btbot.com/"  >BTbot</A></td>
+</tr>
+</tbody>	<!--// bt-->
+
+<tbody class="rj">
+<tr>
+	<th rowspan="4">软件<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input id="rdskycn"  type="radio" name="radio" /><a title="包括有较为齐全的盗版软件" href="http://www.skycn.com/">天空软件</a></td>
+	<td><input id="rdmydown"  type="radio" name="radio" /><a href="http://www.mydown.com/">天极软件</a></td>
+	<td><input id="rdonlinedown"  type="radio" name="radio" /><a href="http://www.onlinedown.net/">华军软件</a></td>
+	<td><input id="rdxinlang"  type="radio" name="radio" /><a href="http://tech.sina.com.cn/down/">新浪下载</a></td>
+	<td><input type="radio" name="radio"  id="rd_ttdown" /><a href="http://www.ttdown.com/" >天天精品</a> </td>
+	<td><input id="rdgooglesoft"  type="radio" name="radio" /><a href="http://www.google.cn/" >谷歌搜软</a></td>
+	<td><input id="rdbaidusoft"  type="radio" name="radio" /><a href="http://d.baidu.com/index.php?tn=zhongguosou">百度搜软</a></td>
+	<td><input id="rdsoftgougou"  type="radio" name="radio" /><a href="http://soft.gougou.com/">迅雷狗狗</a></td>
+</tr>
+
+<tr>
+	<td><input id="rdpconline"  type="radio" name="radio" /><a href="http://dl.pconline.com.cn/">太平洋</a></td>
+	<td><input id="rdduote"  type="radio" name="radio" /><a href="http://www.duote.com/">多特</a></td>
+	<td><input id="rdit168"  type="radio" name="radio" /><a href="http://down.it168.com/">it168</a></td>
+	<td><input id="rdpchome"  type="radio" name="radio" /><a href="http://download.pchome.net/">电脑之家</a></td>
+	<td><input id="rdxiazaiba"  type="radio" name="radio" /><a href="http://www.xiazaiba.com/">下载吧</a></td>
+	<td><input id="rdxp510"  type="radio" name="radio" /><a href="http://www.xp510.com/">XP之家</a></td>
+	<td><input id="rd331c"  type="radio" name="radio" /><a href="http://www.33lc.com/">绿茶</a></td>
+	<td><input type="radio" name="radio"  id="rd_cnd8"><a href="http://www.cnd8.com" >中国下载</a></td>		
+</tr>
+
+<tr>
+	<td><input type="radio" name="radio"  id="rd_download_enet"><a href="http://download.enet.com.cn/" >硅谷动力</a></td>		
+	<td><input type="radio" name="radio"  id="rd51dd"><a href="http://www.51dd.com"  title="盗版软件正版软件共享软件">无忧当当</a></td>
+	<td><input type="radio" name="radio"  id="rdmydrivers"><a href="http://www.mydrivers.com/"  title="电脑硬件驱动 数码产品硬件驱动搜索" >驱动之家</a></td>
+	<td><input type="radio" name="radio"  id="rddownloadcom"><a href="http://www.download.com" >Download</a></td>
+	<td><input id="rdsoft8"  type="radio" name="radio" /><a href="http://www.soft8.net/">软件搜吧</a></td>
+	<td><input type="radio" name="radio"  id="rd_softped"><a href="http://www.softpedia.com/"><span style="font-size:80%;">SoftPedia</span></a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr> 
+
+<tr> 
+	<td><input id="rdxtzj"  type="radio" name="radio" /><a href="http://www.355189.com/win7/2012/0706/880.html">系统之家</a></td>
+	<td><input id="rdddxt"  type="radio" name="radio" /><a href="http://www.dedexitong.com/xitong/xp/index.html">得得系统</a></td>
+	<td><input id="rdylmf"  type="radio" name="radio" /><a href="http://www.startos.com/">雨林木风</a></td>
+	<td><input id="rdfqhh"  type="radio" name="radio" /><a href="http://www.tomatolei.com/portal.php">番茄花园</a></td>
+	<td>&nbsp;&nbsp;&nbsp;<a href="http://msdn.itellyou.cn/" title="微软原版下载,weibo.com/aoxiang6688">MSDN</a></td>
+	<td><a href="http://ghostba.blog.163.com/">XP装机版</a></td>
+	<td><a href="overall/how to search.html">how  search</a></td>
+	<td><a href="http://www.zhongguosou.com/">cn搜</a></td>
+</tr>
+</tbody><!--// 软件rj-->
+
+<tbody class="gw">
+<tr>
+	<th rowspan="3">购物<span class="arrow">&nbsp;&raquo;</span></th>
+	<td><input id="rdtaobaogw"  type="radio" name="radio" /><a href="http://www.taobao.com/" rel="nofollow" >淘宝网</a></td>
+	<td><input id="rdyiqugouwu"  type="radio" name="radio" /><a title="二手商品" href="http://www.eachnet.com/" rel="nofollow" >易趣</a> </td>
+	<td><input id="rdpaipai"  type="radio" name="radio" /><a href="http://www.paipai.com/">拍拍网~</a></td>
+	<td><input id="rd58tc"  type="radio" name="radio" /><a href="http://gz.58.com/">58同城</a></td>
+	<td><input id="rdgjw"  type="radio" name="radio" /><a href="http://gz.ganji.com/">赶集网</a></td>
+	<td><input id="rdgome" type="radio" name="radio" /><a href="http://www.gome.com.cn/ec/homeus/index.html">国美电器</a></td>
+	<td><input id="rdgooglegouwu"  type="radio" name="radio" /><a title="比较价格购物搜索引擎" href="http://www.google.cn/products" rel="nofollow" >谷歌购物</a> </td>
+	<td><input id="rdjoyogw"  type="radio" name="radio" /><a title="全球最大的商品批发网" href="http://www.amazon.cn/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.cn%2F&amp;tag=zhongguosou-23&amp;linkCode=ur2" rel="nofollow" >亚马逊</a></td>
+</tr>
+
+<tr>
+	<td><input id="rdtianmao" type="radio" name="radio" /><a href="http://www.tmall.com/">Tmall</a></td>
+	<td><input id="rddangdanggw" type="radio" name="radio" /><a href="http://union.dangdang.com/transfer.php?from=P-138512&amp;ad_type=10&amp;sys_id=1&amp;backurl=http://www.dangdang.com/" rel="nofollow" >当当网</a></td>
+	<td><input id="rdjingdonggouwu"  type="radio" name="radio" /><a href="http://click.union.360buy.com/JdClick/?unionId=5425&amp;t=1&amp;to=http://www.360buy.com" rel="nofollow" >京东商城</a> </td>
+	<td><input id="rd1hao" type="radio" name="radio" /><a href="http://www.yihaodian.com/3/">1号店~</a></td>
+	<td><input id="rdfkcp" type="radio" name="radio" /><a href="http://www.vancl.com/">凡客诚品</a></td>
+	<td><input id="rdsuning" type="radio" name="radio" /><a href="http://www.suning.com/">苏宁易购</a></td>
+	<td><a href="http://guangzhou.baixing.com/">百姓网</a></td>
+	<td><input id="rdamazongouwu"  type="radio" name="radio" title="用英文搜索" /><a title="世界最大购物网站，用英文搜索" href="http://www.amazon.com/exec/obidos/redirect-home/oduen-20" rel="nofollow" >Amazon</a></td>
+</tr>
+
+<tr>
+	<td><input id="rdalibaba"  type="radio" name="radio" /><a href="http://china.alibaba.com/?spm=b26110380.2165030.0.55" rel="nofollow" target="blank">阿里巴巴</a></td>
+	
+	<td><input id="rdalibabaen"  type="radio" name="radio"  title="用英文搜索"  /><a href="http://www.alibaba.com/" rel="nofollow" target="blank">Alibaba</a></td>
+	<td><a href="http://www.smarter.com.cn/">购物聪明点</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody><!--// 购物搜索gw-->
+</TABLE>
+</FORM>
+
+
+
+<DIV style="text-align:center; font-size:12px; border-top:1px #CCCCCC solid;">
+    
+    <p><A href="mailto:195579221@qq.com">联系本站</A>-<a href="http://www.dataiso.com/index.html">网站地图</a>-<a href="http://www.miibeian.gov.cn">粤ICP备05002870号</a>&nbsp;<A href="http://www.dataiso.com/">www.<B><FONT 
+color=#000000>dataidso</FONT></B>.com</A> 版权所有&nbsp;未经授权禁止复制或建立镜像 测试21</p>
+
+</DIV>
+</div>
+<SCRIPT language=javascript>
+
+//防止把页面被加入别人的框架 
+if (top != self) 
+top.location.href = location.href;
+</SCRIPT>
+
+<SCRIPT>
+var b="我心淡然，我心从容";
+function d(){
+window.status=b;
+timerID=setTimeout("d()",10000);}
+</SCRIPT>
+
+<!--定向搜索-->
+<SCRIPT language=javascript>
+
+function googleSearch() {
+window.open("http://www.google.com.hk/search?q=" + formmain.searchkey.value + "&sitesearch=" + formmain.sitesearch.value + "&domains=" + formmain.sitesearch.value + "&sa=%E6%90%9C%C2%A0%E7%B4%A2&prog=aff&client=pub-4055365977023692&hl=zh-CN&source=sdo_sb&sdo_rt=ChBNfvf1AA5v2QqkgIvyIjvnEg5fX1JMX0RFRkFVTFRfXxoI-PektCokDFUoAVidyNe9ldivpRg");
+}
+</SCRIPT>
+<SCRIPT language=javascript>
+
+function baiduSearch() {
+window.open("http://www.baidu.com/s?wd=" + formmain.searchkey.value + "+site%3A" + formmain.sitesearch.value + "&rsv_bp=0&rsv_spt=3&rsv_sug3=27&rsv_sug=0&rsv_sug1=22&rsv_sug4=1791&inputT=25355");
+}
+</SCRIPT>
+
+</BODY>
+</HTML>

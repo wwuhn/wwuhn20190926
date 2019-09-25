@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base target="_blank" />
+ 
+<title>PC classic</title>
+<script language="javascript"> 
+//bg_even("表格ID属性名","奇数行背景色","偶数行背景色","鼠标经过背景色","点击后背景色");
+function bg_even(o,a,b,c,d){
+        var t=document.getElementById(o).getElementsByTagName("tr");
+        for(var i=0;i<t.length;i++){
+                t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+                t[i].onclick=function(){
+                        if(this.x!="1"){
+                                this.x="1";
+                                this.style.backgroundColor=d;
+                        }else{
+                                this.x="0";
+                                this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                        }
+                }
+                t[i].onmouseover=function(){
+                        if(this.x!="1")this.style.backgroundColor=c;
+                }
+                t[i].onmouseout=function(){
+                        if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+                }
+        }
+}
+</script>
+ <style type="text/css">
+#tbrowser a:link，.container a:visited{
+font-size:18px;
+text-decoration:none;
+}
+.container{
+font-size:1.2em;
+margin:auto;
+font-family:"mv boli","宋体";
+width:90.29%;
+line-height:1.4em;
+}
+P{
+margin:8px;
+text-indent:2em;
+}
+.uls{
+color:#CC6666;
+font-weight:bold;
+}
+.uls>ol{
+list-style:none;
+font-weight:normal;
+list-style:lower-latin;
+color:#000000;
+line-height:1.3em;
+
+}
+h2{
+font-size:20px;
+font-weight:bold;
+margin-top:5px;
+margin-bottom:-15px;
+text-indent:0em;
+}
+img{
+margin-right:5px;
+}
+.fc{
+color:red;
+}
+#tbrowser {
+	width:100%;
+	margin:auto;
+	border-collapse:collapse;
+	font-family: "MV Boli";
+	text-align:left;
+	line-height:1.3em;
+	table-layout:fixed;
+}
+
+#tbrowser th,#tbrowser td{
+border:1px dashed #FFE1FF;
+font-size:1em;
+color:#000000;
+text-align:left;
+font-family: "MV Boli";
+padding-left:3px;
+}
+
+
+#tbrowser thead th{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+color:#fff;
+/*padding:2px 0px;*/
+display:table-column-group;
+}
+#tbrowser .nd{
+border-bottom:2px solid #3d580b;
+background-color:#8fc629;
+background-color:#D3D3A9;
+color:red;
+}
+
+#tbrowser th{
+background-color:#f2f4b9;
+color:#A6A653;
+}
+#tbrowser th.title{
+background-color:#e3e685;
+}
+
+#tbrowser caption{
+font-weight:bold;
+padding:1px 0px;
+color:#3d580b;
+font-size:18px;
+}
+
+
+#tbrowser .xhx{
+border-bottom:0px solid #aaa;
+}
+
+
+#tbrowser tr{
+height:6px;
+}
+
+#tbrowser tr>td{/*1*/
+font-size:1em;
+text-align:left;
+/*width:13%;*/
+}
+#tbrowser tr>td+td{/*2*/
+text-align:left;
+/*width:8%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td{/*3*/
+font-size:1em;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td{/*4*/
+font-size:1em;
+text-align:left;
+/*width:6%;*/
+}
+#tbrowser tr>td+td+td+td+td{/*5*/
+font-size:1em;
+text-align:left;
+/*width:5%;*/
+}
+#tbrowser tr>td+td+td+td+td+td{/*6*/
+/*width:13%;*/
+font-size:1em;
+}
+#tbrowser tr>td+td+td+td+td+td+td{/*7*/
+/*width:59%;*/
+font-size:1em;
+}
+
+
+#tbrowser tfoot td{
+border-width:0px;
+text-align:left;
+line-height:18px;
+font-size:16px;
+color:#777;
+}
+.floatr{
+float:right;
+padding-right:5px;
+}
+
+#tbrowser th a:link {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:hover {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:active {
+	text-decoration: none;
+	color:white;
+}
+#tbrowser th a:visited {
+	text-decoration: none;
+	color:white;
+}
+
+a:link {
+	text-decoration: none;
+	cursor:url(rose.ani);
+	font-size:0.75em;
+}
+a:visited {
+	text-decoration: none;
+	color:##005681;
+	font-size:0.75em;
+}
+a {
+    padding: 2px 8px;
+    border: 1px solid;
+    border-color: #ffe #aaab9c #ccc #fff;
+    text-decoration: none;
+    background: #f0e7d7;
+    color: #800000;
+    
+}
+a:hover {
+    background: transparent;
+    border-color: #aaab9c #fff #fff #ccc;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<a href="I:\wwuhn\Website\PC\">Folder</a>
+<a href="I:\wwuhn\Website\index.html">website</a>
+<a href="http://www.techcn.com.cn/index.php?category-view-1774.html">科技中国</a>
+
+<table id="tbrowser">
+
+	<thead>
+    <tr>
+      <th width="12.5%">overall</th>
+      <th width="12.5%">Times</th>
+      <th width="12.5%">经典List</th>
+      <th width="12.5%">PC</th>
+      <th width="12.5%">Notebook</th>
+      <th width="12.5%">OS</th>
+      <th width="12.5%">Network</th>
+	  <th width="12.5%">Role</th>
+	  </tr>
+	</thead>
+  
+  <tr>
+    <td><a href="计算机历史list/计算机历史list.html" title="图片+简要+年份">计算机历史list</a></td>
+    <td><a href="机械时代/计算机机械时代.html">机械时代</a></td>
+    <td><a href="1经典计算产品/计算经典.html">计算经典</a></td>
+    <td><a href="PC时代/PC编年史.html">PC时代</a></td>
+    <td><a href="1经典计算产品/笔记本史1/笔记本史1.html">笔记本史1</a></td>
+    <td><a href="os list/os list.html">os list</a></td>
+    <td><a href="互联网列表/互联网列表.html">互联网List</a></td>
+    <td><a href="PC12大公司/PC12大公司.html">IT 12大公司</a></td>
+  </tr>
+  <tr>
+    <td><a href="计算机时代/j.html" title="年份+描述">计算机时代</a></td>
+    <td><a href="机械电子篇/机械电子篇.html">机械电子篇</a></td>
+    <td><a href="1经典计算产品/product list.html">Product List</a></td>
+    <td><a href="10款昂贵老PC/10款昂贵老PC.html">10款昂贵老PC</a></td>
+    <td><a href="1经典计算产品/笔记本史2/笔记本史2.html">笔记本史2</a></td>
+    <td><a href="iOS/iOS.html">IOS</a></td>
+    <td><a href="互联网早期大事记/互联网早期大事记.html">互联网早期大事记</a></td>
+    <td><a href="历史名企/ic.html">历史名企List</a></td>
+  </tr>
+  <tr>
+    <td><a href="计算机科学列表/计算机科学列表.html">计算机科学List</a></td>
+    <td><a href="电子管时代/d.html">电子管时代</a></td>
+    <td><a href="12款综合设备/12款综合设备.html">12款综合设备</a></td>
+    <td><a href="史上25大PC/史上25大PC.html">史上25大PC</a></td>
+    <td><a href="1经典计算产品/笔记本史3/笔记本史3.html">笔记本史3</a></td>
+    <td><a href="Windows简史/Windows简史.html">Windows简史</a></td>
+    <td><a href="搜索引擎大事记/搜索引擎大事记.html">搜索引擎大事记</a></td>
+    <td><a href="IT名企/IT名企.html">IT名企List</a></td>
+  </tr>
+  <tr>
+    <td><a href="PC历史演义/PC历史演义.html">电脑历史演义</a></td>
+    <td><a href="晶体管时代/晶体管时代.html">晶体管时代</a></td>
+    <td><a href="超级计算机史/超级计算机史.html">超级计算机史</a></td>
+    <td></td>
+    <td><a href="1经典计算产品/IBM笔记本经典回顾/IBM笔记本经典回顾.html">IBM笔记本经典</a></td>
+    <td><a href="25款OS/25款OS.html">25款OS</a></td>
+    <td><a href="图说IT/图说网络网页/图说网络网页.html">图说网络网页</a></td>
+    <td><a href="15家最创新科技公司/15家最创新科技公司.html">15家最创新公司</a></td>
+  </tr>
+  <tr>
+    <td><a href="计算机史15重要事件/计算机史15重要事件.html">计算机史15大事件</a></td>
+    <td><a href="集成电路时代/集成电路计算机.html">集成电路时代</a></td>
+    <td></td>
+    <td></td>
+    <td><a href="笔记本经典16款/笔记本经典16款.html">笔记本经典16款</a></td>
+    <td><a href="OS2往事/OS2往事.html">OS2往事</a></td>
+    <td><a href="http://b2museum.cdstm.cn/internet/history/history.html">动画说互联网史</a>&nbsp;</td>
+    <td><a href="大牌Logo变迁/大牌Logo变迁.html">大牌Logo变迁</a></td>
+  </tr>
+  <tr>
+    <td><a href="计算机大事记/计算机大事记.html">计算机大事记</a></td>
+    <td><a href="微处理器时代/微处理器时代.html">微处理器时代</a></td>
+    <td></td>
+    <td></td>
+    <td><a href="经典笔记本/经典笔记本.html">经典笔记本</a></td>
+    <td><a href="GUI进化史/GUI进化史.html">GUI进化史</a></td>
+    <td><a href="通信的分层结构/通信的分层结构.html">通信的分层结构</a></td>
+    <td><a href="IT大战/IT大战.html">IT大战</a></td>
+  </tr>
+  <tr>
+    <td><a href="史上的首次/史上的首次.html">史上的首次</a></td>
+    <td><a href="ITtop50/ITtop50.html">ITtop50</a></td>
+    <td></td>
+    <td></td>
+    <td><a href="2012十大天价笔记本/table have.html">2012十大天价NB</a></td>
+    <td style="font-size:14px;"><a href="Windows历代Logo与版本/Windows历代Logo与版本.html">Windows Logo与版本</a></td>
+    <td>&nbsp;</td>
+    <td><a href="IT10大对决/IT10大对决.html">IT10大对决</a></td>
+  </tr>
+  <tr>
+    <td><a href="电脑发明top100/电脑发明top100.html">电脑发明top100</a></td>
+    <td><a href="it top10.html">IT top10</a> </td>
+    <td></td>
+    <td></td>
+    <td><a href="超极本轻薄之谜/超极本轻薄之谜.html">超极本轻薄之谜</a></td>
+    <td style="font-size:14px;"><a href="图说IT/图说os/图说os.html">图说OS</a></td>
+    <td></td>
+    <td><a href="科技行业风云变幻/科技行业风云变幻.html">科技行业风云变幻</a></td>
+  </tr>
+  <tr>
+    <td><a href="图说IT/图说IT/图说IT.html">图说IT</a></td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td></td>
+    <td>&nbsp;</td>
+    <td style="font-size:14px;">&nbsp;</td>
+    <td></td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+<table id="tbrowser">
+<col width="7.5%" />
+<col width="11.5%" />
+<col width="11.5%" />
+<col width="11.5%" />
+
+<col width="11.5%" />
+<col width="11.5%" />
+<col width="11.5%" />
+<col width="11.5%" />
+<col width="12%" />
+
+<tr>
+  <th>人物</th>
+  <td><a href="it人物top20/it人物top20.html">it人物top20</a></td>
+  <td><a href="Leibniz/Leibniz.html">Leibniz</a></td>
+  <td><a href="盖茨采访回顾.html">盖茨采访回顾</a></td>
+  <td><a href="it人物/it人物.html">it获奖人物</a></td>
+  <td><a href="IT精英/IT精英.html">IT精英</a></td>
+  <td><a href="25位IT人物/25位IT人物.html">25位IT人物</a></td>
+  <td><a href="DOS之父/DOS之父.html">DOS之父</a></td>
+  <td><a href="王安公司/王安公司.html">王安公司</a></td>
+</tr>
+<tr>
+<th>元件:</th>
+<td><a href="处理器历史/处理器历史.html">处理器历史</a></td>
+      <td><a href="微处理器top11/微处理器top11.html">微处理器top11</a></td>
+      <td><span id="changename"><a href="显微镜下的CPU/显微镜下的CPU.html">显微镜下的CPU
+            <label id="auditmsg"></label>
+            <label id="lockimage"></label>
+      </a></span> </td>
+      <td><a href="芯片组史/芯片组史.html">芯片组史</a></td>
+      <td><a href="真空三极管/真空三极管.html">真空三极管</a></td>
+      <td><a href="内存史/内存史.html">内存史</a></td>
+      <td><a href="cpu memory/cpu和主存.html">CPU和主存</a></td>
+      <td><a href="Motorola80年/Motorola80年.html">Motorola80年</a></td>
+</tr>
+<tr>
+<th>硬件:</th>
+<td><a href="硬件top100/硬件top100.html">硬件top100</a></td>
+<td><a href="硬件溯源top10/硬件溯源top10.html">硬件溯源top10</a></td>
+<td><a href="显卡10年/显卡10年.html">显卡10年</a></td>
+<td><a href="屏幕史/屏幕史.html">屏幕史</a></td>
+<td><a href="显卡散热史/显卡散热史.html">显卡散热史</a></td>
+<td><a href="图说IT/图说硬件/图说硬件.html">图说硬件</a></td>
+      <td><a href="寄存器/寄存器.html">寄存器</a></td>
+      <td><a href="CD30年/CD30年.html">CD30年</a></td>
+</tr>
+<tr>
+  <th>&nbsp;</th>
+  <td><a href="24款3D打印机/24款3D打印机.html">24款3D打印机</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <th style="font-size:14px;">输入输出:</th>
+  <td><a href="鼠标史/鼠标史.html">鼠标史</a></td>
+  <td><a href="鼠标50年/鼠标50年.html">鼠标50年</a></td>
+  <td><a href="苹果鼠标/苹果鼠标.html">苹果鼠标</a></td>
+  <td><a href="输入设备史/输入设备史.html">输入设备史</a></td>
+  <td><a href="单片机/单片机.html">单片机</a></td>
+  <td><a href="单板机/单板机.html">单板机</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <th>存储:</th>
+  <td><a href="图说存储史/图说存储史.html">图说存储史</a></td>
+  <td><a href="硬盘50年/硬盘50年.html">硬盘50年</a></td>
+  <td><a href="外置存储进化史/外置存储进化史.html">外置存储进化史</a></td>
+  <td><a href="笔记本硬盘史/笔记本硬盘史.html">笔记本硬盘史</a></td>
+  <td><a href="存储器史/存储器史.html">存储器史</a></td>
+  <td><a href="硬盘技术史/硬盘技术史.html">硬盘技术史</a></td>
+  <td><a href="USB3.0移动硬盘/USB3.0移动硬盘.html">移动硬盘3.0</a></td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+<th>通信:</th>
+<td><a href="通信List/通信List.html">通信List</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>&nbsp;</td>
+</tr>
+<tr>
+  <th style="font-size:14px;">电子产品:</th>
+  <td><a href="最酷十款电子阅读器/最酷十款电子阅读器.html">十款电子阅读器</a></td>
+  <td><a href="iPhone4拆解/iPhone4拆解.html">iPhone4拆解</a></td>
+  <td><a href="创新电子top20/创新电子top20.html">创新电子top20</a></td>
+  <td><a href="收音机历史/收音机历史.html">收音机历史</a></td>
+  <td><a href="Mobile 2013top10/2013top10.html">2013手机top10</a></td>
+  <td></td>
+  <td></td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <th>软件:</th>
+  <td style="font-size:14px"><a href="10大协作办公工具/10大协作办公工具.html">10大协作办公工具</a></td>
+  <td><a href="PS22年/PS22年.html">PS22年</a></td>
+  <td><a href="ZIP故事/ZIP故事.html">ZIP故事</a></td>
+  <td><a href="C语言发展史/C语言发展史.html">C语言发展史</a></td>
+  <td><a href="病毒简史/病毒简史.html">病毒简史</a></td>
+  <td><a href="图说IT/图说编程/图说编程.html">图说编程</a></td>
+  <td></td>
+  <td>&nbsp;</td>
+</tr>
+</table>
+<a href="硅谷博物馆/硅谷博物馆.html">硅谷博物馆</a>	
+<a href="计算机博物展/计算机博物展.html">计算机博物展</a>
+
+<a href="九种未来技术/九种未来技术.html">九种未来技术</a><a href="图形操作历史/图形操作历史.html">图形操作历史</a><a href="顶级域名服务器的分布/顶级域名服务器的分布.html">顶级域名服务器的分布</a></div>
+</body>
+</html>
+<script language="javascript"> 
+bg_even("tbrowser111","#fff","#F5F5F5","#FFFFCC","#FFDDFF");/*#FFFF84*/
+</script>
